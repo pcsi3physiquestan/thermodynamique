@@ -1,0 +1,587 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interprétations &#8212; Thermodynamique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/thermodynamique/notebook/th_sp_interpretation.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exemples d’application" href="th_sp_exemples.html" />
+    <link rel="prev" title="Expression des grandeurs" href="th_sp_expression.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Thermodynamique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thermodynamique.html">
+   Thermodynamique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_description.html">
+   Description d’un système thermodynamique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_systeme.html">
+     Système thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_echelle.html">
+     Echelles d’étude
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_variables.html">
+     Variables d’état et variables microscopiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_equilibre.html">
+     Equilibre thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_extensives.html">
+     Variables extensives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_intensives.html">
+     Grandeurs intensives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_entropie_stat.html">
+     Approche statistique de l’entropie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_usuels.html">
+   Systèmes thermodynamiques usuels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_gaz.html">
+     Etude des gaz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_condenses.html">
+     Phases condensées
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_premier_pcp.html">
+   Premier principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_enonce.html">
+     Premier principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_q.html">
+     Transfert thermique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_w.html">
+     Travail mécanique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_transfo.html">
+     Etude de transformations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_compression.html">
+     Compression isotherme d’un gaz parfait
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_act_meth.html">
+     Activités méthodes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="th_second_pcp.html">
+   Second principe
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_enonce.html">
+     Second principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_expression.html">
+     Expression des grandeurs
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Interprétations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_exemples.html">
+     Exemples d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_ex_app.html">
+     Second principe: Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_td.html">
+     Second principe: Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_chgt_etat.html">
+   Transitions de phases
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_obs.html">
+     Observations expérimentales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_quant.html">
+     Analyse quantitative
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_td.html">
+     Travaux dirigés: Changements d’état
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_machines.html">
+   Machines thermiques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_gene.html">
+     Généralités
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_moteur.html">
+     Moteurs thermiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_recepteur.html">
+     Récepteurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_methodes.html">
+     Méthodes d’études
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_ex_app.html">
+     Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/th_sp_interpretation.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/th_sp_interpretation.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/th_sp_interpretation.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enonce-de-clausius">
+   Enoncé de Clausius
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enonce-de-thomson">
+   Enoncé de Thomson
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="interpretations">
+<h1>Interprétations<a class="headerlink" href="#interpretations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="enonce-de-clausius">
+<h2>Enoncé de Clausius<a class="headerlink" href="#enonce-de-clausius" title="Permalink to this headline">¶</a></h2>
+<p>Il s’agit de l’énoncé historique qui a conduit Clausius à élaborer le concept d’entropie.</p>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Enoncé historique de Clausius</p>
+<p>Considérons deux solides en contact thermique. Le premier est à température <span class="math notranslate nohighlight">\(T_f\)</span> et le second à température <span class="math notranslate nohighlight">\(T_c &gt; T_f\)</span>. Le transfert thermique ne s’effectuer spontanément (sans intervention du milieu extérieur) que du corps chaud vers le corps froid.</p>
+</div>
+<p><strong>Démonstration</strong><br />
+Les caractéristiques du corps chaud (système <span class="math notranslate nohighlight">\(\Sigma_c\)</span>) seront notés avec un indice <span class="math notranslate nohighlight">\(c\)</span> et celles du corps froid (système <span class="math notranslate nohighlight">\(\Sigma_f\)</span>) avec un indice <span class="math notranslate nohighlight">\(f\)</span>. Les grandeurs sans indices concernent le système total <span class="math notranslate nohighlight">\(\{\Sigma_f + \Sigma_f\}\)</span></p>
+<p>Considérons <strong>le système <span class="math notranslate nohighlight">\(\{\Sigma_f + \Sigma_c\)</span>}</strong>. Les deux principes s’écrivent appliqué à une transformation infinitésimale:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+dU = dU_c + dU_f = \delta W + \delta Q = 0\\
+dS = dS_c + dS_f = \delta S_e + \delta S_c = \delta S_c \geq 0
+\end{align*}\]</div>
+<p>Supposons la transformation réversible (<strong>on calcule une fonction d’état donc on peut choisir un chemin</strong>). Alors le second principe appliqué à chaque système pris séparément s’écrit:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+dS_c &amp;= \delta S_{ech,c} + \delta S_{c,c} = \frac{\delta Q_c}{T_c}\\
+dS_f &amp;= \delta S_{ech,f} + \delta S_{c,f} = \frac{\delta Q_f}{T_f}
+\end{align*}\]</div>
+<p>soit avec <span class="math notranslate nohighlight">\(\delta Q_c = dU_c + P_c dV_c\)</span> et <span class="math notranslate nohighlight">\(\delta Q_f = dU_f + P_f dV_f\)</span> (premier principe appliqué à chaque système pris séparément):</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+dS_c &amp;= \frac{dU_c + P_c dV_c}{T_c}\\
+dS_f &amp;= \frac{dU_f + P_f dV_f}{T_f}
+\end{align*}\]</div>
+<p>Ces relations ne font intervenir que des variables d’état, elles peuvent donc être généraliser à toute transformation, même non <a class="reference external" href="http://r%C3%A9versible.Il">réversible.Il</a> vient donc dans l’équation du second principedu système total:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-13b382a1-d405-4488-97c3-3dbcb8dc6adb">
+<span class="eqno">(22)<a class="headerlink" href="#equation-13b382a1-d405-4488-97c3-3dbcb8dc6adb" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+dS = \frac{dU_c}{T_c} + \frac{P_c}{T_c} dV_c + \frac{dU_f}{T_f} + \frac{P_f}{T_f} dV_f \geq 0
+\end{equation}\]</div>
+<p><strong>On a utilisé ici l’extensivité de l’entropie</strong>.</p>
+<p>On a montré que <span class="math notranslate nohighlight">\(dU_c = - dU_f\)</span> et on travaille à volume constant (sinon il y aurait des travaux des forces de pression et le système ne serait pas isolé) <span class="math notranslate nohighlight">\(dV_c = - dV_f\)</span> soit:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-585d5792-7604-4aa9-9994-042da20c98ff">
+<span class="eqno">(23)<a class="headerlink" href="#equation-585d5792-7604-4aa9-9994-042da20c98ff" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+dS = (\frac{1}{T_f} - \frac{1}{T_c})dU_f + (\frac{P_f}{T_f} - \frac{P_c}{T_c})dV_f \geq 0
+\end{equation}\]</div>
+<p>Pour des solides, <span class="math notranslate nohighlight">\(dV_f = 0\)</span> soit <span class="math notranslate nohighlight">\((\frac{1}{T_f} - \frac{1}{T_c})dU_f \geq 0\)</span> avec <span class="math notranslate nohighlight">\((\frac{1}{T_f} - \frac{1}{T_c})&gt;0\)</span> si <span class="math notranslate nohighlight">\(T_f &lt; T_c\)</span>. Il vient donc que <span class="math notranslate nohighlight">\(dU_f \geq 0\)</span> soit <span class="math notranslate nohighlight">\(\delta Q_f = dU_f - \delta W_f = dU_f \geq 0\)</span> et <span class="math notranslate nohighlight">\(\delta Q_c = - \delta Q_f \leq 0\)</span>. La chaleur ne peut donc bien passer que du corps chaud au corps froid.</p>
+<p>Cette démonstration contient de nombreux points de méthodes extrêmement importants quand on étudie un système thermodynamique.</p>
+<ul class="simple">
+<li><p>Prise de recul: On est souvent amené à prendre l’intégrale des sous-systèmes dans un seul système pour ne pas avoir à étudier les échanges internes.</p></li>
+<li><p>Diviser pour mieux régner: A l’inverse, dans les systèmes composés de sous-ensemble on profitera de <strong>l’extensivité</strong> de l’énergie interne et de l’entropie pour les calculer comme des sommes de grandeurs exprimables en fonction des variables d’état de chaque sous système (impossible pour l’ensemble si T ou P n’est pas identique).</p></li>
+<li><p>Fonction d’état: l’utilisation de la propriété de l’entropie (ou de U) d’être une fonction d’état est fondamentale dans de nombreuses démonstration. Elle permet de calculer leur variation sur un chemin choisi (réversible) puis de <strong>généraliser ces expressions puisqu’elles ne dépendent pas du chemin parcouru</strong>.</p></li>
+</ul>
+<div class="hint dropdown admonition">
+<p class="admonition-title">Compléments : Equilibre thermique</p>
+<p>Remarquons que les expressions précédentes font apparaître <span class="math notranslate nohighlight">\(S\)</span> comme une fonction de <span class="math notranslate nohighlight">\(U_f\)</span> et <span class="math notranslate nohighlight">\(V_f\)</span> (et non plus de <span class="math notranslate nohighlight">\(U\)</span> et <span class="math notranslate nohighlight">\(V\)</span>) et définit les dérivées partielles:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+{(\frac{\partial S}{\partial U_f})}_{V_f} = \frac{1}{T_f} - \frac{1}{T_c}\\
+{(\frac{\partial S}{\partial V_f})}_{U_f} = \frac{P_f}{T_f} - \frac{P_c}{T_c}
+\end{align*}\]</div>
+<p>On a vu que pour un système isolé, l’entropie ne pouvait qu’agmenter. Elle va donc atteindre un maximum à l’équilibre. Donc, à l’équilibre les dérivées partielles de <span class="math notranslate nohighlight">\(S\)</span> sont nulles sont: <span class="math notranslate nohighlight">\(T_c = T_f\)</span>. <strong>A l’équilibre, les températures de deux corps en contact thermique seront égales.</strong></p>
+</div>
+</div>
+<div class="section" id="enonce-de-thomson">
+<h2>Enoncé de Thomson<a class="headerlink" href="#enonce-de-thomson" title="Permalink to this headline">¶</a></h2>
+<p>L’énoncé de Thomson est fondamental pour comprendre les limites des machines thermiques. Là où l’énoncé de Clausius s’intéresse à l’évolution interne d’un système et l’homogénéisation des grandeurs intensives, l’énoncé de Thomson traite de la dissymétrie entre le travail et le transfert thermique échangé.</p>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Enoncé de Thomson</p>
+<p>Un système en contact avec une seule source de chaleur (thermostat) ne peut, au cours d’un cycle, que recevoir du travail pour fournir de la chaleur.</p>
+</div>
+<p><strong>Démonstration</strong><br />
+Notons <span class="math notranslate nohighlight">\(T_0\)</span> la température de la source de chaleur. Les deux principe appliqué au système sur un cycle s’écrivent (les variations des fonctions d’état sont nulles sur un cycle):</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\Delta U = 0 = W + Q &amp; \Longrightarrow Q = -W\\
+\Delta S = 0 = S_{e} + S_c = \frac{Q}{T_0} + S_c \geq \frac{Q}{T_0} &amp; \Longrightarrow \frac{Q}{T_0} \leq 0
+\end{align*}\]</div>
+<p>soit <span class="math notranslate nohighlight">\(Q &lt;0\)</span> et <span class="math notranslate nohighlight">\(W &gt; 0\)</span>.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="th_sp_expression.html" title="previous page">Expression des grandeurs</a>
+    <a class='right-next' id="next-link" href="th_sp_exemples.html" title="next page">Exemples d’application</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

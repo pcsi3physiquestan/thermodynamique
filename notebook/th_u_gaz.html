@@ -1,0 +1,914 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etude des gaz &#8212; Thermodynamique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/thermodynamique/notebook/th_u_gaz.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Phases condensées" href="th_u_condenses.html" />
+    <link rel="prev" title="Systèmes thermodynamiques usuels" href="th_usuels.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Thermodynamique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thermodynamique.html">
+   Thermodynamique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_description.html">
+   Description d’un système thermodynamique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_systeme.html">
+     Système thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_echelle.html">
+     Echelles d’étude
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_variables.html">
+     Variables d’état et variables microscopiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_equilibre.html">
+     Equilibre thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_extensives.html">
+     Variables extensives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_intensives.html">
+     Grandeurs intensives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_entropie_stat.html">
+     Approche statistique de l’entropie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="th_usuels.html">
+   Systèmes thermodynamiques usuels
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Etude des gaz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_condenses.html">
+     Phases condensées
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_premier_pcp.html">
+   Premier principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_enonce.html">
+     Premier principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_q.html">
+     Transfert thermique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_w.html">
+     Travail mécanique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_transfo.html">
+     Etude de transformations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_compression.html">
+     Compression isotherme d’un gaz parfait
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_act_meth.html">
+     Activités méthodes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_second_pcp.html">
+   Second principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_enonce.html">
+     Second principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_expression.html">
+     Expression des grandeurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_interpretation.html">
+     Interprétations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_exemples.html">
+     Exemples d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_ex_app.html">
+     Second principe: Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_td.html">
+     Second principe: Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_chgt_etat.html">
+   Transitions de phases
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_obs.html">
+     Observations expérimentales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_quant.html">
+     Analyse quantitative
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_td.html">
+     Travaux dirigés: Changements d’état
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_machines.html">
+   Machines thermiques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_gene.html">
+     Généralités
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_moteur.html">
+     Moteurs thermiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_recepteur.html">
+     Récepteurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_methodes.html">
+     Méthodes d’études
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_ex_app.html">
+     Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/th_u_gaz.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/th_u_gaz.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/th_u_gaz.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etude-empirique-des-gaz">
+   Etude empirique des gaz
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gaz-parfait">
+     Gaz parfait
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#melange-de-gaz-et-pression-partielle">
+     Mélange de gaz et pression partielle
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ecart-au-gaz-parfait-gaz-reel">
+     Ecart au gaz parfait. Gaz réel
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpretation-de-l-equation-d-etat-de-van-der-waals">
+     Interprétation de l’équation d’état de Van der Waals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etude-des-gaz-approche-microscopique">
+   Etude des gaz: Approche microscopique
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorie-cinetique-des-gaz">
+     Théorie cinétique des gaz
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modele-du-gaz-parfait-monoatomique">
+     Modèle du gaz parfait monoatomique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#calcul-de-la-pression-cinetique">
+     Calcul de la pression cinétique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#approche-microscopique-equation-d-etat-des-gaz-parfait">
+     Approche microscopique: Equation d’état des gaz parfait
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etude-des-gaz-equation-energetique">
+   Etude des gaz: Equation énergétique
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#energie-interne-des-gaz-parfaits-premiere-loi-de-joule">
+     Energie interne des gaz parfaits: Première loi de Joule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enthalpie-des-gaz-parfaits-deuxieme-loi-de-joule">
+     Enthalpie des gaz parfaits: Deuxième loi de Joule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relation-de-mayer-et-coefficient-gamma">
+     Relation de Mayer et coefficient gamma
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cas-du-gaz-parfait-monoatomique">
+     Cas du gaz parfait monoatomique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cas-des-gaz-parfaits-polyatomiques">
+     Cas des gaz parfaits polyatomiques
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#energie-interne-des-gaz-reels">
+     Energie interne des gaz réels
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="etude-des-gaz">
+<h1>Etude des gaz<a class="headerlink" href="#etude-des-gaz" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="etude-empirique-des-gaz">
+<h2>Etude empirique des gaz<a class="headerlink" href="#etude-empirique-des-gaz" title="Permalink to this headline">¶</a></h2>
+<p><em>En général l’étude empirique des gaz se fait par le contrôle de deux paramètres (température et volume par exemple) et par la mesure du troisième. On cherche alors à modéliser la relation (P,V,T) par une équation d’état et à l’interprêter physique (notamment à l’échelle microscopique).</em></p>
+<div class="section" id="gaz-parfait">
+<h3>Gaz parfait<a class="headerlink" href="#gaz-parfait" title="Permalink to this headline">¶</a></h3>
+<p><strong>Gaz parfait: Approche empirique</strong><br />
+Un gaz parfait n’a aujourd’hui de définition rigoureuse que si l’on considère ses aspects cinétiques et donc microscopiques. A l’échelle macroscopique, on ne peut définir un gaz parfait que par son comportement: il suit la loi de Boyle-Mariote qu’on peut réécrire, la définition de la température absolue aidant: <span class="math notranslate nohighlight">\(PV = nRT\)</span></p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Comportement à basse pression</strong><br />
+Du point de vue macroscopique, un gaz suit cette loi <strong>si sa pression est relativement faible</strong> (cf. expérience de Boyle-Mariotte). Le seuil de pression à partir duquel on peut considérer que le gaz suit le modèle du gaz parfait dépend du gaz et de la précision exigée.</p>
+<p class="card-text">D’un point de vue microscopique, la nécessité d’une basse pression peut être reliée à la nécessité de négliger les interactions à longue distance.</p>
+</div>
+</details></div>
+<div class="section" id="melange-de-gaz-et-pression-partielle">
+<h3>Mélange de gaz et pression partielle<a class="headerlink" href="#melange-de-gaz-et-pression-partielle" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Pression partielle</p>
+<p>Quand plusieurs gaz parfaits sont mélangés et à l’équilibre, on définit la pression partielle des gaz comme la pression qu’il auraient s’ils étaient seuls dans l’enceinte.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Pression partielle et équation d’état</p>
+<p>Dans un mélange de gaz parfaits, la pression partielle <span class="math notranslate nohighlight">\(P_r\)</span> du gaz est reliée à la température et au volume du système par l’équation d’état des gaz parfait <span class="math notranslate nohighlight">\(P_r V = nRT\)</span>.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Pression totale</p>
+<p>La pression totale est la somme des pressions partielles de chaque gaz.</p>
+</div>
+</div>
+<div class="section" id="ecart-au-gaz-parfait-gaz-reel">
+<h3>Ecart au gaz parfait. Gaz réel<a class="headerlink" href="#ecart-au-gaz-parfait-gaz-reel" title="Permalink to this headline">¶</a></h3>
+<p>Si l’on réalise une mesure du produit PV en faisant varier P,V pour une température donnée, on s’aperçoit qu’il apparaît un écart entre le produit PV et le produit nRT au fur et à mesure que P grandit. Cet écart au modèle du gaz parfait est d’autant plus important qu’on s’approche de la pression de vapeur saturante, c’est-à-dire la pression pour laquelle, pour une température donnée, le gaz se condense et forme un liquide.</p>
+<p>Rappelons nous que le modèle du gaz parfait correspond à des particules dont l’interaction à distance est négligeable. Si l’on augmente la pression, ces interactions deviennent importantes et la réalité s’écarte du modèle. Comme on l’a vu en chimie, les interactions entre molécules ou atomes sont des interactions dites de Van der Waals. On peut se baser sur ces interactions pour trouver une équation d’état.</p>
+<p><strong>Equation d’état de Van der Waals</strong><br />
+Pour décrire le comportement réels des gaz, on dispose notamment d’un modèle: le gaz de Van der Waals. On propose comme équation d’état des gaz:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-d5adf3a9-3d86-4ba0-baac-c0d5721b1f19">
+<span class="eqno">(7)<a class="headerlink" href="#equation-d5adf3a9-3d86-4ba0-baac-c0d5721b1f19" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+(P + \frac{n^2 a}{V^2})(V - nb) = nRT
+\end{equation}\]</div>
+<p>où a et b sont des constantes positives. Les termes correctifs <span class="math notranslate nohighlight">\(\frac{n^2 a}{V^2}\)</span> et nb sont, en général, faibles devant respectivement P et V aux basses pressions. On appelle le terme <span class="math notranslate nohighlight">\(\frac{n^2 a}{V^2}\)</span> <strong>pression moléculaire</strong> et b le <strong>covolume molaire</strong>.</p>
+</div>
+<div class="section" id="interpretation-de-l-equation-d-etat-de-van-der-waals">
+<h3>Interprétation de l’équation d’état de Van der Waals<a class="headerlink" href="#interpretation-de-l-equation-d-etat-de-van-der-waals" title="Permalink to this headline">¶</a></h3>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On considère un gaz suivant le modèle de Van der Waals.</p>
+<ol class="simple">
+<li><p>Vers quoi tend le volume quand P tend vers l’infini à température fixée? En déduire une interprétation de b.</p></li>
+<li><p>On suppose le covolume négligeable. Exprimer la pression <span class="math notranslate nohighlight">\(P\)</span> d’un gaz de Van der Waals. La comparer à celle d’un gaz parfait dans les mêmes conditions. Cette correction est-elle cohérente avec des interactions attractives.</p></li>
+</ol>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Démonstration<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Interprétation du covolume.</strong><br />
+Quand P tend vers l’infini, le terme <span class="math notranslate nohighlight">\(V-nb\)</span> tend vers 0, c’est-à-dire que le volume tend vers <span class="math notranslate nohighlight">\(nb\)</span>. Cela correspond à un cas limite où toute les molécules se touchent. Le terme <span class="math notranslate nohighlight">\(nb\)</span>, homogène à un volume, correspond au volume minimal occupé par les particules du gaz. Il s’agit d’une correction due à la dimension non négligeable des particules.</p>
+<p class="card-text">Le terme <span class="math notranslate nohighlight">\(\frac{n^2 a}{V^2}\)</span> est homogène à une pression (c’est-à-dire une force par unité de volume). Si l’on se place dans le cas relativement courant où le covolume est négligeable devant le volume V, l’équation d’état devient: <span class="math notranslate nohighlight">\(P = \frac{nRT}{V} - \frac{n^2 a}{V^2}\)</span>.</p>
+<p class="card-text">Autrement dit, pour une température et un volume donné, la pression moléculaire va avoir tendance à diminuer la pression par rapport au modèle du gaz parfait. La pression moléculaire représente en effet les forces d’interaction entre particules, c’est-à-dire les force de Van der Waals (le terme en <span class="math notranslate nohighlight">\(n^2/V^2\)</span> représentent bien la distance moyenne entre particule élevée à la puissance 6). Ces forces sont attractives: elles vont avoir tendance à diminuer la “poussée’’ du gaz sur la paroi (puisque les particules sont attirées ``vers” le gaz).</p>
+</div>
+</details></div>
+</div>
+<div class="section" id="etude-des-gaz-approche-microscopique">
+<h2>Etude des gaz: Approche microscopique<a class="headerlink" href="#etude-des-gaz-approche-microscopique" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="theorie-cinetique-des-gaz">
+<h3>Théorie cinétique des gaz<a class="headerlink" href="#theorie-cinetique-des-gaz" title="Permalink to this headline">¶</a></h3>
+<p>Nous allons étudier les gaz par leur comportement à l’échelle microscopique. Cela permettra d’expliquer par des phénomènes microscopiques l’équation d’état des gaz parfait. Pour faire cette étude, nous devons distinguer deux types d’hypothèses: les premières sont générales à la théorie cinétique des gaz et les secondes sont propres à l’étude d’un gaz parfait.</p>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Hypothèse de la théorie cinétique des gaz.</p>
+<ul class="simple">
+<li><p>Le gaz est à l’équilibre thermodynamique: la répartition des grandeurs macroscopiques extensives est donc homogène et constante dans tout le gaz.</p></li>
+<li><p>Il y a à l’échelle microscopique un chaos moléculaire c’est-à-dire que les molécules ont un mouvement incessant et désordonné: il est sans cesse modifié par des chocs avec d’autres molécules. Les vitesses et positions sont alors distribuées aléatoirement.</p></li>
+</ul>
+</div>
+<p><strong>Interprétation</strong><br />
+Ces hypothèses ont quelques conséquences sur l’étude des gaz. On rappelle qu’à l’échelle microscopique, on ne peut connaître les caractéristiques de chaque particules mais on peut s’intéresser à la <strong>statistique des différentes grandeurs, notamment des vitesses</strong>.</p>
+<ul class="simple">
+<li><p>l’équilibre thermodynamique impose que la répartition statistique des vitesses <span class="math notranslate nohighlight">\(\overrightarrow{v}\)</span> est la même à tout instant: on pourra noter <span class="math notranslate nohighlight">\(n(\overrightarrow{v})\)</span> sans se soucier de l’instant <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+<li><p>l’homogénéité des grandeurs impose aussi que la distribution <span class="math notranslate nohighlight">\(n(\overrightarrow{v})\)</span> est la même quelque soit la portion  considérée tout comme la concentration en particule.</p></li>
+<li><p>l’hypothèse du chaos moléculaire et le fait que que le gaz soit au repos impose aussi qu’il y a <strong>isotropie de l’espace</strong>, c’est-à-dire que toutes les directions de l’espace sont équivalente.On rappelle quelques conséquences sur la distribution des composantes des vitesses</p></li>
+<li><p>la moyenne d’ensemble d’une composantes est nulle.</p></li>
+<li><p>la statistique des composantes de vitesse est la même quelque soit la direction. Il vient notamment que la moyenne du carré de chaque composante est identique.</p></li>
+<li><p>une conséquence du dernier point est que le carré de la vitesse quadratique moyenne vaut 3 fois la moyenne du carré de chaque composante <span class="math notranslate nohighlight">\(u^2 = 3 \left\langle v_x^2 \right\rangle= 3 \left\langle v_y^2 \right\rangle= 3 \left\langle v_z^2 \right\rangle\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="modele-du-gaz-parfait-monoatomique">
+<h3>Modèle du gaz parfait monoatomique<a class="headerlink" href="#modele-du-gaz-parfait-monoatomique" title="Permalink to this headline">¶</a></h3>
+<p>A l’échelle microscopique, le modèle du gaz parfait monoatomique est décrit par trois hypothèses.</p>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Modèle du gaz parfait monoatomique</p>
+<ul class="simple">
+<li><p>Dans un gaz parfait, <strong>les seuls interactions qui existent sont des forces de contact au moment des chocs</strong>, soit entre particules, soit entre une particule et la paroi. Les interactions à longues distances, notamment entre particules sont négligées.</p></li>
+<li><p>On suppose de plus que <strong>les chocs sont tous élastiques</strong>, c’est-à-dire que l’énergie cinétique des deux particules qui s’entrechoquent ou du système {particule+paroi} est conservée au cours du mouvement.</p></li>
+<li><p>Dans le cadre d’un gaz parfait monoatomique, les particules peuvent être assimilées à des <strong>particules ponctuelles</strong>.</p></li>
+</ul>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Sur les hypothèses</strong><br />
+La troisième hypothèse est propre aux gaz parfait monoatomiques. Son implication directe est que l’énergie cinétique microscopique se réduit à l’énergie cinétique de translation. Pour déterminer l’équation d’état du gaz, cette conséquence a peu d’importance mais elle en aura quand il s’agira de déterminer l’énergie interne du gaz. Pour un gaz parfait composé de molécules, l’hypothèse d’une taille négligeable reste importante pour négliger le covolume.</p>
+<p class="card-text">L’assimilation à des particules ponctuelles a une conséquences gênantes. En effet, si les particules sont ponctuelles, la probabilité qu’elles s’entrechoquent est…  nulle! Or les chocs sont nécessaires pour atteindre le chaos moléculaire (l’isotropie notamment). Il faut donc comprendre pour cette hypothèse: “particules de dimensions négligeables” devant la distance entre particules. Cela revient à dire que <strong>le libre parcours moyen des particules est très grand devant la taille des particules</strong>. Pour un gaz parfait dans les conditions ambiantes, le libre parcours moyen se situe entre 10nm et <span class="math notranslate nohighlight">\(1 \rm{\mu m}\)</span>.</p>
+<p class="card-text">La première hypothèse est cruciale. On a vu que macroscopiquement, l’existence d’interactions à distances non négligeables impliquaient une déviance du comportement réel du gaz par rapport au modèle du gaz parfait.</p>
+<p class="card-text">On peut s’attarder sur l’hypothèse de l’élasticité des chocs. Dans le cas d’un gaz parfait monoatomique, la seule possibilité de transfert d’énergie est de l’énergie cinétique vers l’énergie de l’atome (du gaz ou de la paroi) qui conduit à une excitation de l’atome: les électrons peuvent passer à un niveau d’énergie supérieure. Or cela implique un échange d’énergie de l’ordre de l’électron-volt et donc une énergie cinétique du même ordre au moins. Pour cela, il faudrait une température d’au moins 11000K! Les systèmes étudiées n’atteindrons jamais cette température. L’hypothèse du choc élastique est donc pleinement justifiée.</p>
+</div>
+</details></div>
+<div class="section" id="calcul-de-la-pression-cinetique">
+<h3>Calcul de la pression cinétique<a class="headerlink" href="#calcul-de-la-pression-cinetique" title="Permalink to this headline">¶</a></h3>
+<p>Ce calcul est à savoir faire par coeur.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On s’intéresse à un élément de surface orienté vers l’extérieur de l’enceinte. Pour plus de simplicité, nous définissons un repère cartésien où l’axe Ox est suivant la normale à la paroi orienté vers l’extérieur (<span class="math notranslate nohighlight">\(\overrightarrow{dS} = dS \overrightarrow{e_x} = dy dz \overrightarrow{e_x}\)</span>).</p>
+<p>On va travailler sous le modèle du choc simplifié (modèle de Krönig, 1856). Dans ce cadre, on suppose que:</p>
+<ul class="simple">
+<li><p>toutes les particules (identiques) ont en module la même vitesse v.</p></li>
+<li><p>chaque particule ne peut se déplacer que suivant une seule des trois directions Ox, Oy, Oz (dans les deux sens).</p></li>
+</ul>
+<p>On peut obtenir l’expression de la pression cinétique sans ces hypothèses mais une telle démonstration n’est plus dans le cadre du programme.</p>
+<ol class="simple">
+<li><p>Que vaut la vitesse quadratique?</p></li>
+<li><p>Déduire des hypothèses précédentes le nombre de particules par unité de volume qui possèdent la vitesse <span class="math notranslate nohighlight">\(+v \overrightarrow{e_x}\)</span>.</p></li>
+<li><p>On considère une particule heurtant la paroi entre t et t+dt. Relier la variation <span class="math notranslate nohighlight">\(\overrightarrow{\rm{d} p_1}\)</span>de quantité de mouvement de la particule entre t et t+dt à la force moyenne exercée par la particule sur la paroi entre t et t+dt. En déduire l’expression de la pression cinétique en fonction de <span class="math notranslate nohighlight">\(\overrightarrow{\rm{d} p_1}\)</span>, du nombre <span class="math notranslate nohighlight">\(dN_{choc}\)</span> de particules qui heurtent la paroi dS entre t et t+dt et de la surface dS.</p></li>
+<li><p>Exprimer <span class="math notranslate nohighlight">\(\overrightarrow{\rm{d} p_1}\)</span> en fonction de la masse de la particule et de sa vitesse v.</p></li>
+<li><p>Déterminer le volume dans lequel doivent se trouver les particules à l’instant t pour qu’elles heurtent la paroi dS entre t et t+dt. En déduire <span class="math notranslate nohighlight">\(dN_{choc}\)</span>.</p></li>
+<li><p>En déduire que la pression cinétique s’exprime comme <span class="math notranslate nohighlight">\(P = \frac{N}{3V}mu^2\)</span></p></li>
+</ol>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Démonstration<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Pression et force moyenne</strong><br />
+Le principe fondamentale de la dynamique appliqué à la particule dans le référentiel de la paroi supposé galiléen s’écrit: <span class="math notranslate nohighlight">\(\frac{\rm{d}\overrightarrow{p}}{\rm{dt}} = \overrightarrow{F_{paroi \to particule}} = - \overrightarrow{F_{particule \to paroi}}\)</span>. Il vient le calcul de la force moyenne:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\left\langle F_{particule \to paroi} \right\rangle &amp;= \frac{1}{\rm{d}t} \int_{t}^{t+\rm{d}t}F_{particule \to paroi}(t) \rm{d}t\\
+&amp;= - \frac{1}{\rm{d}t} \int_{t}^{t+\rm{d}t}\frac{\rm{d}\overrightarrow{p}}{\rm{\rm{d}t}} \rm{d}t\\
+&amp;= - \frac{1}{\rm{d}t} \int_{\overrightarrow{p}(t)}^{\overrightarrow{p}(t+\rm{d}t)} \rm{d}\overrightarrow{p}\\
+&amp;= - \frac{1}{\rm{d}t} \overrightarrow{\rm{d} p_1}
+\end{align*}\]</div>
+<p class="card-text">La force exercée par l’ensemble du gaz s’écrit évidemment <span class="math notranslate nohighlight">\(\left\langle \overrightarrow{dF_{gaz \to paroi}} \right\rangle = dN_{choc} \left\langle \overrightarrow{F_{gaz \to particule}} \right\rangle\)</span> soit une pression cinétique:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+P &amp;= \frac{\left\langle \overrightarrow{\rm{d}F_{gaz\to paroi}} \right\rangle \cdot \overrightarrow{e_x}}{\rm{d}S}\\
+&amp;= - \frac{dN_{choc}}{\rm{d}t \rm{d}S} \overrightarrow{\rm{d} p_1}\cdot \overrightarrow{e_x}
+\end{align*}\]</div>
+<p class="card-text"><strong>Variation de quantité de mouvement</strong><br />
+Remarquons que pour heurter la paroi, la particule doit nécessairement se diriger suivant <span class="math notranslate nohighlight">\(+ \overrightarrow{e_x}\)</span>. Avec les hypothèses simplifiées, elle aura donc une vitesse <span class="math notranslate nohighlight">\(+ v \overrightarrow{e_x}\)</span> avant le choc et une vitesse <span class="math notranslate nohighlight">\(- v\overrightarrow{e_x}\)</span> après le choc.</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\overrightarrow{d p_{1}} &amp;= \overrightarrow{p(t+dt)} - \overrightarrow{p(t)}\\
+&amp;= - 2m v \overrightarrow{e_x}
+\end{align*}\]</div>
+<p class="card-text"><strong>Dénombrement des particules</strong><br />
+On veut déterminer <span class="math notranslate nohighlight">\(dN_{choc}\)</span>. Pour venir taper la surface <span class="math notranslate nohighlight">\(dS\)</span> entre <span class="math notranslate nohighlight">\(t\)</span> et <span class="math notranslate nohighlight">\(t+dt\)</span>, les particules, sous l’hypothèse du choc simplifié doivent satisfaire les conditions suivantes:</p>
+<ul class="simple">
+<li><p class="card-text">avoir à l’instant <span class="math notranslate nohighlight">\(t\)</span> la vitesse <span class="math notranslate nohighlight">\(\overrightarrow{v} = + v \overrightarrow{e_x}\)</span></p></li>
+<li><p class="card-text">se trouver dans le cylindre de base <span class="math notranslate nohighlight">\(dS\)</span> (sinon elle taperait à côté)</p></li>
+<li><p class="card-text">être à une distance de la paroi inférieure à <span class="math notranslate nohighlight">\(vdt\)</span> (sinon, elle n’atteindrait pas la paroi avant <span class="math notranslate nohighlight">\(t+dt\)</span>)</p></li>
+</ul>
+<p class="card-text">Les deux dernières conditions impliquent toutes les particules qui se situent dans le cylindre de hauteur <span class="math notranslate nohighlight">\(vdt\)</span> appuyé sur la base <span class="math notranslate nohighlight">\(dS\)</span> et seulement ces particules viendront heurter la paroi entre <span class="math notranslate nohighlight">\(t\)</span> et <span class="math notranslate nohighlight">\(t+dt\)</span>. A l’équilibre, les grandeurs sont homogènes, et le nombre total de particules contenues dans ce volume s’obtient par une règle de trois (on note <span class="math notranslate nohighlight">\(N_V\)</span> le nombre de particules par unités de volume du gaz): <span class="math notranslate nohighlight">\(dN_{cylindre} = N_V d \tau_{cylindre} = \frac{N}{V} vdt dS\)</span></p>
+<p class="card-text">La première condition, associée à l’isotropie implique que seules <span class="math notranslate nohighlight">\(1/6\)</span> de ces particules vont venir heurter la paroi: <span class="math notranslate nohighlight">\(dN_{choc} = \frac{N}{6V} v dt dS = \frac{N}{6V} u dt dS\)</span></p>
+<p class="card-text"><strong>Calcul de la pression cinétique:</strong><br />
+Il vient: <span class="math notranslate nohighlight">\(P = \frac{N}{6V} u dt dS \frac{2mu}{dt dS} = \frac{N}{3V} m u^2\)</span></p>
+</div>
+</details></div>
+<div class="section" id="approche-microscopique-equation-d-etat-des-gaz-parfait">
+<h3>Approche microscopique: Equation d’état des gaz parfait<a class="headerlink" href="#approche-microscopique-equation-d-etat-des-gaz-parfait" title="Permalink to this headline">¶</a></h3>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Pression cinétique</p>
+<p>Sous les hypothèses de la théorie cinétique et du gaz parfait, la pression cinétique est reliée à la vitesse quadratique moyenne:</p>
+<p>\begin{equation}
+P = \frac{N}{3V} mu^2</p>
+</div>
+<p><em>Rappel : Température cinétique</em><br />
+On rappelle que la vitesse quadratique moyenne est reliée à la température par <span class="math notranslate nohighlight">\(\frac{3}{2}k_B T = \frac{1}{2}m u^2\)</span>.</p>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Equation d’état des gaz parfait.</p>
+<p>L’équation d’état d’un gaz parfait monoatomique est: <span class="math notranslate nohighlight">\(PV = Nk_B T = nRT\)</span>. Elle se démontre à partir de l’expression de la pression cinétique et de la température cinétique.</p>
+</div>
+</div>
+</div>
+<div class="section" id="etude-des-gaz-equation-energetique">
+<h2>Etude des gaz: Equation énergétique<a class="headerlink" href="#etude-des-gaz-equation-energetique" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="energie-interne-des-gaz-parfaits-premiere-loi-de-joule">
+<h3>Energie interne des gaz parfaits: Première loi de Joule<a class="headerlink" href="#energie-interne-des-gaz-parfaits-premiere-loi-de-joule" title="Permalink to this headline">¶</a></h3>
+<p><em>Rappel :</em><br />
+L’énergie interne est une fonction d’état. Elle peut donc se définir comme une fonction de variables d’état indépendantes par exemple U(T,V,n) (en pratique on écrira en physique U(T,V) car on travaille avec des systèmes fermés où n peut être considéré comme un paramètre).</p>
+<p>On rappelle que le comportement de l’énergie interne vis-à-vis d’une des variables est caractérisée par une dérivée partielle. On définit en particulier la capacité thermique à volume constante <span class="math notranslate nohighlight">\(C_V = {\left ( \frac{\partial U}{\partial T}\right )}_V\)</span>.</p>
+<p>La différentielle de l’énergie interne peut alors s’écrire:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-812313e9-8959-4533-a8e7-2f172350eae2">
+<span class="eqno">(8)<a class="headerlink" href="#equation-812313e9-8959-4533-a8e7-2f172350eae2" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+dU(T,V) = C_V(T,V) dT + {\left(\frac{\partial U}{\partial V}\right)}(T,V)_T dV
+\end{equation}\]</div>
+<p>On a choisi ici d’exprimer U comme une fonction de T et V. Ce sera souvent le cas dans les premiers temps mais il faut savoir qu’on peut aussi exprimer U comme une fonction de S et V. Les dérivées partielles sont alors différentes (on pourra remarquer qu’il s’agit alors de la température et de la pression).</p>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Première loi de Joule</p>
+<p>L’énergie interne d’un gaz parfait <strong>ne dépend que de la température</strong>: <span class="math notranslate nohighlight">\(U(T,V) = U(T)\)</span>. Sa différentielle s’écrit: <span class="math notranslate nohighlight">\(dU = C_V(T) dT\)</span>.</p>
+<p>Dans la majorité des cas étudiés, on peut considérer que la capacité thermique à volume constant ne dépend pas de T sur de grandes gammes de températures, de sorte que la variation d’énergie interne sur une transformation finie s’écrit <span class="math notranslate nohighlight">\(\Delta U = C_V \Delta T\)</span>.</p>
+</div>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Exemple :</p>
+<p>La capacité thermique molaire à volume constant du Néon dans les gammes de températures ambiantes (et jusqu’à plus de 600K) est de l’ordre de <span class="math notranslate nohighlight">\(12.4 J.\rm{mol^{-1}.K^{-1}}\)</span>. Elle est à peu près égale à <span class="math notranslate nohighlight">\(\frac{3}{2}R\)</span>.</p>
+<p>La capacité thermique molaire à volume constant du dihydrogène dans les gammes de températures ambiantes (et jusqu’à plus de 600K) est de l’ordre de <span class="math notranslate nohighlight">\(20.8 J.\rm{mol^{-1}.K^{-1}}\)</span>. Elle est à peu près égale à <span class="math notranslate nohighlight">\(\frac{5}{2}R\)</span>.</p>
+<p>Nous verrons par la suite que ces valeurs ont un sens particuliers.</p>
+</div>
+</div>
+<div class="section" id="enthalpie-des-gaz-parfaits-deuxieme-loi-de-joule">
+<h3>Enthalpie des gaz parfaits: Deuxième loi de Joule<a class="headerlink" href="#enthalpie-des-gaz-parfaits-deuxieme-loi-de-joule" title="Permalink to this headline">¶</a></h3>
+<p><em>Rappel : L’enthalpie est une fonction d’état. Elle peut donc se définir comme une fonction de variables d’état indépendantes par exemple U(T,P,n) (en pratique on écrira en physique U(T,P) car on travaille avec des systèmes fermés où n peut être considéré comme un paramètre).</em></p>
+<p>On rappelle que le comportement de l’enthalpie vis-à-vis d’une des variables est caractérisée par une dérivée partielle. On définit en particulier la capacité thermique à pression constante <span class="math notranslate nohighlight">\(C_P = {\left ( \frac{\partial H}{\partial T}\right )}_P\)</span>.</p>
+<p>La différentielle de l’enthalpie peut alors s’écrire:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8daeaf3a-c188-4620-8003-854ab381d75a">
+<span class="eqno">(9)<a class="headerlink" href="#equation-8daeaf3a-c188-4620-8003-854ab381d75a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+dH(T,P) = C_P(T,P) dT + {\left(\frac{\partial H}{\partial P}\right)}(T,P)_T dP
+\end{equation}\]</div>
+<p>On a choisi ici d’exprimer H comme une fonction de T et P alors qu’on a exprimé U comme une fonction de T et V. On aurait très bien pu exprimer H comme une fonction de T et V mais comme on le verra par la suite, il est préférable d’exprimer H(T,P) plutôt que H(T,V) à cause de l’utilisation faite de H. De même, il arrive qu’on préfère écrire H(S,P) mais nous nous servirons peu de cette vision de l’enthalpie.</p>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Deuxième loi de Joule</p>
+<p>L’enthalpie d’un gaz parfait <strong>ne dépend que de la température</strong>: <span class="math notranslate nohighlight">\(H(T,P) = H(T)\)</span>. Sa différentielle s’écrit: <span class="math notranslate nohighlight">\(dH = C_P(T) dT\)</span>.</p>
+<p>Dans la majorité des cas étudiés, on peut considérer que la capacité thermique à pression constante ne dépend pas de T sur de grandes gammes de températures, de sorte que la variation d’énergie interne sur une transformation finie s’écrit <span class="math notranslate nohighlight">\(\Delta H = C_P \Delta T\)</span>.</p>
+</div>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Exemple :</p>
+<p>La capacité thermique molaire à pression constante du Néon dans les gammes de températures ambiantes (et jusqu’à plus de 600K) est de l’ordre de <span class="math notranslate nohighlight">\(20.8 J.\rm{mol^{-1}.K^{-1}}\)</span>. Elle est à peu près égale à <span class="math notranslate nohighlight">\(\frac{5}{2}R\)</span>.</p>
+<p>La capacité thermique molaire à pression constante du dihydrogène dans les gammes de températures ambiantes (et jusqu’à plus de 600K) est de l’ordre de <span class="math notranslate nohighlight">\(29.0 J.\rm{mol^{-1}.K^{-1}}\)</span>. Elle est à peu près égale à <span class="math notranslate nohighlight">\(\frac{7}{2}R\)</span>.</p>
+<p>Nous verrons par la suite que ces valeurs ont un sens particuliers.</p>
+</div>
+</div>
+<div class="section" id="relation-de-mayer-et-coefficient-gamma">
+<h3>Relation de Mayer et coefficient gamma<a class="headerlink" href="#relation-de-mayer-et-coefficient-gamma" title="Permalink to this headline">¶</a></h3>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Relation de Mayer</p>
+<p>Pour un gaz parfait: <span class="math notranslate nohighlight">\(C_P - C_V = nR\)</span></p>
+</div>
+<p><strong>Démonstration</strong><br />
+La première loi de Joule donne l’expression de <span class="math notranslate nohighlight">\(\Delta U = C_V \Delta T\)</span>. La variation d’enthalpie s’écrit donc: <span class="math notranslate nohighlight">\(\Delta H = \Delta (U + PV) = \Delta U + \Delta (nRT) = (C_V + nR) \Delta T\)</span> donc <span class="math notranslate nohighlight">\(C_P = C_V + nR\)</span></p>
+<p><strong>Interprétation</strong><br />
+On rappelle que la capacité thermique à volume constant donne l’énergie à fournir pour augmenter la température de 1K à volume constant et la capacité thermique à pression constante l’énergie à fournir pour augmenter la température de 1K à pression constante. La relation de Mayer montre que <span class="math notranslate nohighlight">\(C_P &gt; C_V\)</span>: il est donc plus coûteux (en énergie) d’augmenter la température à pression constante que de l’augmenter à volume constante. On pourra en comprendre la raison par la suite.</p>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Coefficient gamma.</p>
+<p>On définit le coefficient gamma <span class="math notranslate nohighlight">\(\gamma\)</span> d’un gaz parfait par le rapport <span class="math notranslate nohighlight">\(\gamma = \frac{C_P}{C_V}\)</span>. Il dépend du type de gaz mais pas de la quantité de gaz. Il est nécessairement supérieur à 1.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Coefficient gamma et capacités thermiques</p>
+<p>En général, la seule donnée du coefficient gamma suffit à caractériser un gaz parfait (en plus de préciser qu’il s’agit d’un gaz parfait) d’un point de vue énergétique. En effet, avec la relation de Mayer, on a deux relations, faisant intervenir les capacités thermiques, on peut donc les exprimer en fonction du coefficient gamma et du nombre de mole.</p>
+<p><strong>On s’entraînera à montrer les expressions suivantes (utilisables directement):</strong></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+C_V &amp;= \frac{nR}{\gamma-1}\\
+C_p &amp;= \frac{\gamma nR}{\gamma - 1}
+\end{align*}\]</div>
+</div>
+</div>
+<div class="section" id="cas-du-gaz-parfait-monoatomique">
+<h3>Cas du gaz parfait monoatomique<a class="headerlink" href="#cas-du-gaz-parfait-monoatomique" title="Permalink to this headline">¶</a></h3>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Energie interne d’un gaz parfait monoatomique</p>
+<p>L’énergie interne d’un gaz parfait monoatomique est <span class="math notranslate nohighlight">\(U = \frac{3}{2}n R T\)</span>. Sa capacité thermique à volume constant est donc <span class="math notranslate nohighlight">\(C_V = \frac{3}{2}nR\)</span> et sa capacité thermique à pression constante est <span class="math notranslate nohighlight">\(\frac{5}{2}nR\)</span>.</p>
+<p>Le coefficient gamma d’un gaz parfait monoatomique est donc <span class="math notranslate nohighlight">\(\gamma = \frac{5}{3}\)</span>.</p>
+</div>
+<p><strong>Justification</strong><br />
+On rappelle que l’énergie interne est la somme de toutes les composantes “microscopiques” de l’énergie. On distingue l’énergie associée à la translation des molécules, à leur vibration, à leur rotation et enfin l’énergie potentielle d’interaction.</p>
+<p>Dans le cas d’un gaz parfait, l’énergie potentielle d’interaction est nulle puisqu’on néglige les interactions à longues distances.</p>
+<p>De plus, il n’y a ni vibration, ni rotation pour des atomes (assimilables à des points matériels). La seule compose restante est donc l’énergie cinétique de translation.</p>
+<p>On a vu que cette dernière valait en moyenne <span class="math notranslate nohighlight">\(\overline{E_C}=\frac{3}{2}k_B T\)</span> soit une énergie cinétique totale pour N particule: <span class="math notranslate nohighlight">\(E_C = \frac{3}{2}Nk_B T = \frac{3}{2}n R T\)</span>.</p>
+</div>
+<div class="section" id="cas-des-gaz-parfaits-polyatomiques">
+<h3>Cas des gaz parfaits polyatomiques<a class="headerlink" href="#cas-des-gaz-parfaits-polyatomiques" title="Permalink to this headline">¶</a></h3>
+<p><em>Rappel : On rappelle que pour tout gaz parfait, l’énergie interne ne dépend que de la température.</em></p>
+<div class="hint dropdown admonition">
+<p class="admonition-title">Compléments : Loi d’équipartition (admis)</p>
+<p>On peut montrer que chaque terme énergétique “quadratique’’ (c’est-à-dire proportionnel au carré de la position ou de la vitesse) <strong>peut contribuer</strong> à l’énergie interne pour une valeur <span class="math notranslate nohighlight">\(\frac{1}{2}k_B T\)</span>. On appelle ces termes des ``degrés de liberté” du système.</p>
+</div>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Exemple : Cas de l’énergie cinétique de translation.</p>
+<p>Pour une particule l’énergie cinétique de translation s’écrit <span class="math notranslate nohighlight">\(\frac{1}{2}m v_x^2 + \frac{1}{2}m v_y^2 + \frac{1}{2}m v_z^2\)</span>. Il y a donc trois termes quadratiques qui contribuent donc pour <span class="math notranslate nohighlight">\(\frac{3}{2}k_B T = \frac{3}{2}nR T\)</span>. Pour un gaz composé de N particules, on retrouve une énergie interne de <span class="math notranslate nohighlight">\(\frac{3}{2}Nk_B T\)</span>.</p>
+</div>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Exemple : Cas d’une molécule diatomique. Energie interne maximale.</p>
+<p>Pour une molécule diatomique, outre l’énergie cinétique de translation, il va aussi y avoir une énergie cinétique de vibration (<span class="math notranslate nohighlight">\(\frac{1}{2}m \dot \Delta l^2\)</span>) et une énergie potentielle de vibration (<span class="math notranslate nohighlight">\(\frac{1}{2}k \Delta l^2\)</span>) qui peuvent contribuer à l’énergie interne  soit un terme supplémentaire <span class="math notranslate nohighlight">\(nRT\)</span>.</p>
+<p>De plus il y a aussi l’énergie cinétique de rotation qui peut être complètement décrite par deux rotations (de vitesses angulaires notés <span class="math notranslate nohighlight">\(\dot \phi\)</span> et <span class="math notranslate nohighlight">\(\dot \theta\)</span> associées à des énergies cinétiques <span class="math notranslate nohighlight">\(\frac{1}{2}J_{\phi}\dot \phi^2\)</span> et <span class="math notranslate nohighlight">\(\frac{1}{2}J_{\theta}\dot \theta^2\)</span>) soit un terme supplémentaire <span class="math notranslate nohighlight">\(nRT\)</span>.</p>
+<p>Il vient qu’on attend une énergie interne maximale égale à <span class="math notranslate nohighlight">\(U = \frac{7}{2}nRT\)</span> soit <span class="math notranslate nohighlight">\(C_V = \frac{7}{2}nR\)</span>.</p>
+</div>
+<div class="hint dropdown admonition">
+<p class="admonition-title">Compléments : Gel des degrés de liberté.</p>
+<p>En pratique, l’énergie interne des gaz parfaits diatomiques n’est que très rarement égale à sa valeur maximale. Par exemple, à température ambiante (pour beaucoup de gaz parfait diatomique et de gaz parfaits en général), elle est égale à <span class="math notranslate nohighlight">\(\frac{5}{2}nR T\)</span>.</p>
+<p>En effet, suivant la température, certains “degrés” de liberté sont “gelés”, c’est-à-dire que les mouvements associées se ne se produisent. On observe ainsi que pour de nombreux gaz parfait diatomiques à température ambiante, les molécules ne vibrent pas de sorte que les degrés de liberté associés ne participent par à l’énergie interne.D’où une énergie interne <span class="math notranslate nohighlight">\(U = \frac{5}{2}nRT\)</span>.</p>
+<p>On peut montrer que lorsque la température augmente, le degré de liberté se dégèle pour la quasi-totalité de molécule très rapidement de sorte que la capacité thermique change assez rapidement de valeur avec la température avant de rester constante sur un large palier de température.</p>
+<div class="figure align-center" id="fig-271">
+<img alt="../_images/thermo_cv_temperture.jpg" src="../_images/thermo_cv_temperture.jpg" />
+</div>
+</div>
+</div>
+<div class="section" id="energie-interne-des-gaz-reels">
+<h3>Energie interne des gaz réels<a class="headerlink" href="#energie-interne-des-gaz-reels" title="Permalink to this headline">¶</a></h3>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Exemple : Cas du gaz de Van der Waals (pas à connaître)</p>
+<p>De manière générale, l’énergie interne d’un gaz qui ne suit pas la première loi Joule: elle dépend à la fois de la température et du volume.</p>
+<p>Par exemple, on associe au modèle de Van der Waals, une énergie interne <span class="math notranslate nohighlight">\(U = U_{GP} - \frac{n^2 a}{V^2}\)</span>. Le terme correctif est associé à l’énergie potentielle d’interaction. Elle est négative car l’interaction est attractive (Van der Waals).</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="th_usuels.html" title="previous page">Systèmes thermodynamiques usuels</a>
+    <a class='right-next' id="next-link" href="th_u_condenses.html" title="next page">Phases condensées</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

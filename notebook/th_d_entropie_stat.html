@@ -1,0 +1,646 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Approche statistique de l’entropie &#8212; Thermodynamique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/thermodynamique/notebook/th_d_entropie_stat.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Systèmes thermodynamiques usuels" href="th_usuels.html" />
+    <link rel="prev" title="Exercices d’application" href="th_d_ex_app.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Thermodynamique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thermodynamique.html">
+   Thermodynamique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="th_description.html">
+   Description d’un système thermodynamique
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_systeme.html">
+     Système thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_echelle.html">
+     Echelles d’étude
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_variables.html">
+     Variables d’état et variables microscopiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_equilibre.html">
+     Equilibre thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_extensives.html">
+     Variables extensives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_intensives.html">
+     Grandeurs intensives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Approche statistique de l’entropie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_usuels.html">
+   Systèmes thermodynamiques usuels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_gaz.html">
+     Etude des gaz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_condenses.html">
+     Phases condensées
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_premier_pcp.html">
+   Premier principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_enonce.html">
+     Premier principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_q.html">
+     Transfert thermique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_w.html">
+     Travail mécanique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_transfo.html">
+     Etude de transformations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_compression.html">
+     Compression isotherme d’un gaz parfait
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_act_meth.html">
+     Activités méthodes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_second_pcp.html">
+   Second principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_enonce.html">
+     Second principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_expression.html">
+     Expression des grandeurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_interpretation.html">
+     Interprétations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_exemples.html">
+     Exemples d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_ex_app.html">
+     Second principe: Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_td.html">
+     Second principe: Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_chgt_etat.html">
+   Transitions de phases
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_obs.html">
+     Observations expérimentales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_quant.html">
+     Analyse quantitative
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_td.html">
+     Travaux dirigés: Changements d’état
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_machines.html">
+   Machines thermiques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_gene.html">
+     Généralités
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_moteur.html">
+     Moteurs thermiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_recepteur.html">
+     Récepteurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_methodes.html">
+     Méthodes d’études
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_ex_app.html">
+     Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/th_d_entropie_stat.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/th_d_entropie_stat.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/th_d_entropie_stat.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#macroetat-et-microetat">
+   Macroétat et microétat
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decompte-des-microetats">
+   Décompte des microétats
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hypothese-microcanonique">
+   Hypothèse microcanonique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#les-billes">
+   Les billes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entropie-statistique">
+   Entropie statistique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entropie-d-un-systeme-isole-exemple-des-billes">
+   Entropie d’un système isolé: Exemple des billes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entropie-desordre-et-information">
+   Entropie, désordre et information
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="approche-statistique-de-l-entropie">
+<h1>Approche statistique de l’entropie<a class="headerlink" href="#approche-statistique-de-l-entropie" title="Permalink to this headline">¶</a></h1>
+<p><em>L’entropie définie par le second principe permet de prévoir le sens des transformations, elle peut se calculer au moyen de diverses expressions. Néanmoins, sa définition, quoique très utile, semble très abstraite et ad hoc. Comment l’interpréter ? Et surtout a-t-elle une signification microscopique ou est-elle une construction mathématique purement abstraite qui cache un aspect plus fondamental de la matière ?</em></p>
+<p>Jusqu’à présent, nous avions dit que nous ne pouvions étudié le comportement de chaque particule du système tant elles sont nombreuses. Néanmoins, les progrès mathématiques permettent une étude globale à l’échelle microscopique: on va faire des statistiques. Les concepts de valeurs moyennes, écart-type, variance…  vont intervenir en physique. Boltzmann va ajouter le concept de probabilité et de variabilité pour remonter à la vision macroscopique du système et surtout de l’entropie. C’est pourquoi, on parlera d’<strong>entropie statistique de Boltzmann</strong>.</p>
+<div class="section" id="macroetat-et-microetat">
+<h2>Macroétat et microétat<a class="headerlink" href="#macroetat-et-microetat" title="Permalink to this headline">¶</a></h2>
+<p><em>Rappel : Macro-état</em><br />
+On appelle macro-état d’un système thermodynamique, l’état du système défini par les seules variables marocroscopiques du système (par exemple E,V,n).</p>
+<p><em>Rappel : Microétat</em><br />
+On appelle micro-état d’un système thermodynamique, un état du système décrit par les données de toutes les grandeurs microscopiques (vitesses et positions) des particules du système.</p>
+<p>On rappelle que la connaissance d’un micro-état précis est impossible et que de plus, le micro-état du système change à chaque instant (sous le simple effet des déplacements).</p>
+<p>A l’inverse, à l’équilibre le macro-état reste le même et est mesurable.</p>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Microétat compatible</p>
+<p>Pour un macro-état observé, les micro-états dont les données sont cohérentes avec le macro-état observé sont dits micro-état compatibles ou accessibles.</p>
+<p>Pour un macro-état <span class="math notranslate nohighlight">\(\mathfrak{E}\)</span>donné, on notera le nombre de micro-état compatibles <span class="math notranslate nohighlight">\(\Omega(\mathfrak{E})\)</span>.</p>
+</div>
+</div>
+<div class="section" id="decompte-des-microetats">
+<h2>Décompte des microétats<a class="headerlink" href="#decompte-des-microetats" title="Permalink to this headline">¶</a></h2>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Prenons pour simplifier un gaz composé de 5 particules dans une enceinte rigide et calorifugée. On suppose que l’état de chaque particule du gaz n’est donné que par son énergie (pas sa position ou sa vitesse) qui ne peut prendre que deux valeurs 0 ou E1. Nous supposons de plus que l’état macroscopique du système est donné par la donnée de son énergie E totale.</p>
+<ol class="simple">
+<li><p>Donner l’écriture d’un macro état puis d’un micro-état compatible.</p></li>
+<li><p>On suppose que le système est dans l’état <span class="math notranslate nohighlight">\(E = 4E_1\)</span>. Recenser tous les micro-état accessibles.</p></li>
+<li><p>Donner l’expression de la fonction <span class="math notranslate nohighlight">\(\Omega(E)\)</span> pour chaque valeur possibles de E.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="hypothese-microcanonique">
+<h2>Hypothèse microcanonique<a class="headerlink" href="#hypothese-microcanonique" title="Permalink to this headline">¶</a></h2>
+<p>Les différentes macro-état possibles n’ont pas tous le même nombre de micro-états compatibles. Si l’on attend suffisamment longtemps, on peut supposer qu’on va atteindre un état d’équilibre donc une valeur d’énergie particulière. Quelle valeur sera atteinte ? <span class="math notranslate nohighlight">\(E=3E_1\)</span> ou <span class="math notranslate nohighlight">\(E=2E_1\)</span> ? On pourrait le penser puisque ces états compte le plus de micro-états. Cela dit, il faut encore être sûr que chaque micro-état possède la même probabilité d’exister.</p>
+<p>C’est pourquoi on doit faire une hypothèse fondamentale pour la physique statistique.</p>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Système microcanonique</p>
+<p>Un système pour lequel l’énergie du macroétat est imposé (système isolé) est appelé distribution microcanonique. Les variables privilégiées seront donc l’énergie E, le volume V et le nombre de mole n (ou le nombre de particules N).</p>
+</div>
+<p>Il existe d’autres types de distributions statistiques où l’on impose d’autres grandeurs (on peut imposer le volume et la température ou la pression et la température… )</p>
+<p>On impose E, V et N mais les autres grandeurs peuvent parfaitement varier. Autrement dit, même si on fixe E,V et n, les autres grandeurs T et P ne sont pas forcément fixées. Il peut donc y avoir plusieurs macroétats possibles. Dans ces conditions, celui qui décrira le mieux le système à l’équilibre sera le macroétats le plus probables. L’hypothèse microcanonique assure que <strong>le macroétat le plus probable</strong> est celui pour lequel la grandeur <span class="math notranslate nohighlight">\(\Omega(E,V,n)\)</span>. On appelle la fonction <span class="math notranslate nohighlight">\(\Omega\)</span> nombre <strong>d’états accessibles</strong>.</p>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Hypothèse microcanonique</p>
+<p>Dans un système isolé, tous les états microscopiques, ou micro-états, possibles, c’est-à-dire correspondant à un macro-état donné sont équiprobables.</p>
+</div>
+<p>Qu’est-ce que ça veut dire ? Imaginons qu’on puissent distinguer tous les micro-états possibles d’un système quand on a fixé ses grandeurs macroscopiques (donc son macroétat). Si chaque état est équiprobable, cela veut dire que pendant un temps déterminer <span class="math notranslate nohighlight">\(\tau\)</span>, le système passe autant de temps dans chaque état du système. Plus généralement, si un microétat <span class="math notranslate nohighlight">\(\Sigma_1\)</span> possède une probabilité p de se réaliser, le système, pendant un temps <span class="math notranslate nohighlight">\(\tau\)</span> donné, passera un temps <span class="math notranslate nohighlight">\(p\tau\)</span> dans le microétat <span class="math notranslate nohighlight">\(\Sigma_1\)</span>.</p>
+</div>
+<div class="section" id="les-billes">
+<h2>Les billes<a class="headerlink" href="#les-billes" title="Permalink to this headline">¶</a></h2>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On suppose un ensemble de N billes situées dans une enceinte rigide et calorifugée. On a séparé l’enceinte en 2 parties de volumes égaux V/2. On note le compartiment de gauche 1 et celui de droite 2. On suppose que le macroétat est défini par le nombre de particules <span class="math notranslate nohighlight">\(N_1\)</span> contenues dans le compartiment 1 (on peut imaginer que ce sont des billes suffisamment grandes pour qu’on puisse les compter par chronophotographie). La fonction de partition sera donc exprimée en fonction de N et <span class="math notranslate nohighlight">\(N_1\)</span>.</p>
+<ol class="simple">
+<li><p>Déterminer la fonction <span class="math notranslate nohighlight">\(\Omega(N,N_1)\)</span>. La représenter.</p></li>
+<li><p>Quel est le macroétat le plus probable ? En déduire l’état du système à l’équilibre ?</p></li>
+<li><p>Dans l’hypothèse des grands ensembles de particules (N grand) la fonction  peut se réécrire: <span class="math notranslate nohighlight">\(\Omega(N,N_1)\approx 2^N \exp\left(-2 \frac{{(N_1 - 0.5 N)}^2}{N}\right)\)</span>. Déterminer la largeur à mi-hauteur du pic autour du maximum. Commenter sa largeur.</p></li>
+<li><p>Déterminer le temps moyen passé par jour dans l’état {toutes les particules dans le compartiment de gauche}.</p></li>
+</ol>
+<p>On retiendra que si les grandeurs non imposées fluctuent (ici la concentration à gauche, mais ce pourrait être la température, la pression… ), la largeur de fluctuation est tellement faible qu’il est légitime de les considérées comme constante à l’équilibre.</p>
+</div>
+</div>
+<div class="section" id="entropie-statistique">
+<h2>Entropie statistique<a class="headerlink" href="#entropie-statistique" title="Permalink to this headline">¶</a></h2>
+<div class="hint dropdown admonition">
+<p class="admonition-title">Compléments : Entropie statistique</p>
+<p>On définit l’entropie statistique d’un système, dans un état macroscopique (ou macro-état) donné par la quantité: <span class="math notranslate nohighlight">\(S = - k_B \sum_s P_s \ln(P_s)\)</span> où s est le microétat compatible avec le macroétat et <span class="math notranslate nohighlight">\(P_s\)</span> la probabilité d’occurence de s.</p>
+</div>
+<p>Cette définition n’est pas à connaître.</p>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Entropie statistique - Cas microcanonique (A connaître)</p>
+<p>Dans le cas d’un système isolé, l’entropîe se réécrire en fonction de la seule fonction de répartition <span class="math notranslate nohighlight">\(\Omega\)</span>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-836c61cf-5edf-4dc1-ad31-b7ccae697c60">
+<span class="eqno">(6)<a class="headerlink" href="#equation-836c61cf-5edf-4dc1-ad31-b7ccae697c60" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+S = k_B \ln \Omega
+\end{equation}\]</div>
+</div>
+<p><strong>Preuve (pas à connaître)</strong><br />
+Pour un système isolé, l’hypothèse microcanonique conduit à une probabilité <span class="math notranslate nohighlight">\(P_s = \frac{1}{\Omega}\)</span>. En remplaçant <span class="math notranslate nohighlight">\(P_s\)</span> par son expression, on trouve la relation donnée précédemment entre S et <span class="math notranslate nohighlight">\(\Omega\)</span>.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Entropie de Boltzmann et vision macroscopique</strong><br />
+La vision macroscopique de l’entropie est donnée par le second principe. Nous reviendrons par la suite sur ce dernier mais notons déjà que l’entropie est alors donnée comme une fonction d’état extensive.</p>
+<p class="card-text">La propriété d’être une fonction d’état pour l’entropie de Boltzmann est assez évidente. Le caractère extensif est par délicat puisqu’il est en pratique faux, un terme supplémentaire apparaît quand on mélange deux systèmes (entropie dite de mélange). L’hypothèse d’extensivité consiste à supposer ce terme négligeable, ce qui revient, comme pour l’énergie à considérer que les effets de surface sont négligeables. <strong>On admettra que dans le cadre du cours, l’entropie de Boltzmann est cohérente avec la définition de l’entropie qui sera vue avec le second principe.</strong></p>
+</div>
+</details></div>
+<div class="section" id="entropie-d-un-systeme-isole-exemple-des-billes">
+<h2>Entropie d’un système isolé: Exemple des billes<a class="headerlink" href="#entropie-d-un-systeme-isole-exemple-des-billes" title="Permalink to this headline">¶</a></h2>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On reprend le systèmes composé de N billes. A l’instant initial, toutes les billes sont dans la partie gauche.</p>
+<ol class="simple">
+<li><p>Le système est-il à l’équilibre? Déterminer la valeur de l’entropie en supposant comme précédemment que la fonction <span class="math notranslate nohighlight">\(\Omega\)</span> ne dépend que de N et <span class="math notranslate nohighlight">\(N_1\)</span>.</p></li>
+<li><p>Lorsque l’équilibre est atteint, déterminer la valeur de l’entropie. Montrer que l’entropie a atteint à l’équilibre un maximum.</p></li>
+</ol>
+<p>Le second principe va permettre de généraliser cette propriété: à l’équilibre, un système <strong>isolé aura une entropie maximale</strong>.</p>
+<p>Cette propriété explique l’intérêt du second principe car il va permettre, à l’échelle macroscopique (sans passer par le dénombrement des microétat compatibles) et déterminer <strong>le sens d’évolution possible d’une transformation</strong>. On pourra ainsi expliquer pourquoi le transfert thermique s’effectue toujours du corps chaud vers le corps froid, pourquoi certaines réactions chimiques ont lieu dans un sens privilégié. Ces explications feronts directement intervenir l’entropie et son expression en fonction des variables d’état (vision macroscopique donc) et non un dénombrement à l’échelle microscopique.</p>
+</div>
+</div>
+<div class="section" id="entropie-desordre-et-information">
+<h2>Entropie, désordre et information<a class="headerlink" href="#entropie-desordre-et-information" title="Permalink to this headline">¶</a></h2>
+<p><strong>Entropie et désordre</strong><br />
+La vision microscopique explique la notion de désordre introduit précédemment. Le “désordre” correspond au fait qu’un macroétat peut posséder de nombreux microétats compatibles et que le système va passer de manière désordonnée d’un microétat à un autre. Plus l’entropie est grand, plus il y a de microétat (dans le cas d’un système isolé) et donc plus le système est désordonné.</p>
+<p>On interprète aussi l’entropie comme une mesure de l’information manquante (entropie de Shannon) puisque plus l’entropie est grand, plus il existe de microétats. Comme on ne sait pas dans quel microétat se trouve le système, on perd d’autant plus d’information.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="th_d_ex_app.html" title="previous page">Exercices d’application</a>
+    <a class='right-next' id="next-link" href="th_usuels.html" title="next page">Systèmes thermodynamiques usuels</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

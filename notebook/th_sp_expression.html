@@ -1,0 +1,701 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expression des grandeurs &#8212; Thermodynamique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/thermodynamique/notebook/th_sp_expression.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Interprétations" href="th_sp_interpretation.html" />
+    <link rel="prev" title="Second principe: Enoncé" href="th_sp_enonce.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Thermodynamique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thermodynamique.html">
+   Thermodynamique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_description.html">
+   Description d’un système thermodynamique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_systeme.html">
+     Système thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_echelle.html">
+     Echelles d’étude
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_variables.html">
+     Variables d’état et variables microscopiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_equilibre.html">
+     Equilibre thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_extensives.html">
+     Variables extensives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_intensives.html">
+     Grandeurs intensives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_entropie_stat.html">
+     Approche statistique de l’entropie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_usuels.html">
+   Systèmes thermodynamiques usuels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_gaz.html">
+     Etude des gaz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_condenses.html">
+     Phases condensées
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_premier_pcp.html">
+   Premier principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_enonce.html">
+     Premier principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_q.html">
+     Transfert thermique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_w.html">
+     Travail mécanique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_transfo.html">
+     Etude de transformations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_compression.html">
+     Compression isotherme d’un gaz parfait
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_act_meth.html">
+     Activités méthodes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="th_second_pcp.html">
+   Second principe
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_enonce.html">
+     Second principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Expression des grandeurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_interpretation.html">
+     Interprétations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_exemples.html">
+     Exemples d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_ex_app.html">
+     Second principe: Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_td.html">
+     Second principe: Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_chgt_etat.html">
+   Transitions de phases
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_obs.html">
+     Observations expérimentales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_quant.html">
+     Analyse quantitative
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_td.html">
+     Travaux dirigés: Changements d’état
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_machines.html">
+   Machines thermiques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_gene.html">
+     Généralités
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_moteur.html">
+     Moteurs thermiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_recepteur.html">
+     Récepteurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_methodes.html">
+     Méthodes d’études
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_ex_app.html">
+     Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/th_sp_expression.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/th_sp_expression.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/th_sp_expression.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entropie-echangee-expression">
+   Entropie échangée: Expression
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entropie-echangee-expression-generale">
+     Entropie échangée: Expression générale
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entropie-echangee-cas-d-une-transformation-adiabatique">
+     Entropie échangée: Cas d’une transformation adiabatique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entropie-echangee-et-transformation-reversible">
+     Entropie échangée et transformation réversible
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entropie-echangee-contact-avec-un-thermostat">
+     Entropie échangée: Contact avec un thermostat
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entropie-expression">
+   Entropie: Expression
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entropie-generalites">
+     Entropie: Généralités
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entropie-des-gaz-parfaits">
+     Entropie des gaz parfaits
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#entropie-phases-condensees">
+     Entropie: Phases condensées
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#entropie-creee">
+   Entropie créée
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="expression-des-grandeurs">
+<h1>Expression des grandeurs<a class="headerlink" href="#expression-des-grandeurs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="entropie-echangee-expression">
+<h2>Entropie échangée: Expression<a class="headerlink" href="#entropie-echangee-expression" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="entropie-echangee-expression-generale">
+<h3>Entropie échangée: Expression générale<a class="headerlink" href="#entropie-echangee-expression-generale" title="Permalink to this headline">¶</a></h3>
+<p><strong>Entropie échangée - Expression générale (pas à connaître)</strong><br />
+L’entropie échangée a pour expression générale:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-da4899dd-3f07-4237-9dea-f04c27b1393c">
+<span class="eqno">(18)<a class="headerlink" href="#equation-da4899dd-3f07-4237-9dea-f04c27b1393c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\delta S_{ech} = \iint_{M \in \textrm{frontiere}} \frac{\delta Q_{dS}}{T_{dS}}
+\end{equation}\]</div>
+<p><span class="math notranslate nohighlight">\(T_{dS}\)</span> est la température à la surface <span class="math notranslate nohighlight">\(dS\)</span> et <span class="math notranslate nohighlight">\(\delta Q_{dS}\)</span> le transfert thermique qui se produit à travers la surface élémentaire. L’expression générale n’est pas à connaître, mais les cas particuliers le sont.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Cette expression n’est pas à connaître mais elle montre le fort lien entre entropie échangée et transfert thermique.</p>
+</div>
+</details></div>
+<div class="section" id="entropie-echangee-cas-d-une-transformation-adiabatique">
+<h3>Entropie échangée: Cas d’une transformation adiabatique<a class="headerlink" href="#entropie-echangee-cas-d-une-transformation-adiabatique" title="Permalink to this headline">¶</a></h3>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Entropie échangée et transformation adiabatique</p>
+<p>L’entropie échangée lors d’une transformation adiabatique est nulle.</p>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Une conséquence directe est que l’entropie S ne peut qu’<strong>augmenter lors d’une transformation adiabatique.</strong> Elle sera donc maximale à l’équilibre lors d’une telle transformation.</p>
+</div>
+</details></div>
+<div class="section" id="entropie-echangee-et-transformation-reversible">
+<h3>Entropie échangée et transformation réversible<a class="headerlink" href="#entropie-echangee-et-transformation-reversible" title="Permalink to this headline">¶</a></h3>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Entropie échangée - Cas d’une transformatino réversible</p>
+<p>Dans une transformation réversible, l’entropie échangée s’écrit <span class="math notranslate nohighlight">\(\delta S_{ech} =\frac{\delta Q}{T}\)</span> où <span class="math notranslate nohighlight">\(\delta Q\)</span> est le transfert thermique global échangé durant le temps dt de la transformation et T <strong>la température du système.</strong></p>
+</div>
+<p><strong>Démonstration (pas à connaître)</strong><br />
+Si la transformation est réversible, le système est en équilibre thermique à chaque instant et on peut définir sa température T qui est la même en chaque point, notamment à sa surface. La température sort alors de l’intégrale qui donne le transfert thermique global.</p>
+</div>
+<div class="section" id="entropie-echangee-contact-avec-un-thermostat">
+<h3>Entropie échangée: Contact avec un thermostat<a class="headerlink" href="#entropie-echangee-contact-avec-un-thermostat" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Thermostat</p>
+<p>Un thermostat (ou source de chaleur) est un système de capacité thermique infinie, n’échangeant pas de travail mais uniquement du transfert thermique avec l’extérieur. Il est caractérisé par sa température qui ne varie pas. Son évolution est considérée réversible.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Entropie échangée avec un thermostat</p>
+<p>Si un système fermé ne peut échanger de chaleur qu’avec un thermostat à température <span class="math notranslate nohighlight">\(T_{\textrm{thermostat}}\)</span>, l’entropie échangé est: <span class="math notranslate nohighlight">\(\delta S_{ech} = \frac{\delta Q}{T_{\textrm{thermostat}}}\)</span> où <span class="math notranslate nohighlight">\(\delta Q\)</span> la chaleur totale reçue du thermostat.</p>
+</div>
+</div>
+</div>
+<div class="section" id="entropie-expression">
+<h2>Entropie: Expression<a class="headerlink" href="#entropie-expression" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="entropie-generalites">
+<h3>Entropie: Généralités<a class="headerlink" href="#entropie-generalites" title="Permalink to this headline">¶</a></h3>
+<p><strong>Entropie: une fonction d’état</strong><br />
+L’entropie est une fonction d’état. Cela signifie</p>
+<ul class="simple">
+<li><p>que sa variation dépend de l’état initial et de l’état final mais <strong>pas du chemin parcouru</strong>. On pourra donc <strong>choisir le chemin parcouru pour la calculer</strong>. L’expression trouvée <strong>se généralisera à toutes les transformations possédant le même état initial et final</strong>.</p></li>
+<li><p>que sa valeur dans un état donné est fonction d’autres variables d’état qu’on aura choisi (par exemple, on peut choisir d’exprimer <span class="math notranslate nohighlight">\(S(U,V)\)</span>). On peut la choisir comme variable et exprimer les autres grandeurs en fonction de S (écrire par exemple U(S,V) ou H(S,P), l’écriture de U(S,V) permet, rappelons le de définir la température et la pression “thermodynamique”).</p></li>
+</ul>
+<p>On peut aussi voir l’entropie comme une variable d’état comme l’est le volume ou la pression. A nombre de moles fixées, on peut alors considérer (pour un fluide) 2 variables d’état indépendantes: l’entropie et le volume.</p>
+<p>Toute fonction d’état est alors fonction de S et V: l’énergie interne notamment U(S,V) et sa différentielle:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3c835814-14d7-4348-a951-dd1b063268cb">
+<span class="eqno">(19)<a class="headerlink" href="#equation-3c835814-14d7-4348-a951-dd1b063268cb" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+dU = \frac{\partial U}{\partial S}_V dS + \frac{\partial U}{\partial V}_S dV
+\end{equation}\]</div>
+<p>Cette relation amène la définition thermodynamique de la température et de la pression vues précédemment. On obtient alors <strong>l’identité thermodynamique:</strong></p>
+<div class="amsmath math notranslate nohighlight" id="equation-090dfd2e-b103-4132-b888-1e4e9a56a0a8">
+<span class="eqno">(20)<a class="headerlink" href="#equation-090dfd2e-b103-4132-b888-1e4e9a56a0a8" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+dU = TdS - PdV
+\end{equation}\]</div>
+</div>
+<div class="section" id="entropie-des-gaz-parfaits">
+<h3>Entropie des gaz parfaits<a class="headerlink" href="#entropie-des-gaz-parfaits" title="Permalink to this headline">¶</a></h3>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Entropie des gaz parfaits</p>
+<p>Pour un gaz parfait, l’entropie s’écrit:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+S &amp;= S_0 + \frac{nR}{\gamma-1}\ln \left(\frac{TV^{\gamma-1}}{T_0 V_0^{\gamma-1}}\right)\\
+&amp;= S_0 + \frac{nR}{\gamma-1}\ln \left(\frac{T^{\gamma}P^{1-\gamma}}{T_0^{\gamma} P_0^{1-\gamma}}\right)\\
+&amp;= S_0 + \frac{nR}{\gamma-1}\ln \left(\frac{PV^{\gamma}}{P_0 V_0^{\gamma}}\right)
+\end{align*}\]</div>
+<p>où <span class="math notranslate nohighlight">\(S_0\)</span> est l’entropie du gaz à <span class="math notranslate nohighlight">\((T_0,P_0,V_0)\)</span></p>
+</div>
+<p><strong>Démonstration - Méthode 1</strong><br />
+On utilise l’identité thermodynamique:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+dU &amp;= TdS - PdV\\
+dS &amp;= C_v \frac{dT}{T} + nR \frac{dV}{V}\\
+\int_{i}^{f}dS &amp;= \frac{nR}{\gamma-1}\int_{i}^{f}\frac{dT}{T} + nR \int_{i}^{f}\frac{dV}{V}\\
+\Delta S &amp;= \frac{nR}{\gamma-1} \ln \frac{T_f}{T_i} + nR\ln {\left(\frac{V_f}{V_i}\right)}\\
+\Delta S &amp;= \frac{nR}{\gamma-1} \ln \frac{T_f V_f^{\gamma-1}}{T_i V_i^{\gamma-1}}\\
+\end{align*}\]</div>
+<p><strong>Démonstration - Méthode 2</strong><br />
+Considérons la variation d’entropie sur une transformation infinitésimale réversible. <strong>L’entropie étant une fonction d’état, la variation calculée se généralisera à toute transformation ce qui nous donnera une expression générale de la variation d’entropie</strong>. Le second principe s’écrit:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+dS &amp;= \delta S_e + \delta S_c \\
+&amp;= \frac{\delta Q}{T} + 0 \\
+&amp;= \frac{dU - \delta W}{T} \\
+&amp;= \frac{dU + P dV}{T}\\
+&amp;= C_V \frac{dT}{T} + nR \frac{dV}{V}\\
+&amp;= \frac{nR}{\gamma-1} \frac{dT}{T} + nR \frac{dV}{V}
+\end{align*}\]</div>
+<p>soit en intégrant l’expression donnée <span class="math notranslate nohighlight">\(S(T,V)\)</span>. En utilisant la loi des gaz parfaits, on trouve les deux autres.</p>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Lois de Laplace</p>
+<p>Lors d’une transformation isentropique, un gaz parfait suit les lois de Laplace.</p>
+<p>Lorsqu’un gaz parfait suit les lois de Laplace, sa transformation est isentropique.</p>
+<p>La preuve de ces deux propriétés découle directement de l’expression de l’entropie.</p>
+</div>
+</div>
+<div class="section" id="entropie-phases-condensees">
+<h3>Entropie: Phases condensées<a class="headerlink" href="#entropie-phases-condensees" title="Permalink to this headline">¶</a></h3>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Entropie des phases condensées</p>
+<p>Pour des solides et des fluides peu dilatables et peu compressibles, on peut écrire:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-53f64f9e-c26b-433f-ba95-33db2f86446a">
+<span class="eqno">(21)<a class="headerlink" href="#equation-53f64f9e-c26b-433f-ba95-33db2f86446a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+dS \approx \frac{dU}{T} \approx \frac{dH}{T} \approx C \frac{dT}{T}
+\end{equation}\]</div>
+</div>
+<p><strong>Démonstration</strong><br />
+On s’entraînera à le démontrer en suivant le même principe de raisonnement que pour le gaz parfait. On fera <strong>très attention à la rédaction</strong>.</p>
+</div>
+</div>
+<div class="section" id="entropie-creee">
+<h2>Entropie créée<a class="headerlink" href="#entropie-creee" title="Permalink to this headline">¶</a></h2>
+<p>Il n’existe pas d’expression permettant de calculer l’entropie créée sinon le second principe.</p>
+<p>A l’image du transfert thermique, on calculera l’entropie créée en utilisant la relation <span class="math notranslate nohighlight">\(\Delta S = S_{ech} + S_c\)</span>.</p>
+<p>L’autre cas est le cas d’une transformation réversible où l’on sait que l’entropie créée est nulle.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="th_sp_enonce.html" title="previous page">Second principe: Enoncé</a>
+    <a class='right-next' id="next-link" href="th_sp_interpretation.html" title="next page">Interprétations</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

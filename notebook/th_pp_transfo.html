@@ -1,0 +1,573 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etude de transformations &#8212; Thermodynamique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/thermodynamique/notebook/th_pp_transfo.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Compression isotherme d’un gaz parfait" href="th_pp_compression.html" />
+    <link rel="prev" title="Travail mécanique" href="th_pp_w.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Thermodynamique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thermodynamique.html">
+   Thermodynamique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_description.html">
+   Description d’un système thermodynamique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_systeme.html">
+     Système thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_echelle.html">
+     Echelles d’étude
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_variables.html">
+     Variables d’état et variables microscopiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_equilibre.html">
+     Equilibre thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_extensives.html">
+     Variables extensives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_intensives.html">
+     Grandeurs intensives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_entropie_stat.html">
+     Approche statistique de l’entropie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_usuels.html">
+   Systèmes thermodynamiques usuels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_gaz.html">
+     Etude des gaz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_condenses.html">
+     Phases condensées
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="th_premier_pcp.html">
+   Premier principe
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_enonce.html">
+     Premier principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_q.html">
+     Transfert thermique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_w.html">
+     Travail mécanique
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Etude de transformations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_compression.html">
+     Compression isotherme d’un gaz parfait
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_act_meth.html">
+     Activités méthodes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_second_pcp.html">
+   Second principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_enonce.html">
+     Second principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_expression.html">
+     Expression des grandeurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_interpretation.html">
+     Interprétations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_exemples.html">
+     Exemples d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_ex_app.html">
+     Second principe: Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_td.html">
+     Second principe: Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_chgt_etat.html">
+   Transitions de phases
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_obs.html">
+     Observations expérimentales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_quant.html">
+     Analyse quantitative
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_td.html">
+     Travaux dirigés: Changements d’état
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_machines.html">
+   Machines thermiques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_gene.html">
+     Généralités
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_moteur.html">
+     Moteurs thermiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_recepteur.html">
+     Récepteurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_methodes.html">
+     Méthodes d’études
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_ex_app.html">
+     Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/th_pp_transfo.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/th_pp_transfo.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/th_pp_transfo.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transformations-diverses">
+   Transformations diverses
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cas-des-transformations-monobares-enthalpie">
+   Cas des transformations monobares. Enthalpie.
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="etude-de-transformations">
+<h1>Etude de transformations<a class="headerlink" href="#etude-de-transformations" title="Permalink to this headline">¶</a></h1>
+<p>_  On va étudier l’écriture du premier principe dans diverses transformations. On s’intéressera en particulier au cas des transformations monobares qui expliquent l’intérêt de l’enthalpie._</p>
+<div class="section" id="transformations-diverses">
+<h2>Transformations diverses<a class="headerlink" href="#transformations-diverses" title="Permalink to this headline">¶</a></h2>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Ecrire le premier principe dans le cas:</p>
+<ol class="simple">
+<li><p>d’une transformation adiabatique.</p></li>
+<li><p>d’une transformation isochore.</p></li>
+<li><p>d’une transformation isotherme pour une phase peu compressible ou un solide.</p></li>
+<li><p>d’une transformation isotherme pour gaz parfait.</p></li>
+</ol>
+<p>On distinguera, pour le travail W, le travail associé aux contraintes normales <span class="math notranslate nohighlight">\(W_P\)</span> du reste du travail <span class="math notranslate nohighlight">\(W_{autre}\)</span>.</p>
+</div>
+</div>
+<div class="section" id="cas-des-transformations-monobares-enthalpie">
+<h2>Cas des transformations monobares. Enthalpie.<a class="headerlink" href="#cas-des-transformations-monobares-enthalpie" title="Permalink to this headline">¶</a></h2>
+<p><em>Rappel :Transformation monobare</em>
+On rappelle qu’une transformation monobare est une transformation pour laquelle la pression extérieure (ou plus généralement la contrainte normale extérieure) est constante.</p>
+<p>Si la transformation est de plus quasi-statique, elle devient isobare.</p>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Réécriture du premier principe pour une transformation monobare</p>
+<p>Soit un système fermé dont la pression extérieure agissante sur le système est maintenue constante <span class="math notranslate nohighlight">\(P_0\)</span> passant d’un état d’équilibre à un autre. La variation d’enthalpie <span class="math notranslate nohighlight">\(\Delta H\)</span> s’écrit:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b64bc77f-32a4-42e3-b575-fcc0df99fc63">
+<span class="eqno">(16)<a class="headerlink" href="#equation-b64bc77f-32a4-42e3-b575-fcc0df99fc63" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\Delta E_{M,macro} + \Delta H = Q + W_{autre}
+\end{equation}\]</div>
+<p>où <span class="math notranslate nohighlight">\(W_{autre}\)</span> est le travail autre que les forces de pression.</p>
+</div>
+<p><strong>Démonstration</strong><br />
+Le premier principe appliqué au système s’écrit: <span class="math notranslate nohighlight">\(\Delta U = W_{pression} + W_{autre} + Q\)</span>. Remarquons de plus qu’à l’état initial et à l’état final, la pression du système est <span class="math notranslate nohighlight">\(P_0\)</span> puisque le système est en équilibre avec l’extérieur. On a:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+W_{pression} &amp;= - \int P_{ext} dV = - P_0 \int dV = - (P_0 V_{final} - P_0 V_{initial})\\
+&amp;= - \Delta PV\\
+\Delta U &amp;= - \Delta PV + W_{autre} + Q\\
+\Delta H &amp;= \Delta(U + PV) = W_{autre} + Q
+\end{align*}\]</div>
+<p><strong>Remarques</strong><br />
+Il s’agit d’une <strong>réécriture du premier principe</strong>.</p>
+<p>On pourra faire le parallèle avec le passage du TEC au TEM. Ici aussi, on “fait passer” un terme (produit PV) de la gauche vers la droite et on redéfinit une nouvelle grandeur énergétique, ce qui simplique l’expression du premier principe.</p>
+<div class="note admonition">
+<p class="admonition-title">Attention :</p>
+<p>L’analogie précédente a ses limites car le passage du TEC au TEM est valable quelle que soit le système alors qu’ici la réécriture du premier principe avec l’enthalpie <strong>n’est valable que si la transformation est monobare entre deux états d’équilibre</strong>.</p>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Interprétation</strong><br />
+L’écriture du premier principe avec l’enthalpie pour une transformation monobare entre deux états d’équilibre permet de comprendre le sens donné à la capacité thermique à pression constante comme <strong>l’énergie à fournir pour augmenter la température de 1K à pression constante.</strong>.</p>
+<p class="card-text">En effet, quand on fonctionne à pression constante, celà signifie en général qu’on dispose d’un système fermé par une partie mobile (piston) qui permet d’ajuster le volume du système pour maintenir la pression constante. Cet ajustement se fait “naturellement” au contact d”un atmosphère suffisamment grand pour sa pression soit constante. Mais le travail échangé par la contrainte normale n’est pas maitrîsé. Ce qu’on fournit réellement, c’est le <span class="math notranslate nohighlight">\(W_{autre} + Q\)</span>.</p>
+<p class="card-text">Cette interprétation permet aussi de comprendre pourquoi la capacité thermique à pression constante est plus grande que la capacité thermique à volume constant. En effet, quand la température du système augmente, son volume augmente à pression constante (coefficient de dilatation isobare). Il vient que les contraintes normales (qu’on appelera force de pression extérieures puisqu’elles sont exercées par une atmosphère à pression constante sur le piston) exerce un travail des forces de pression résistant: le système doit <strong>fournir</strong> un travail mécanique à l’atmosphère. Cette énergie doit être fournie en plus de celle à apporter pour augmenter la température d’où <span class="math notranslate nohighlight">\(C_P &gt; C_V\)</span>.</p>
+</div>
+</details></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="th_pp_w.html" title="previous page">Travail mécanique</a>
+    <a class='right-next' id="next-link" href="th_pp_compression.html" title="next page">Compression isotherme d’un gaz parfait</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

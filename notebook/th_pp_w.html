@@ -1,0 +1,735 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travail mécanique &#8212; Thermodynamique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/thermodynamique/notebook/th_pp_w.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Etude de transformations" href="th_pp_transfo.html" />
+    <link rel="prev" title="Transfert thermique" href="th_pp_q.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Thermodynamique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thermodynamique.html">
+   Thermodynamique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_description.html">
+   Description d’un système thermodynamique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_systeme.html">
+     Système thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_echelle.html">
+     Echelles d’étude
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_variables.html">
+     Variables d’état et variables microscopiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_equilibre.html">
+     Equilibre thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_extensives.html">
+     Variables extensives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_intensives.html">
+     Grandeurs intensives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_entropie_stat.html">
+     Approche statistique de l’entropie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_usuels.html">
+   Systèmes thermodynamiques usuels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_gaz.html">
+     Etude des gaz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_condenses.html">
+     Phases condensées
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="th_premier_pcp.html">
+   Premier principe
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_enonce.html">
+     Premier principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_q.html">
+     Transfert thermique
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Travail mécanique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_transfo.html">
+     Etude de transformations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_compression.html">
+     Compression isotherme d’un gaz parfait
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_act_meth.html">
+     Activités méthodes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_second_pcp.html">
+   Second principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_enonce.html">
+     Second principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_expression.html">
+     Expression des grandeurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_interpretation.html">
+     Interprétations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_exemples.html">
+     Exemples d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_ex_app.html">
+     Second principe: Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_td.html">
+     Second principe: Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_chgt_etat.html">
+   Transitions de phases
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_obs.html">
+     Observations expérimentales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_quant.html">
+     Analyse quantitative
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_td.html">
+     Travaux dirigés: Changements d’état
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_machines.html">
+   Machines thermiques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_gene.html">
+     Généralités
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_moteur.html">
+     Moteurs thermiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_recepteur.html">
+     Récepteurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_methodes.html">
+     Méthodes d’études
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_ex_app.html">
+     Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/th_pp_w.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/th_pp_w.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/th_pp_w.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#travail-generalites">
+   Travail: Généralités
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dipole-electrique">
+   Dipôle électrique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cas-des-contraintes-normales-exterieures">
+   Cas des contraintes normales extérieures
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#travail-des-contraintes-normales-exterieures-generalites">
+     Travail des contraintes normales extérieures: Généralités
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cas-a-connaitre-contrainte-uniforme">
+     Cas à connaître: contrainte uniforme.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diagramme-de-watt">
+     Diagramme de Watt
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="travail-mecanique">
+<h1>Travail mécanique<a class="headerlink" href="#travail-mecanique" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="travail-generalites">
+<h2>Travail: Généralités<a class="headerlink" href="#travail-generalites" title="Permalink to this headline">¶</a></h2>
+<p><em>Rappel : Calcul du travail mécanique</em><br />
+Le calcul du travail mécanique s’effectue au moyen des définitions classiques présentées dans le cours de mécanique.</p>
+<p>Dans le cas (rare au programme) où il s’agit d’une action globale, on pensera bien à calcul le travail de chaque action ponctuelle puis de réaliser la sommation (en général une intégrale- cf. suite).</p>
+<p>Dans le cas de force conservative, on peut utiliser l’énergie potentielle mais attention, elle fait partie de l’énergie totale et non de W.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Action globale surfacique</strong><br />
+On considère une action globale <span class="math notranslate nohighlight">\(\cal A\)</span> regroupant des actions ponctuelles en plusieurs points M d’une surface <span class="math notranslate nohighlight">\(\Sigma\)</span> du système. On modélise chaque action ponctuelle par une force <span class="math notranslate nohighlight">\(\overrightarrow{d^2F}(M)\)</span> qui s’applique sur la petite surface <span class="math notranslate nohighlight">\(\overrightarrow{d^2S}(M)\)</span> autour du point M.</p>
+<p class="card-text">Le travail élémentaire fournit par l’action ponctuelle autour de M pendant un temps dt s’écrit: <span class="math notranslate nohighlight">\(\delta^3 W = \overrightarrow{d^2F}(M)\cdot\overrightarrow{dl}(M)\)</span> où M est le déplacement élementaire du point M (et donc de la surface <span class="math notranslate nohighlight">\(\overrightarrow{dS}(M)\)</span>.</p>
+<div class="figure align-center" id="fig-272">
+<img alt="../_images/force_surfacique.png" src="../_images/force_surfacique.png" />
+</div>
+<p class="card-text">Le travail <strong>élémentaire</strong> total fournit par l’action globale s’obtient par intégration sur la surface de contact:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-34ae04ee-1935-456d-a868-47ebc547e333">
+<span class="eqno">(12)<a class="headerlink" href="#equation-34ae04ee-1935-456d-a868-47ebc547e333" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\delta W = \iint_{M\in\Sigma} \overrightarrow{d^2 F}(M) \cdot \overrightarrow{dl}(M)
+\end{equation}\]</div>
+<p class="card-text">Si nous serons pas amené à calculer une telle intégrale, il faut comprendre le sens des différents infinitésimaux utilisés ici. Pour la force, il s’agit d’un infinitésimal <strong>spatial</strong> (un double infinitésimal puisque la force est surfacique). C’est ce double infinitésimal qu’on intégre (sur la surface donc).</p>
+<p class="card-text">Pour le déplacement élémentaire et le <span class="math notranslate nohighlight">\(\delta W\)</span>, il s’agit d’un infinitésimal <strong>temporel</strong>: un déplacement et un transfert énergétique durant un instant dt.</p>
+</div>
+</details></div>
+<div class="section" id="dipole-electrique">
+<h2>Dipôle électrique<a class="headerlink" href="#dipole-electrique" title="Permalink to this headline">¶</a></h2>
+<p><em>Rappel : Puissance électrique reçue</em><br />
+Soit un dipôle électrique D parcouru par une intensité i et dont la tension à ses bornes est u en convention récepteur. Alors la puissance qu’il reçoit du reste du circuit est <span class="math notranslate nohighlight">\(P = ui\)</span>.</p>
+<p>Si l’on isole le dipôle comme un système thermodynamique, il faut tenir compte de cette puissance mécanique (issue d’actions mécaniques de type électromagnétiques - on l’appelle parfois puissance électrique) quand on utilise le premier principe.</p>
+<p>Le “travail électrique” reçu par le dipôle durant un temps fini sera donc:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-4585d4b0-3f34-4b68-8d79-1052b105cc9c">
+<span class="eqno">(13)<a class="headerlink" href="#equation-4585d4b0-3f34-4b68-8d79-1052b105cc9c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+W = \int_{t_1}^{t_2}u(t)i(t)dt
+\end{equation}\]</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Cas d’une résistance - Effet Joule</strong><br />
+Dans le cas d’une résistance, <strong>le travail reçu W</strong> se calcule en utilisant la loi d’Ohm (la puissance <strong>reçue</strong> est <span class="math notranslate nohighlight">\(P = Ri^2(t)\)</span>).</p>
+<p class="card-text">Cette énergie est transformée à l’échelle microscopique de manière désordonnée, c’est <strong>l’effet Joule</strong>. <strong>Une partie</strong> de cette est énergie va être transmise <strong>par la résistance au système extérieur</strong> sous forme de transfert thermique Q.</p>
+<p class="card-text">Il est important de comprendre que a priori, <strong><span class="math notranslate nohighlight">\(W \neq Q\)</span></strong>. En effet, une partie de l’énergie reçu par travail électrique peut être conservée par la résistance pour augmenter son énergie interne. L’application du premier principe à la résistance donne bien <span class="math notranslate nohighlight">\(\Delta U = W + Q\)</span> avec <span class="math notranslate nohighlight">\(\Delta U = C_V \Delta T\)</span> en considérant que la résistance est un solide.</p>
+<p class="card-text">Il est important de bien considérer les échanges pour une résistance: elle <strong>reçoit un travail</strong> et <strong>fournit un transfert thermique</strong>. Le type de transfert d’énergie à  considérer sera donc différent que l’on considère la résistance à l’intérieur ou à l’extérieur du système étudié.</p>
+</div>
+</details></div>
+<div class="section" id="cas-des-contraintes-normales-exterieures">
+<h2>Cas des contraintes normales extérieures<a class="headerlink" href="#cas-des-contraintes-normales-exterieures" title="Permalink to this headline">¶</a></h2>
+<p><em>Comme on l’a vu en introduction, le cas des forces globales peut nécéssité un traitement différents à cause de la déformation du système. Il est un cas d’action que l’on va rencontrer très fréquemment en thermodynamique, c’est le cas du travail des forces de contraintes normales qui s’exercent à la surface extérieure du système de sorte qu’il est important de connaître les méthodes de calcul de ce travail et son interprétation.</em></p>
+<p>On appelle souvent ce terme “travail des forces de pression extérieures” mais notons que ce terme est ambigü car l’action n’est pas nécessairement dû à l’action normale d’un fluide (associé à une pression) mais peut aussi concernant l’action normale d’un solide. Le principe des actions réciproques permet d’expliquer pourquoi on parle de force de pression (si le système étudié est un fluide, l’action réciproque est une force de pression) mais cela peut s’avérer trompeur…</p>
+<p>…  car la “pression” mise en jeu est la pression <strong>locale</strong> du fluide au point de contact qui:</p>
+<ul class="simple">
+<li><p>n’est pas forcément définie (cas d’un fort déséquilibre)</p></li>
+<li><p>n’est pas forcément égale à la pression du fluide. C’et le cas d’un fluide un peu hors équilibre ou sous l’effet d’une action à longue portée comme le champ de pesanteur - cf. statique des fluide). Dans ce cas, il est même compliqué de parler de <strong>pression du fluide</strong> (au mieux de champ de pression).</p></li>
+</ul>
+<p>De plus, le terme de “pression” laisse à suggérer que son expression sera toujours une terme de pression d’un fluide. Or c’est faut, dans le cas d’une action d’une paroi mobile sur le gaz, l’expression de cette contrainte normale peut être plus complexe qu’un simple “P”.</p>
+<p>Par la suite, on utilisera le terme de “contrainte normale extérieure” pour désigner la force surfacique étudié ici mais il faut savoir qu’on trouvera souvent dans les ouvrages le termes de “pression extérieure”._</p>
+<div class="section" id="travail-des-contraintes-normales-exterieures-generalites">
+<h3>Travail des contraintes normales extérieures: Généralités<a class="headerlink" href="#travail-des-contraintes-normales-exterieures-generalites" title="Permalink to this headline">¶</a></h3>
+<p>Dans toute la suite, on considèrera les actions de contact comme normale à la surface, c’est-à-dire qu’on ne tient pas compte des frottements.</p>
+<p><strong>Notation</strong><br />
+On considère un système <span class="math notranslate nohighlight">\(\Sigma\)</span> soumis en chaque point M de sa surface à une force <span class="math notranslate nohighlight">\(\overrightarrow{d^2 F}(M)\)</span>.</p>
+<p>On peut associer à cette force une contrainte normale surfacique <span class="math notranslate nohighlight">\(\sigma_{ext}(M)\)</span> telle que <span class="math notranslate nohighlight">\(\overrightarrow{d^2 F}(M) = - \sigma_{ext}(M) \overrightarrow{d^2 S}(M)\)</span> avec <span class="math notranslate nohighlight">\(\overrightarrow{d^2 S} (M)\)</span> le vecteur surface associé à la surface de contact autour du point M. Il est orienté vers l’extérieur du système par convention (d’où le signe moins car que l’action extérieure viennent d’un fluide ou d’un solide, elle ne peut que pousser le système).</p>
+<p>Comme dans l’exemple général, on note <span class="math notranslate nohighlight">\(\overrightarrow{dl}(M)\)</span> le déplacement de la surface de contact infinitésimal sous l’effet de la déformation du système. On peut reprendre le schéma proposé pour une force surfacique. Ici la force est normale à la surface (s’il y avait une contrainte tangentielle, il faudrait la traiter à part).</p>
+<div class="figure align-center" id="fig-273">
+<img alt="../_images/travail_pression.png" src="../_images/travail_pression.png" />
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Travail des contraintes normales: Expression générale</p>
+<p>Considérons l’évolution du système durant un temps dt, le travail élémentaire des forces de contraintes normales extérieures s’écrit:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\delta W &amp;= -\iint_{M \in surface(\Sigma)} \sigma_{ext} \overrightarrow{dl}(M) \cdot \overrightarrow{dS}(M)\\
+ &amp;= -\iint_{M \in surface(\Sigma)} \sigma_{ext} dV_{balaye}(M)\\
+\end{align*}\]</div>
+<p>où <span class="math notranslate nohighlight">\(dV_{balaye}\)</span> est le volume balayé par la surface durant la durée dt. Il est compté positivement s’il correspond à un gain de volume pour le système et négativement s’il correspond à une perte de volume pour le système</p>
+</div>
+<p><strong>Démonstration</strong><br />
+La première formule est la simple expression du travail élémentaire.</p>
+<p>La seconde vient du fait que <span class="math notranslate nohighlight">\(\overrightarrow{dl} \cdot \overrightarrow{n}\)</span> donne en valeur absolue la hauteur du cylindre de base dS balayé par la surface dS lors de la déformation de sorte que le produit scalaire donne bien le volume balayé <span class="math notranslate nohighlight">\(dV_{balaye}(M)\)</span>par la surface dS.</p>
+<div class="note admonition">
+<p class="admonition-title">Attention : Volume balayé</p>
+<p>Le volume balayé est <strong>albégrique</strong> (à cause du produit scalaire).</p>
+<ul class="simple">
+<li><p>Si le système perd ce volume, cela correspond au cas <span class="math notranslate nohighlight">\(\overrightarrow{dl}\cdot\overrightarrow{n} &lt; 0\)</span> (cas de la figure). Le travail est alors positif. On pourra le comprendre en observer que le travail est nécessairement moteur (la contrainte normale extérieure est dans le même sens que le déplacement du point de contact).</p></li>
+<li><p>Si le système gagne ce volume, cela correspond au cas <span class="math notranslate nohighlight">\(\overrightarrow{dl}\cdot\overrightarrow{n} &gt; 0\)</span> (cas non représentée). Le travail est alors négatif. On pourra le comprendre en observer que le travail est nécessairement résistant (la contrainte normale extérieure est dans le sens inverse au déplacement du point de contact).</p></li>
+</ul>
+<p>Ce point est fondamental dans certains calculs (cf. suite) et permet d’associer au travail des contraintes normales extérieures une interprétation en terme de variation de volume. Dans le cas d’une contrainte uniforme (<span class="math notranslate nohighlight">\(\sigma_{ext}\)</span> ne dépend pas de M) sur les parois en mouvement, le lien entre la perte/gain de volume et le caractère résistante/moteur du travail global reste le même.</p>
+</div>
+<p>On rappelle que le <span class="math notranslate nohighlight">\(\delta W\)</span> correspond à une variation infinitésimale dans le temps alors que l’intégration se fait dans l’espace à un instant t donné.</p>
+</div>
+<div class="section" id="cas-a-connaitre-contrainte-uniforme">
+<h3>Cas à connaître: contrainte uniforme.<a class="headerlink" href="#cas-a-connaitre-contrainte-uniforme" title="Permalink to this headline">¶</a></h3>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Contrainte uniforme sur l’ensemble du système.</p>
+<p>Si la contrainte normale <span class="math notranslate nohighlight">\(\sigma_{ext}\)</span> est uniforme l’ensemble du système (plus précisément sur l’ensemble des parois mobiles), alors le travail de la contrainte normale devient <span class="math notranslate nohighlight">\(\delta W = - \sigma_{ext} dV\)</span> où <span class="math notranslate nohighlight">\(dV\)</span> est la variation de volume du système total.</p>
+<p>Le caractère algébrique du système est relié au gain/à la perte de volume total.</p>
+</div>
+<p><strong>Démonstration</strong><br />
+La contrainte normale étant uniforme, on peut la sortir de l’intégrale. Il reste la sommation des volumes balayés par chaque paroi qui correspond effectivement au volume total gagné par le système.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Transformation finie</strong><br />
+Il vient que lors du passage d’un état A à un état B, le travail reçu par le système des contraintes normales extérieures devient:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-232ad319-82aa-49f9-be39-cf1edc5581ba">
+<span class="eqno">(14)<a class="headerlink" href="#equation-232ad319-82aa-49f9-be39-cf1edc5581ba" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+W = - \int_{V_A}^{V_B}\sigma_{ext}dV
+\end{equation}\]</div>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Pression extérieure et abus de langage</strong><br />
+Comme on l’a dit, on appelle, par abus de langage ce travail “travail des forces de pression extérieures”. On ne revient sur les raisons qui font de ce terme un abus mais il faut savoir que <span class="math notranslate nohighlight">\(\sigma_{ext}\)</span> est souvent noté <span class="math notranslate nohighlight">\(P_{ext}\)</span> (il est effectivement homogène à une pression). Si cette notation est acceptée (elle sera même trouvée dans la majorité des ouvrages), il faut faire attention car <strong>elle est très trompeuse</strong>.</p>
+<p class="card-text">Ce n’est en effet PAS une pression et la manière de calculer <span class="math notranslate nohighlight">\(\sigma_{ext}\)</span> ne se ramène pas simplement à le remplacer par P (la pression du système) ou par une pression extérieure notée <span class="math notranslate nohighlight">\(P_0\)</span>. Il faut <strong>réfléchir au système étudié pour déterminer son expression.</strong></p>
+</div>
+</details><div class="attention admonition">
+<p class="admonition-title">Fondamental : Cas d’une transformation quasi-statique</p>
+<p>Dans le cas d’une transformation quasi-statique, le travail des contraintes normales extérieures se réécrit:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-524df60f-3428-4221-8214-39b143313ac1">
+<span class="eqno">(15)<a class="headerlink" href="#equation-524df60f-3428-4221-8214-39b143313ac1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\delta W = - P dV
+\end{equation}\]</div>
+<p>où P est la pression (interne) du système.</p>
+</div>
+<p><strong>Démonstration</strong><br />
+Dans le cas d’une évolution quasi-statique, le système étant en quasi-équilibre mécanique à chaque instant, on peut définir la pression P du système <strong>qui est la même dans tout le système.</strong>.</p>
+<p>La force normale qu’exerce alors le système sur le milieu extérieur est alors (en norme) PdS. Le principe des actions réciproques permet alors d’écrire <span class="math notranslate nohighlight">\(\sigma_{ext} = P\)</span> (le signe des deux forces réciproques apparaît dans le vecteur directeur de la force, pas dans la contrainte) qui est uniforme.</p>
+<p>Il vient que le travail élémentaire des contraintes extérieures s’écrit alors <span class="math notranslate nohighlight">\(\delta W = - P dV\)</span>.</p>
+<p><strong>Intérêt du cas quasi-statique</strong><br />
+Le cas d’une transformation quasi-statique présente plusieurs intérêts. Nous en citons deux ici:</p>
+<ul class="simple">
+<li><p>il ramène l’expression du travail à une expression ne dépendant plus que des paramètres d’état du système (on rappelle qu’on ne peut l’utiliser que si l’évolution est quasi-statique) ce qui permet souvent de calculer le travail reçu (calcul d’une intégrale) alors que dans le cas non quasi-statique, le calcul est souvent plus délicat (mais pas impossible - toute dépend des cas).</p></li>
+<li><p>Comme on le verra par la suite, le cas d’une transformation quasi-statique est souvent une transformation optimale.</p></li>
+</ul>
+</div>
+<div class="section" id="diagramme-de-watt">
+<h3>Diagramme de Watt<a class="headerlink" href="#diagramme-de-watt" title="Permalink to this headline">¶</a></h3>
+<div class="note admonition">
+<p class="admonition-title">Attention :</p>
+<p>Dans toute la suite, on considère le cas du travail des contraintes extérieures <strong>dans le cas quasi-statique</strong>. Dans ce cas, la contrainte extérieure est uniforme et égale à la pression P du système, on rappelle que dans ces conditions, le travail se réécrit <span class="math notranslate nohighlight">\(\delta W = - PdV\)</span>.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Diagramme de Watt</p>
+<p>Un diagramme de Watt est la représentation de la pression du système en fonction du volume du système.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Interprétation géométrique du travail des contraintes normales extérieures</p>
+<p>Dans le cas d’une transformation quasi-statique, on peut représenter la transformation entre un état A et un état B pour un chemin dans un diagramme de Watt. Le travail des contraintes normales extérieures y est alors représenté par l’opposé de l’aire sous la courbe ainsi dessinée.</p>
+<p>La justification vient de l’expression du travail: <span class="math notranslate nohighlight">\(W = \int - PdV\)</span>.</p>
+<p>L’orientation du chemin permet alors de savoir si le travail reçu par le système est moteur ou résistant:</p>
+<ul class="simple">
+<li><p>une augmentation de volume conduit à une aire positive et donc à un travail négatif donc résistant.</p></li>
+<li><p>une diminution de volume conduit à une aire négative et donc à un travail positif donc résistant.</p></li>
+</ul>
+<div class="figure align-center" id="fig-274">
+<img alt="../_images/thermo_diag_watt.jpg" src="../_images/thermo_diag_watt.jpg" />
+</div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Cycle</p>
+<p>Un cycle est une transformation ou une série de transformations ramenant le système dans son état initial.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Grandeurs d’état et cycle</p>
+<p>La variation d’une variable d’état sur un cycle est trivialement nulle.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Cas des cycles: Travail des contraintes normales</p>
+<p>Dans une transformation quasi-statique cyclique, le travail fourni passe par des phases motrices puis résistantes. Le signe du travail globale défini si le système a reçu ou fourni de l’énergie. On relie ce signe au sens de parcours du cycle:</p>
+<ul class="simple">
+<li><p>Si le cycle est parcouru dans le sens horaire, <span class="math notranslate nohighlight">\(W&lt;0\)</span>: le système est un moteur car il fournit un travail mécanique.</p></li>
+<li><p>Si le cycle est parcouru dans le sens anti-horaire, <span class="math notranslate nohighlight">\(W&gt;0\)</span>: le système est un récépteur car il reçoit un travail mécanique.</p></li>
+</ul>
+</div>
+<p><strong>Justification</strong></p>
+<div class="figure align-center" id="fig-275">
+<img alt="../_images/thermo_watt_cycle.jpg" src="../_images/thermo_watt_cycle.jpg" />
+</div>
+<p>Si le cycle est parcouru dans le sens horaire, on observe que le temps où le système est récepteur correspond à un travail mécanique <span class="math notranslate nohighlight">\(\left\vert W_{recepteur} \right\vert\)</span> plus faible que le travail mécanique <span class="math notranslate nohighlight">\(\left\vert W_{moteur} \right\vert\)</span> du temps moteur (aire sous la courbe plus faible): le travail total reçu sera donc négatif:  le système fournit de du travail mécanique, c’est un moteur.</p>
+<p>Si le cycle est parcouru dans le sens anti-horaire, on observe que le temps où le système est récepteur correspond à un travail mécanique <span class="math notranslate nohighlight">\(\left\vert W_{recepteur} \right\vert\)</span> plus grand que le travail mécanique <span class="math notranslate nohighlight">\(\left\vert W_{moteur} \right\vert\)</span> du temps moteur (aire sous la courbe plus grande) : le travail total reçu sera donc positif:  le système reçoit de du travail mécanique, c’est un récepteur.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="th_pp_q.html" title="previous page">Transfert thermique</a>
+    <a class='right-next' id="next-link" href="th_pp_transfo.html" title="next page">Etude de transformations</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

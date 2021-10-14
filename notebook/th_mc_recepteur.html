@@ -1,0 +1,602 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Récepteurs &#8212; Thermodynamique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/thermodynamique/notebook/th_mc_recepteur.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Méthodes d’études" href="th_mc_methodes.html" />
+    <link rel="prev" title="Moteurs thermiques" href="th_mc_moteur.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Thermodynamique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thermodynamique.html">
+   Thermodynamique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_description.html">
+   Description d’un système thermodynamique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_systeme.html">
+     Système thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_echelle.html">
+     Echelles d’étude
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_variables.html">
+     Variables d’état et variables microscopiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_equilibre.html">
+     Equilibre thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_extensives.html">
+     Variables extensives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_intensives.html">
+     Grandeurs intensives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_entropie_stat.html">
+     Approche statistique de l’entropie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_usuels.html">
+   Systèmes thermodynamiques usuels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_gaz.html">
+     Etude des gaz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_condenses.html">
+     Phases condensées
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_premier_pcp.html">
+   Premier principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_enonce.html">
+     Premier principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_q.html">
+     Transfert thermique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_w.html">
+     Travail mécanique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_transfo.html">
+     Etude de transformations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_compression.html">
+     Compression isotherme d’un gaz parfait
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_act_meth.html">
+     Activités méthodes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_second_pcp.html">
+   Second principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_enonce.html">
+     Second principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_expression.html">
+     Expression des grandeurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_interpretation.html">
+     Interprétations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_exemples.html">
+     Exemples d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_ex_app.html">
+     Second principe: Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_td.html">
+     Second principe: Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_chgt_etat.html">
+   Transitions de phases
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_obs.html">
+     Observations expérimentales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_quant.html">
+     Analyse quantitative
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_td.html">
+     Travaux dirigés: Changements d’état
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="th_machines.html">
+   Machines thermiques
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_gene.html">
+     Généralités
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_moteur.html">
+     Moteurs thermiques
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Récepteurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_methodes.html">
+     Méthodes d’études
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_ex_app.html">
+     Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/th_mc_recepteur.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/th_mc_recepteur.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/th_mc_recepteur.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#refrigerateur">
+   Réfrigérateur
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#refrigerateur-generalites">
+     Réfrigérateur: Généralités
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exemple-machine-a-fluide-condensable">
+     Exemple: Machine à fluide condensable
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pompe-a-chaleur">
+   Pompe à chaleur
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="recepteurs">
+<h1>Récepteurs<a class="headerlink" href="#recepteurs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="refrigerateur">
+<h2>Réfrigérateur<a class="headerlink" href="#refrigerateur" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="refrigerateur-generalites">
+<h3>Réfrigérateur: Généralités<a class="headerlink" href="#refrigerateur-generalites" title="Permalink to this headline">¶</a></h3>
+<p>Dans une réfrigérateur, la grandeur utile est la quantité de chaleur prise à la source froide <span class="math notranslate nohighlight">\(Q_f\)</span>: l’intérieur du réfrigérateur. La source chaude est quant à elle l’atmosphère extérieure en général.</p>
+<p>L’efficacité d’un réfrigérateur correspond donc au rapport entre la quantité de chaleur prise à la source froide et le travail fourni au système <span class="math notranslate nohighlight">\(e = \frac{Q_f}{W}\)</span>.</p>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Efficacité de Carnot</p>
+<p>L’efficacité maximale d’un réfrigérateur ditherme ne dépend que des températures des sources chaudes et froides. Il s’obtient lors d’un cycle réversible et a pour expression:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-96c34d96-5b34-42e4-b406-d8b55773c56d">
+<span class="eqno">(29)<a class="headerlink" href="#equation-96c34d96-5b34-42e4-b406-d8b55773c56d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+e_{C} = \frac{T_f}{T_c - T_f}
+\end{equation}\]</div>
+<p>On appelle cette efficacité, efficacité de Carnot pour un réfrigérateur.</p>
+</div>
+<p><strong>Démonstration</strong><br />
+Du second principe, il vient: <span class="math notranslate nohighlight">\(Q_c = -\frac{T_c}{T_f}Q_f - T_c S_c\)</span>. En divisant par <span class="math notranslate nohighlight">\(Q_c\)</span> le premier principe, il vient:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{1}{e} &amp;= \frac{W}{Q_f} \\
+&amp;= -1 - \frac{Q_c}{Q_f} \\
+&amp;= - 1 + \frac{T_c}{T_f} + \frac{T_c S_c}{Q_f}\\
+e &amp;= \frac{1}{\frac{T_c}{T_f} - 1 + \frac{T_c S_c}{Q_f}}
+\end{align*}\]</div>
+<p>Comme <span class="math notranslate nohighlight">\(S_c \geq 0\)</span>, cette efficacité est maximale pour <span class="math notranslate nohighlight">\(S_c =0\)</span> c’est-à-dire pour une transformation réversible et <span class="math notranslate nohighlight">\(e_C = \frac{T_f}{T_c-T_f}\)</span>.</p>
+<p><strong>Analyse</strong><br />
+Comme dans le cas de la pompe à chaleur, le rendement est d’autant plus grand que les température sont proches. Dans le cas d’un réfrigérateur, on peut imaginer qu’il est beaucoup plus facile et moins coûteux de refroidir l’intérieur si l’extérieur n’est pas trop chaud (on verra en deuxième année que les échanges thermiques dépendent fortement de la différence de température).Malheureusement, la température de la source “gratuites”, l’atmosphère ne peut être choisie par l’utilisateur (par exemple quand on veut utiliser une pompe à chaleur, c’est généralement qu’il fait froid dehors!).</p>
+<div class="hint dropdown admonition">
+<p class="admonition-title">Compléments :</p>
+<p>On peut remarquer que <span class="math notranslate nohighlight">\(Q_f = -Q_c - W \leq -Q_c\)</span> car on fournit du travail au réfrigérateur. Cela veut dire que quoiqu’il arrive la quantité de chaleur prise à la source froide sera toujours inférieure à la quantité de chaleur donnée à la source chaude. C’est pourquoi il est inutile d’ouvrir la porte d’un réfrigérateur pour refroidir une pièce: la quantité de chaleur libérée directement dans l’atmosphère sera toujours plus importante que la quantité de chaleur libérée dans le réfrigérateur: ouvrir un réfrigérateur ne va donc PAS refroidir la pièce, au contraire!</p>
+</div>
+</div>
+<div class="section" id="exemple-machine-a-fluide-condensable">
+<h3>Exemple: Machine à fluide condensable<a class="headerlink" href="#exemple-machine-a-fluide-condensable" title="Permalink to this headline">¶</a></h3>
+<p>Beaucoup de réfrigérateur fonctionne sur le principe des machine à fluide condensable ou machine à condensation. Le principe est à peu près celui d’un cycle de Rankine mais parcouru à l’envers. Le fluide utilisé n’est plus de l’eau mais un gaz qui se liquéfie à des températures ambiantes. On peut utiliser du méthane ou du dioxyde de carbone. Les réfrigérateurs usuels utilisaient plutôt des gaz appelés CFC (chlorofluorocarbone) ou fréons. Néanmoins ceux-ci se fixent dans la couche d’ozone où ils sont lysés par le rayons UV. Les atomes de fluor et de chlore libérés sont responsables de la destruction de la couche d’ozone. C’est pourquoi leur utilisation a été restreinte par le protocole de Montréal en 1987. On utilise encore les HCFC, moins nocifs mais il est question de procéder leur remplacement, à condition de trouver un substituants. Principe:</p>
+<ul class="simple">
+<li><p>Dans les machine à fluide condensable, le fluide, liquide, subit une évaporation complète au contact avec la source froide: c’est au cours de cette transformation que le fluide prélève de la chaleur de l’intérieur du réfrigérateur <span class="math notranslate nohighlight">\(Q_f\)</span>.</p></li>
+<li><p>Ensuite, on réalise une compression qui est cette fois le long de la courbe de saturation dans un compresseur. Pour effectuer ceci, il faut fournir un travail W et on augmente la température pour qu’elle passe au dessus de celle de la source chaude.</p></li>
+<li><p>Le fluide passe alors dans le condenseur où il est en contact avec l’atmosphère extérieur, la source chaude. Il cède alors de la chaleur <span class="math notranslate nohighlight">\(Q_c\)</span> à la source chaude. Le fluide se condense entièrement puis se refroidit.</p></li>
+<li><p>Il faut alors détendre le fluide pour le ramener à son état initial. On effectuer pour cela une détente isenthalpique dans un détendeur.</p></li>
+</ul>
+<p><strong>Ordre de grandeur</strong><br />
+Un kilogramme de fréon enlève par cycle, environ 100kJ à la source froide. On rappelle que cela correspond environ au refroidissement de 3K de 10L d’eau.</p>
+</div>
+</div>
+<div class="section" id="pompe-a-chaleur">
+<h2>Pompe à chaleur<a class="headerlink" href="#pompe-a-chaleur" title="Permalink to this headline">¶</a></h2>
+<p>Dans une pompe à chaleur, la grandeur utile est la quantité de chaleur cédée à la source chaude <span class="math notranslate nohighlight">\(Q_c\)</span>. Celle-ci peut-être par exemple une pièce à maintenir à température constante, un moteur…  La pompe à chaleur la plus utilisée est la pompe à air où grâce à un travail (initialement électrique mais qui est en général converti en un travail mécanique), la pompe prend de la chaleur à de l’air et en fourni à la pièce à chauffer. La chaleur prise à la source froide est donc d’une certaine manière “gratuite” et seul le travail apporté W correspond à l’énergie fournie.</p>
+<p>L’efficacité d’une pompe à chaleur correspond donc au rapport entre la quantité de chaleur fournie à la source chaude et le travail fourni au système <span class="math notranslate nohighlight">\( e = \frac{\vert Q_c \vert}{W}\)</span></p>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Efficacité de Carnot</p>
+<p>L’efficacité maximale d’une pompe à chaleur ditherme ne dépend que des températures des sources chaudes et froides. Il s’obtient lors d’un cycle réversible et a pour expression:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-abbf9fbb-9b6e-4fe9-bb1c-01541fe976e0">
+<span class="eqno">(30)<a class="headerlink" href="#equation-abbf9fbb-9b6e-4fe9-bb1c-01541fe976e0" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+e_{C} = \frac{T_c}{T_c - T_f}
+\end{equation}\]</div>
+<p>On appelle cette efficacité, efficacité de Carnot pour une pompe à chaleur.</p>
+</div>
+<p><strong>Démonstration</strong><br />
+Du second principe, il vient: <span class="math notranslate nohighlight">\(Q_f = -\frac{T_f}{T_c}Q_c - T_f S_c\)</span>. En divisant par <span class="math notranslate nohighlight">\(Q_c\)</span> le premier principe, il vient:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\frac{1}{e} &amp;= -\frac{W}{Q_c} \\
+&amp;= 1 + \frac{Q_f}{Q_c} \\
+&amp;= 1 - \frac{T_f}{T_c} - \frac{T_f S_c}{Q_c}\\
+e = \frac{1}{1 - \frac{T_f}{T_c} + \frac{T_f S_c}{\vert Q_c \vert}}
+\end{align*}\]</div>
+<p>Comme <span class="math notranslate nohighlight">\(S_c \geq 0\)</span>, cette efficacité est maximale pour <span class="math notranslate nohighlight">\(S_c =0\)</span> c’est-à-dire pour une transformation réversible et <span class="math notranslate nohighlight">\(e_C = \frac{T_c}{T_c-T_f}\)</span>.</p>
+<p><strong>Analyse</strong><br />
+L’efficacité <strong>maximale</strong> d’une pompe à chaleur est toujours supérieur à 1. Cela signifie qu’on fournir plus que W à la pièce à chauffer. C’est ce qui rend la pompe à chaleur intéressante. En effet, une résistance chauffante simple n’aurait pas pu fournir une chaleur supérieure à W. L’inconvénient est notamment le coût de l’installation et son entretien, il faut une installation importante pour rentabiliser une pompe à chaleur.</p>
+<div class="hint dropdown admonition">
+<p class="admonition-title">Compléments : Travail</p>
+<p>Pourquoi compter W et pas uniquement le travail effectivement reçu <span class="math notranslate nohighlight">\(W_r\)</span> au système mécanique qui nous intéresse? Cela signifie qu’on se place dans le cas le plus favorable où l’ensemble du travail qui serait fourni par le système dans les temps moteurs seraient entièrement réutilisé par le système. Dans la pratique, cela n’est pas toujours le cas.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="th_mc_moteur.html" title="previous page">Moteurs thermiques</a>
+    <a class='right-next' id="next-link" href="th_mc_methodes.html" title="next page">Méthodes d’études</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grandeurs intensives &#8212; Thermodynamique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/thermodynamique/notebook/th_d_intensives.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exercices d’application" href="th_d_ex_app.html" />
+    <link rel="prev" title="Variables extensives" href="th_d_extensives.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Thermodynamique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thermodynamique.html">
+   Thermodynamique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="th_description.html">
+   Description d’un système thermodynamique
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_systeme.html">
+     Système thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_echelle.html">
+     Echelles d’étude
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_variables.html">
+     Variables d’état et variables microscopiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_equilibre.html">
+     Equilibre thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_extensives.html">
+     Variables extensives
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Grandeurs intensives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_entropie_stat.html">
+     Approche statistique de l’entropie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_usuels.html">
+   Systèmes thermodynamiques usuels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_gaz.html">
+     Etude des gaz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_condenses.html">
+     Phases condensées
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_premier_pcp.html">
+   Premier principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_enonce.html">
+     Premier principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_q.html">
+     Transfert thermique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_w.html">
+     Travail mécanique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_transfo.html">
+     Etude de transformations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_compression.html">
+     Compression isotherme d’un gaz parfait
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_act_meth.html">
+     Activités méthodes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_second_pcp.html">
+   Second principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_enonce.html">
+     Second principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_expression.html">
+     Expression des grandeurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_interpretation.html">
+     Interprétations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_exemples.html">
+     Exemples d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_ex_app.html">
+     Second principe: Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_td.html">
+     Second principe: Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_chgt_etat.html">
+   Transitions de phases
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_obs.html">
+     Observations expérimentales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_quant.html">
+     Analyse quantitative
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_td.html">
+     Travaux dirigés: Changements d’état
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_machines.html">
+   Machines thermiques
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_gene.html">
+     Généralités
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_moteur.html">
+     Moteurs thermiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_recepteur.html">
+     Récepteurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_methodes.html">
+     Méthodes d’études
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_ex_app.html">
+     Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/th_d_intensives.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/th_d_intensives.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/th_d_intensives.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#temperature">
+   Température
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#temperature-definition">
+     Température: Définition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#temperature-cinetique">
+     Température cinétique
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#temperature-proprietes-et-mesures">
+     Température: Propriétés et mesures
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#temperature-absolue">
+     Température absolue
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pression">
+   Pression
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pression-definition">
+     Pression: Définition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methode-calculer-une-pression">
+     Méthode: Calculer une pression
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exemple-etude-d-un-gaz">
+   Exemple : Etude d’un gaz
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="grandeurs-intensives">
+<h1>Grandeurs intensives<a class="headerlink" href="#grandeurs-intensives" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="temperature">
+<h2>Température<a class="headerlink" href="#temperature" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="temperature-definition">
+<h3>Température: Définition<a class="headerlink" href="#temperature-definition" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Température (thermodynamique)</p>
+<p>Soit un système dont l’entropie est notée S, l’énergie interne U et le volume V. On définit la température du système par la grandeur:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0f07b5a5-8954-47b8-8670-d5956f9fbf9d">
+<span class="eqno">(3)<a class="headerlink" href="#equation-0f07b5a5-8954-47b8-8670-d5956f9fbf9d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+{\left(\frac{\partial U}{\partial S}\right)}_{V}
+\end{equation}\]</div>
+</div>
+<p>Il s’agit d’une définition très abstraite qui nous servira peu par la suite. Nous allons voir d’autres interprétation de la température (qui sont parfois considérées comme des définitions) et qui permettront de faire des interprétations physiques de la températures.</p>
+</div>
+<div class="section" id="temperature-cinetique">
+<h3>Température cinétique<a class="headerlink" href="#temperature-cinetique" title="Permalink to this headline">¶</a></h3>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Température (cinétique) - Admis</p>
+<p>L’énergie cinétique moyenne de translation des particules d’un gaz s’écrit en fonction de la température sous la forme:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7c4839e1-453a-4209-a37b-5bb5dcc4fc81">
+<span class="eqno">(4)<a class="headerlink" href="#equation-7c4839e1-453a-4209-a37b-5bb5dcc4fc81" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\overline{E_c} = \frac{3}{2}k_B T
+\end{equation}\]</div>
+<p>On parle pour interprêter cette température de “température cinétique”.</p>
+<p><span class="math notranslate nohighlight">\(k_B\)</span> est la constante de Boltzmann.</p>
+</div>
+<p>On rappelle que cette interprétation permet de relier la température à la vitesse quadratique moyenne et donc à l’agitation des particules: ce qu’on appelera <strong>agitation thermique</strong>.</p>
+<p><strong>Equivalence</strong><br />
+L’équivalence entre la définition thermodynamique de la température et son interprétation cinétique est admise.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Thermalisation</strong><br />
+On remarquera que le passage des aspects microscopiques à la notion de température fait “perdre” de l’information. On a en effet accès la valeur moyenne de la vitesse quadratique et non à sa statistique.</p>
+<p class="card-text">Considérons par exemple deux gaz parfaits aux températures <span class="math notranslate nohighlight">\(T_1\)</span> et <span class="math notranslate nohighlight">\(T_2\)</span> contenus dans deux enceintes séparées par une paroi amovible. On peut calculer l’énergie cinétique moyenne par particule du système composé des deux gaz etlui associer une “température cinétique”:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\overline{E_c} &amp;= \frac{N_1}{N_1 + N_2} \overline{E_{c,1}} + \frac{N_2}{N_1 + N_2} \overline{E_{c,2}}\\
+&amp;= \frac{3}{2}k_B\left(\frac{N_1}{N_1 + N_2} T_1 + \frac{N_2}{N_1 + N_2} T_2\right)\\
+T_C &amp;= \frac{2}{3 k_B} \overline{E_c}\\
+&amp;= \frac{N_1 T_1 + N_2 T_2}{N_1 + N_2}
+\end{align*}\]</div>
+<p class="card-text">Cette température n’a pas forcément de sens, notamment si la paroi est calorifugée, c’est-à-dire qu’elle ne laisse pas passer la chaleur. Dans ces conditions, la statistiques des vitesses va garder la présence de deux “pics” de densité autour des vitesses quadratiques moyennes de chaque gaz.</p>
+<p class="card-text">Par contre, supposons maintenant que la paroi laisse passer la chaleur. Alors le système va évoluer vers une température uniforme dans les deux enceintes. Pour la calculer, il suffit de remarquer que le système constitué des deux gaz est isolé (on néglige l’énergie interne de la paroi) de sorte que l’énergie cinétique de translation totale est celle calculée précédemment et la température finale est la moyenne calculée précédemment.</p>
+<p class="card-text">La différence est que d’un côté, ce calcul a un sens (il correspondrait à la mesure donné par un thermomètre) et de l’autre elle n’en a pas (cas la température n’est pas homogène). Dans le cas où la paroi laisse passer la chaleur, la statistique des vitesse va évoluer pour ne faire apparaître qu’un seul “pic” autour de la nouvelle vitesse quadratique moyenne globale.</p>
+<p class="card-text">On remarquera que pour passer de deux températures séparées à des températures égales, les deux gaz s’échangent de l’énergie par l’intermédiaire de la paroi: les particules plus énergétiques (plus chaudes) dans un gaz perdent un peu d’énergie au contact de la paroi et cette énergie, a lieu d’être restituée au même gaz sera prélevée par le second (cet effet est statistique sur un grand nombre de chocs). On parle de thermalisation.</p>
+</div>
+</details></div>
+<div class="section" id="temperature-proprietes-et-mesures">
+<h3>Température: Propriétés et mesures<a class="headerlink" href="#temperature-proprietes-et-mesures" title="Permalink to this headline">¶</a></h3>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Principe zéro</p>
+<p>Tous les systèmes en équilibre thermique avec un système donnée sont en équilibre entre eux. Ce principe se vérifie expérimentalement. On dit alors que tous ces systèmes sont à la même température.</p>
+<p>Ce principe sera démontré pour la température thermodynamique au moyen du second principe.</p>
+</div>
+<p><strong>Thermomètre</strong><br />
+Ce principe 0 est la base des premiers principes de mesure de la température: on place le système étudié en contact thermique avec une appareil de mesure(un thermomètre) et on atteint <strong>l’équilibre thermique</strong>. La température du thermomètre est alors celle du système. On s’arrange alors pour que l’influence de T sur le thermomètre soit quantifiable.</p>
+<p>Par exemple, dans le cas des thermomètres “classiques” il s’agit d’un fluide qui se dilate dans un tube capillaire sous l’effet de la température. On associe à T une hauteur de dilatation.</p>
+<p><strong>Thermomètres modernes</strong><br />
+Si la majorité des thermomètres “grand public” nécessite encore une mise en contact thermique, certains thermomètres modernes peuvent s’en passer en utilisant une mesure par rayonnement thermique.</p>
+</div>
+<div class="section" id="temperature-absolue">
+<h3>Température absolue<a class="headerlink" href="#temperature-absolue" title="Permalink to this headline">¶</a></h3>
+<p>A l’inverse de la température cinétique qui donne une interprétation microscopique, la température dite “absolue” permet une interprétation en terme de mesure expérimentale et donc une vision macroscopique.</p>
+<p>Cette interprétation vient du besoin, après l’utilisation de très nombreuses échelles de mesures (les plus persistentes sont le Celsius et le Farenheit) de créer une “définition” (ça a été une définition) de la température basée sur des propriétés fondamentales et non sur des phénomènes particuliers subjectifs (on choisit aribitrairement de placer le 0<span class="math notranslate nohighlight">\(\circ\)</span>C au gel de l’eau à température ambiante mais ce 0 n’a pas de valeur “absolue”.</p>
+<p>Avec la température absolue (dont l’unité sera le Kelvin K), on définit un 0 issu de propriétés fondamentales et comme valeur limite basse (il ne peut y avoir de température négative). Il restera à choisir une échelle (arbitraire).</p>
+<div class="attention admonition">
+<p class="admonition-title">Fondamental : Expérience de Boyle-Mariotte</p>
+<div class="figure align-center" id="fig-270">
+<img alt="../_images/thermo_amagat.jpg" src="../_images/thermo_amagat.jpg" />
+</div>
+<p>On dispose d’une masse m donnée de gaz maintenue à température constante dans une enceinte thermostatée. On peut faire varier la température <span class="math notranslate nohighlight">\(\theta\)</span> (définie comme une température relative — échelle de Celsius) du thermostat. Un système de vase communiquant permet de faire varier le volume et la pression du gaz. L’expérience consiste à suivre l’évolution du volume V et de la pression P du gaz pour une température <span class="math notranslate nohighlight">\(\theta\)</span> donnée.</p>
+<p>Boyle et Mariotte ont montré qu’on pouvait interpoler la valeur limite du produit PV quand P tendait vers 0 par une valeur <span class="math notranslate nohighlight">\(PV_{P=0}\)</span> qui ne dépendait que de la température <span class="math notranslate nohighlight">\(\theta\)</span>, quel que soit le gaz considéré. On dit que le comportement des gaz est alors parfait.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Température absolue</p>
+<p>On définit la température absolue à partir d’un point de référence <span class="math notranslate nohighlight">\(T_R = 273,16 \rm{K}\)</span> au point triple de l’eau et telle que <span class="math notranslate nohighlight">\(T=0\)</span> quand pour un gaz, <span class="math notranslate nohighlight">\(PV_{P=0} = 0\)</span>. La température T “absolue” est alors définie comme la limite du produit <span class="math notranslate nohighlight">\(\frac{PV}{nR}\)</span> lorsque P tend vers 0 pour un gaz.</p>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Le choix de la valeur du point triple de l’eau permet de garder la même échelle que pour les Celsius: une variation de <span class="math notranslate nohighlight">\(100^\circ\)</span>C correspond à une variation de 100K.</p>
+<p class="card-text">En pratique, l’utilisation de cette définition de manière empirique passe par l’emploi d’un thermomètre à gaz:on met le système dont on veut mesurer la température en contact thermique avec un gaz dont le comportement est parfait et dont on mesure la température (au moyen de la loi des gaz parfaits).</p>
+<p class="card-text">La définition précédente est cohérente (admis) avec la définition de la température thermodynamique. On parlera de température sans préciser sa définition par la suite.</p>
+</div>
+</details></div>
+</div>
+<div class="section" id="pression">
+<h2>Pression<a class="headerlink" href="#pression" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pression-definition">
+<h3>Pression: Définition<a class="headerlink" href="#pression-definition" title="Permalink to this headline">¶</a></h3>
+<p><em>Rappel : Définition empirique</em><br />
+On rappelle qu’on peut définir la pression de manière empirique comme la force surfacique exercée par le fluide normalement à la surface de contact. <span class="math notranslate nohighlight">\(\overrightarrow{dF} = P \overrightarrow{dS}\)</span></p>
+<p><em>Rappel : Origine microscopique</em><br />
+On rappelle que la pression peut-être vue comme un transfert de quantité de mouvement par unité de surface et de temps normalement à la surface de contact (on parlera de flux).</p>
+<p>Comme on l’a déjà précisé, cette interprétation sera surtout utilisée pour exprimer la pression d’un fluide sur une paroi. On parle de <strong>pression cinétique</strong>. On peut calculer la force moyenne exercée par une particule sur la paroi puis sommer les forces exercées par l’ensemble des particules qui heurtent la paroi par unité de temps. Un tel calcul sera réalisé dans le cadre de l’étude de la pression cinétique d’un gaz parfait.</p>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Pression thermodynamique</p>
+<p>Soit un système dont l’entropie est notée S, l’énergie interne U et le volume V. On définit la pression du système par la grandeur:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1872716a-aba3-4cc7-a53e-17543811247e">
+<span class="eqno">(5)<a class="headerlink" href="#equation-1872716a-aba3-4cc7-a53e-17543811247e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+P = - {\left(\frac{\partial U}{\partial V}\right)}_{S}
+\end{equation}\]</div>
+</div>
+<p>Cette dernière définition est relativement abstraite et ne sera pas (peu) utilisée dans la suite. Il s’agit néanmoins de la définition fondamentale. On admettra la cohérence de cette définition avec les deux premières.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Pression des gaz</strong><br />
+En général, on considérera que la pression des gaz est uniforme. Cela est justifié pour des systèmes de tailles “normales” puisqu’on a vu précédemment que la pression ne variait que faiblement sur des distances de l’ordre du mettre.</p>
+<p class="card-text">Pour les fluides incompressibles, on fera plus attention à la <strong>possible</strong> nécessité de travailler avec une pression non uniforme.</p>
+</div>
+</details></div>
+<div class="section" id="methode-calculer-une-pression">
+<h3>Méthode: Calculer une pression<a class="headerlink" href="#methode-calculer-une-pression" title="Permalink to this headline">¶</a></h3>
+<p>Très souvent, on sera amené à caractériser un état d’équilibre, c’est-à-dire à déterminer les variables d’état (pression volume, température) dans l’état considéré</p>
+<p>La mise en équation nécessaire passe par l’écriture des équilibres: thermiques (égalité de température), chimiques (en …  chimie) et mécanique. On se propose ici d’utiliser ce dernier pour déterminer la pression d’un gaz.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On considère un gaz contenu dans une enceinte fermée sur un côté par un piston de section S et de masse M glissant sans frottement sur les paroi de l’enceinte. De l’autre côté du piston se trouve une atmosphère à pression <span class="math notranslate nohighlight">\(P_0\)</span>.</p>
+<ol class="simple">
+<li><p>Déterminer la pression du gaz à l’équilibre en fonction de M,g, S et <span class="math notranslate nohighlight">\(P_0\)</span> suivant que le piston se trouve sur une face latérale ou sur la face supérieure de l’enceinte.</p></li>
+<li><p>Déterminer le volume de l’enceinte à l’équilibre en supposant que la température du gaz est maintenue à <span class="math notranslate nohighlight">\(T_0\)</span> et que le gaz suit le modèle du gaz parfait.</p></li>
+</ol>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Démonstration<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Utilisation d’un équilibre mécanique</strong></p>
+<p class="card-text">Un équilibre mécanique est traduit par un théorême de la résultante dynamique à l’équilibre sur la paroi mobile - ici le piston. On travaille dans le référentiel de l’enceinte supposée galliléen.</p>
+<p class="card-text">On note Ox l’axe vertical ascendant et Oy un axe horizontal.</p>
+<p class="card-text">Les actions qui s’exercent sur le piston sont:</p>
+<ul class="simple">
+<li><p class="card-text">l’action de la paroi. Elle n’a pas de composante suivant le déplacement du piston puisqu’il n’y a pas de frottements.</p></li>
+<li><p class="card-text">l’action de <strong>l’atmosphère extérieure.</strong></p></li>
+<li><p class="card-text">l’action du gaz</p></li>
+<li><p class="card-text">l’action de la pesanteur.</p></li>
+</ul>
+<p class="card-text">Cas horizontal. On projette suivant Ox (dirigé du gaz vers l’extérieur):</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+0 &amp;= PS - P_0 S\\
+P &amp;= P_0
+\end{align*}\]</div>
+<p class="card-text">Cas vertical. On projette suivant Oz:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+0 &amp;= PS - P_0 S - Mg\\
+P &amp;= P_0 + \frac{Mg}{S}
+\end{align*}\]</div>
+<div class="note admonition">
+<p class="admonition-title">Attention :</p>
+<p class="card-text">Plusieurs erreurs fréquentes sont rencontrées lors de l’établissement de l’équilibre mécanique.</p>
+<ul class="simple">
+<li><p class="card-text">Très souvent, l’étudiant écrit directement <span class="math notranslate nohighlight">\(P = P_0\)</span> sans tenir compte des autre action.</p></li>
+<li><p class="card-text">De nombreuses erreurs de signe peuvent se produire.</p></li>
+</ul>
+</div>
+<p class="card-text"><strong>Calcul des forces de pression</strong><br />
+En thermodynamique, on sera souvent amené à étudier des forces de pressions uniformes sur des surfaces planes. Il n’est pas nécessaire dans ce cas de passer par un calcul intégrale: la force de pression est directement la pression multipliée par la surface (reste à l’orienter correctement).</p>
+</div>
+</details></div>
+</div>
+<div class="section" id="exemple-etude-d-un-gaz">
+<h2>Exemple : Etude d’un gaz<a class="headerlink" href="#exemple-etude-d-un-gaz" title="Permalink to this headline">¶</a></h2>
+<p>Cet exercice se propose de mettre en relation les caractéristiques microscopiques et macroscopiques d’un gaz pour en connaître les ordres de grandeurs.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Considérons une mole d’argon (<span class="math notranslate nohighlight">\(M = 39,9 \rm{g.mol^{-1}}\)</span>) considérée comme un gaz parfait contenu dans un récipient de volume <span class="math notranslate nohighlight">\(V=22.4\rm{L}\)</span> et à une température <span class="math notranslate nohighlight">\(T=273,15\rm{K}\)</span>.</p>
+<ol class="simple">
+<li><p>Déterminer la pression du gaz.</p></li>
+<li><p>Déterminer le nombre de particules et la distance moyenne entre deux particules proches.</p></li>
+<li><p>Déterminer l’énergie cinétique moyenne et la vitesse quadratique moyenne des particules.</p></li>
+<li><p>En déduire un estimation du temps entre deux chocs sur une paroi. Commenter le principe de calculer une force “moyenne” pour étudier une force de pression.</p></li>
+<li><p>On définit le <strong>libre parcours moyen</strong> d’une particule comme la distance moyenne que parcourt la particule entre deux chocs. On peut montrer qu’il vaut <span class="math notranslate nohighlight">\(l=\frac{1}{\sqrt{2}n^* \pi d^2}\)</span> où d est le diamètre des particules et <span class="math notranslate nohighlight">\(n^*\)</span> la concentration en particule.</p>
+<ol class="simple">
+<li><p>Reexprimer le libre parcours moyen en fonction de la pression, de la température et de d.</p></li>
+<li><p>A température ambiante et pression ambiante, le libre parcours moyen est d’environ 100nm. Représenter qualitativement la trajectoire d’une particule. Commenter.</p></li>
+<li><p>Estimer le diamètre des particules. Commenter.</p></li>
+</ol>
+</li>
+</ol>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Démonstration<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Pression</strong><br />
+<span class="math notranslate nohighlight">\(P = \frac{nRT}{V} = 10^5 \rm{Pa}\)</span>.</p>
+<p class="card-text"><strong>Distance inter atomique</strong><br />
+<span class="math notranslate nohighlight">\(N = n N_A = 6 \times 10^{23} \rm{particules}\)</span></p>
+<p class="card-text">On peut estimer le volume moyen libre entourant une particules par <span class="math notranslate nohighlight">\(V^* = \frac{V}{nN_A}\)</span>. En assimilant ce volume à un cube, la distance moyenne entre deux particules proches se de l’ordre de <span class="math notranslate nohighlight">\(d \sim {\left( \frac{V}{nN_A}\right)}^{1/3} = 3 \times 10^{-9} \rm{m}\)</span>.</p>
+<p class="card-text">On remarque que cette distance est grande devant la taille des atomes. Dans une modélisation en terme d’interaction entre dipôle électrostatique, on pourrait considérer que cette distance suffit à négliger les interactions à distance entre particules.</p>
+<p class="card-text"><strong>Vitesse quadratique moyenne</strong><br />
+On utilise l’interprétation cinétique de la température <span class="math notranslate nohighlight">\(\overline{E_c} = \frac{3}{2}k_B T = 5 \times 10^{-21} J\)</span> (on pourra remarquer que cette énergie est faible devant 1eV).</p>
+<p class="card-text">Pour calculer la vitesse quadratique moyenne, on a besoin de la masse d’un atome d’argon qu’on va déterminer à partir de sa masse molaire: <span class="math notranslate nohighlight">\(m = \frac{M}{N_A}\)</span></p>
+<p class="card-text">Il vient une vitesse quadratique moyenne <span class="math notranslate nohighlight">\(v = \sqrt{\frac{2 \overline{E_c}N_A}{M}} = 1.2 \times 10^2 \rm{m.s^{-1}}\)</span></p>
+<p class="card-text">On remarquera qu’il s’agit de vitesses très importantes. Ce déplacement n’est pas “visible” car il se fait dans toutes les directions de sorte que la vitesse moyenne de déplacement reste faible.</p>
+<p class="card-text"><strong>Fréquence des chocs</strong><br />
+Pour un volume V, on peut considérer que la taille caractéristique de l’enceinte est <span class="math notranslate nohighlight">\(L = V^{1/3}\)</span>. La distance parcouru entre deux chocs sur une même paroi par une particule est de l’ordre de 2L et donc le temps deux chocs sur une paroi pour une particule est de l’ordre de <span class="math notranslate nohighlight">\(\frac{2L}{v}\)</span>. Avec N particules, la fréquence des chocs est donc de l’ordre de <span class="math notranslate nohighlight">\(f_{choc} \sim \frac{Nv}{2L} \sim 1.2 * 10^{26} \rm{Hz}\)</span>.</p>
+<p class="card-text">On observe qu’il y a donc un très grand nombre de chocs. Pendant une durée infinitésimale (mais associée à une échelle mésoscopique) dt, on pourra considérer que ce nombre reste grand et motive une étude statistique. On travaillera ainsi avec des forces moyennes exercées par les particules.</p>
+<p class="card-text">On pourra remarquer aussi que les fréquences des chocs est bien plus grandes que la fréquence de mesures que peut prendre un capteur de pression. Ce dernier mesure donc aussi une force <strong>moyenne.</strong></p>
+<p class="card-text"><strong>Libre parcours moyen</strong><br />
+De l’équation d’état des gaz parfait, il vient que <span class="math notranslate nohighlight">\(n^* = \frac{N}{V} = \frac{PN_A}{RT} = \frac{P}{k_B T}\)</span> (on retiendra que <span class="math notranslate nohighlight">\(R = N_A k_B\)</span>). Il vient <span class="math notranslate nohighlight">\(l = \frac{k_B T}{\sqrt{2}\pi d^2 P}\)</span>.</p>
+<p class="card-text">Il s’agit donc d’une trajectoire erratique, on parlera de chaos moléculaire. On peut par contre remarquer que cette distance est grande devant la taille des atomes.</p>
+<p class="card-text"><span class="math notranslate nohighlight">\(d = \sqrt{\frac{k_B T}{\sqrt{2}\pi P l}} \sim 3 \times 10^{-10} \rm{m}\)</span>. Il s’agit donc à peu près de la taille d’un atome. Elle est légèrement plus grande du fait qu’on tient compte de la portée de l’interaction entre particules.</p>
+</div>
+</details></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="th_d_extensives.html" title="previous page">Variables extensives</a>
+    <a class='right-next' id="next-link" href="th_d_ex_app.html" title="next page">Exercices d’application</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

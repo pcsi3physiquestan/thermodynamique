@@ -1,0 +1,602 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Généralités &#8212; Thermodynamique</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/thermodynamique/notebook/th_mc_gene.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Moteurs thermiques" href="th_mc_moteur.html" />
+    <link rel="prev" title="Machines thermiques" href="th_machines.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Thermodynamique</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../thermodynamique.html">
+   Thermodynamique
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_description.html">
+   Description d’un système thermodynamique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_systeme.html">
+     Système thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_echelle.html">
+     Echelles d’étude
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_variables.html">
+     Variables d’état et variables microscopiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_equilibre.html">
+     Equilibre thermodynamique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_extensives.html">
+     Variables extensives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_intensives.html">
+     Grandeurs intensives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_d_entropie_stat.html">
+     Approche statistique de l’entropie
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_usuels.html">
+   Systèmes thermodynamiques usuels
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_gaz.html">
+     Etude des gaz
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_condenses.html">
+     Phases condensées
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_u_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_premier_pcp.html">
+   Premier principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_enonce.html">
+     Premier principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_q.html">
+     Transfert thermique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_w.html">
+     Travail mécanique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_transfo.html">
+     Etude de transformations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_compression.html">
+     Compression isotherme d’un gaz parfait
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_act_meth.html">
+     Activités méthodes
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_ex_app.html">
+     Exercices d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_pp_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_second_pcp.html">
+   Second principe
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_intro.html">
+     Introduction
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_enonce.html">
+     Second principe: Enoncé
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_expression.html">
+     Expression des grandeurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_interpretation.html">
+     Interprétations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_exemples.html">
+     Exemples d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_ex_app.html">
+     Second principe: Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_sp_td.html">
+     Second principe: Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="th_chgt_etat.html">
+   Transitions de phases
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_obs.html">
+     Observations expérimentales
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_quant.html">
+     Analyse quantitative
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_cg_td.html">
+     Travaux dirigés: Changements d’état
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="th_machines.html">
+   Machines thermiques
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Généralités
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_moteur.html">
+     Moteurs thermiques
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_recepteur.html">
+     Récepteurs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_methodes.html">
+     Méthodes d’études
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_ex_app.html">
+     Exercice d’application
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="th_mc_td.html">
+     Travaux dirigés
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/th_mc_gene.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/th_mc_gene.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/th_mc_gene.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition">
+   Définition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#relations-generales">
+   Relations générales
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cas-d-une-machine-ditherme">
+   Cas d’une machine ditherme
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cogeneration">
+   Cogénération
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="generalites">
+<h1>Généralités<a class="headerlink" href="#generalites" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="definition">
+<h2>Définition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
+<p>Les machines thermiques sont la base de la révolution industrielle et d’une partie du fonctionnement industriel actuel. Leur but: effectuer une conversion d’énergie (ou de puissance) incluant un transfert thermique.</p>
+<p>Leur fonctionnement général se base sur le principe simple d’équivalence entre travail et échange thermique (ou chaleur) — c’est-à-dire le premier principe tel que l’a énoncé Joule. On peut donc voir une machine thermique comme un système, en général un fluide passant pour différentes transformation pour soit:</p>
+<ul class="simple">
+<li><p>prendre et donner de la chaleur à des corps pour fournir un travail mécanique: on parlera de <strong>moteur</strong>.</p></li>
+<li><p>à partir d’un travail mécanique reçu, effectuer un échange de chaleur qui ne peut se faire naturellement (refroidir en été, chauffer une pièce en hiver… ). On distinguera deux types de machines suivant leur utilité:</p></li>
+<li><p>les réfrigérateurs, servant à refroidir une source froide</p></li>
+<li><p>les pompes à chaleur qui fonctionnement sur le même principe thermodynamique mais qui servent à maintenir une pièce à une température chaude.</p></li>
+</ul>
+<p>La suite de transformations permettant d’effectuer cette conversion ne dure en général pas plus de quelques secondes ou quelques minutes (quelques heures pour certaines machines très particulières). Or un réfrigérateur, un moteur de voiture…  doivent pouvoir fonctionner plusieurs heures voire plusieurs mois sans qu’on doivent relancer à chaque fois la machine. Il faut donc qu’à la fin de la transformation, on soit revenu au point de départ pour recommencer la série de transformation: les machines thermiques fonctionnent en général sur des cycles (ce qui ne veut pas dire qu’il n’y a pas des transformations non cycliques à l’allumage).</p>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Machines thermiques</p>
+<p>Une machine thermique est constitué d’un système (M) qui, en général décrit des cycles fermés successifs. Au cours du cycle, il échange du transfert thermique <span class="math notranslate nohighlight">\(Q_i\)</span> avec des sources de chaleur <span class="math notranslate nohighlight">\(\Sigma_i\)</span> à température <span class="math notranslate nohighlight">\(T_i\)</span> et du travail mécanique <span class="math notranslate nohighlight">\(W_i\)</span> avec les systèmes mécaniques (notés <span class="math notranslate nohighlight">\(Sm_i\)</span>).</p>
+<div class="figure align-center" id="fig-290">
+<img alt="../_images/thermo_machine_modele.jpg" src="../_images/thermo_machine_modele.jpg" />
+</div>
+</div>
+<p><strong>Rendement et efficacité</strong><br />
+L’intérêt d’une machine thermique est mesurée par le rapport entre l’énergie utile récupérable par l’utilisateur et l’énergie à fournir à la machine. On parle de <strong>rendement</strong> pour un moteur et d’<strong>efficacité</strong> pour un récepteur.</p>
+</div>
+<div class="section" id="relations-generales">
+<h2>Relations générales<a class="headerlink" href="#relations-generales" title="Permalink to this headline">¶</a></h2>
+<p><strong>Relations générales</strong></p>
+<p>La base de l’étude des machines thermiques est l’utilisation des deux premiers principe de la thermodynamique. Rappelons que la transformation se fait sur un cycle, donc la variation des fonctions d’état est nulle pour le système:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\Delta U &amp;= 0 = \sum\limits_{i} Q_i + \sum\limits_{i} W_i\\
+\Delta S &amp;= 0 = \sum\limits_{i} \frac{Q_i}{T_i} + S_c \geq \sum\limits_{i} \frac{Q_i}{T_i}
+\end{align*}\]</div>
+</div>
+<div class="section" id="cas-d-une-machine-ditherme">
+<h2>Cas d’une machine ditherme<a class="headerlink" href="#cas-d-une-machine-ditherme" title="Permalink to this headline">¶</a></h2>
+<p><em>Rappel : Principe de Carnot</em><br />
+On rappelle ce corollaire de l’énoncé de Thomson: pour qu’un système décrivant un cycle fournisse du travail, il doit nécessairement échanger du transfert thermique avec au moins deux sources à des températures différentes.</p>
+<p>Dans le cours, nous nous intéresserons uniquement à des machines dithermes, c’est-à-dire à des machines. Il faut bien comprendre le raisonnement pour être capable de le refaire si besoin est pour des machines en contact avec un nombre supérieur de thermostats. On regroupera de plus le travail échangé dans le travail total W. Nous verrons en partie pourquoi on peut travailler uniquement avec le travail total.</p>
+<p><em>Notation: Nous allons noter avec des indices f, les données relatives au thermostat de plus basse température, ce sera donc une source froide. Nous noterons avec des indices c les données relatives au thermostat de plus haute température, ce sera donc une source chaude.</em></p>
+<p><strong>Modélisation et équation</strong></p>
+<div class="figure align-center" id="fig-291">
+<img alt="../_images/thermo_machine_dithermej.jpg" src="../_images/thermo_machine_dithermej.jpg" />
+</div>
+<div class="amsmath math notranslate nohighlight" id="equation-bb87ed8f-d18b-4131-aa83-794eda6d5ec9">
+<span class="eqno">(26)<a class="headerlink" href="#equation-bb87ed8f-d18b-4131-aa83-794eda6d5ec9" title="Permalink to this equation">¶</a></span>\[\begin{align}
+W + Q_c + Q_f &amp;= 0\\
+\frac{Q_c}{T_c} + \frac{Q_f}{T_f} &amp;\leq 0
+\end{align}\]</div>
+<div class="note admonition">
+<p class="admonition-title">Attention :</p>
+<p>La dernière inégalité n’est valable QUE pour des thermostats parfaits, c’est-à-dire dont la température est la même à tout instant. Dans certaines cas, une des sources (ou les deux) ne peuvent être considérées comme des sources parfaites, il faut alors revenir à l’expression générale du second principe.</p>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarque<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Typologie des machines thermiques</strong><br />
+On distingue les machines thermiques en fonction des grandeurs utiles et à fournir. Remarquons d’abord que tous les échanges ne peuvent être positifs. On laissera aussi de côté les cas inutiles.</p>
+<ul class="simple">
+<li><p class="card-text">Moteur: <span class="math notranslate nohighlight">\(W &lt; 0; Q_f &lt; 0; Q_c &gt; 0\)</span>. La grandeur utile est le travail mécanique fourni <span class="math notranslate nohighlight">\(\left\vert W \right\vert\)</span> et la grandeur à fournir est la chaleur fournie par la source chaude <span class="math notranslate nohighlight">\(Q_c\)</span>.</p></li>
+<li><p class="card-text">Réfrigérateur: <span class="math notranslate nohighlight">\(W &gt; 0; Q_f &gt; 0; Q_c &lt; 0\)</span>. La grandeur utile est l’énergie prélevée à la source froide <span class="math notranslate nohighlight">\(Q_f\)</span> et la grandeur à fournir est le travail mécanique <span class="math notranslate nohighlight">\(W\)</span>.</p></li>
+<li><p class="card-text">Pompe à chaleur: <span class="math notranslate nohighlight">\(W &gt; 0; Q_f &gt; 0; Q_c &lt; 0\)</span>. La grandeur utile est la chaleur fournie à la source chaude <span class="math notranslate nohighlight">\(\left\vert Q_c \right\vert\)</span> et la grandeur à fournir est le travail mécanique <span class="math notranslate nohighlight">\(W\)</span>.</p></li>
+</ul>
+</div>
+</details></div>
+<div class="section" id="cogeneration">
+<h2>Cogénération<a class="headerlink" href="#cogeneration" title="Permalink to this headline">¶</a></h2>
+<p><strong>Principe général</strong></p>
+<p>On remarque que dans les machines dithermes, l’un des échanges thermiques est inutile. Par exemple, le moteur fournit de la chaleur à la source froide.</p>
+<p>Dans un souci de récupération d’énergie, on essaie aujourd’hui de construire des machines thermiques permettant de récupérer cette énergie pour une utilisation:</p>
+<ul class="simple">
+<li><p>interne: par exemple dans le cas du moteur, une partie de l’énergie libérée est réutiliser au contact de la source chaude (cf le devoir sur le moteur de Stirling)</p></li>
+<li><p>externe: toujours dans le cas du moteur l’énergie thermique fournit à la source froide ou le surplus d’énergie thermique venu de la source chaude sert à un système de chauffage.</p></li>
+</ul>
+<p>Lorsqu’une machine thermique est conçue pour l’énergie mécanique ET l’énergie thermique soient toutes les deux utilisées, on parle de <strong>cogénération.</strong></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="th_machines.html" title="previous page">Machines thermiques</a>
+    <a class='right-next' id="next-link" href="th_mc_moteur.html" title="next page">Moteurs thermiques</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
