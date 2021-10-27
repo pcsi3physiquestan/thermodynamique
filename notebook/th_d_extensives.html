@@ -485,21 +485,28 @@
 <h1>Variables extensives<a class="headerlink" href="#variables-extensives" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="variables-extensives-generalites">
 <h2>Variables extensives: généralités<a class="headerlink" href="#variables-extensives-generalites" title="Permalink to this headline">¶</a></h2>
-<p><em>Rappel : Variables extensives</em><br />
+<p><em>Rappel : Variables extensives :</em><br />
 On rappelle qu’une variable d’état extensive est une variable d’état dont la valeur pour une portion V d’un système homogène est proportionnelle au volume V (on peut aussi ramener à la masse ou à la quantité de manière)s.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Exemple : Exemple</p>
 <p>Le volume, la quantité de matière, la masse, l’entropie, l’énergie totale et l’énergie interne (on reviendra sur ces grandeurs par la suite) sont toutes des grandeurs extensives.</p>
 </div>
-<p><strong>Bilan d’une grandeur extensive</strong><br />
-On rappelle que la variation d’une grandeur d’état X d’un système s’écrit <span class="math notranslate nohighlight">\(\Delta X\)</span>.</p>
-<p>Dans le cas d’une grandeur extensive, la variation de X a deux origines possibles: la quantité <span class="math notranslate nohighlight">\(X_e\)</span> échangée avec l’extérieur et la quantité <span class="math notranslate nohighlight">\(X_c\)</span> créée à l’intérieur du système. On peut toujours écrire le bilan d’un grandeur extensive X lors d’une transformation finie: <span class="math notranslate nohighlight">\(\Delta X = X_e + X_c\)</span> (<span class="math notranslate nohighlight">\(X_e\)</span> est la grandeur échangée de l’extérieur <strong>vers</strong> le système).</p>
-<p>Dans le cas d’une variation infinitésimale, on écrira ce bilan: <span class="math notranslate nohighlight">\(dX = \delta X_c + \delta X_e\)</span>. L’utilisation de la notation <span class="math notranslate nohighlight">\(\delta\)</span> est fondamentale pour les <strong>termes d’échange et de création</strong>: il signifie que ces deux termes <strong>dépendent du chemin parcouru pour passer de l’état initial à l’état final alors que la variation dX ne dépend que des données de l’état initial et de l’état final et non du chemin parcouru lors de la transformation.</strong></p>
-<p>Ce bilan est général à toutes les grandeurs d’état extensives et notamment l’énergie et l’entropie. Nous verrons qu’une des caractéristiques des premier et second principe de la thermodynamique consiste à caractériser ces termes d’échanges et de création.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Bilan d’une grandeur extensive :</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">On rappelle que la variation d’une grandeur d’état X d’un système s’écrit <span class="math notranslate nohighlight">\(\Delta X\)</span>.</p>
+<p class="card-text">Dans le cas d’une grandeur extensive, la variation de X a deux origines possibles: la quantité <span class="math notranslate nohighlight">\(X_e\)</span> échangée avec l’extérieur et la quantité <span class="math notranslate nohighlight">\(X_c\)</span> créée à l’intérieur du système. On peut toujours écrire le bilan d’un grandeur extensive X lors d’une transformation finie: <span class="math notranslate nohighlight">\(\Delta X = X_e + X_c\)</span> (<span class="math notranslate nohighlight">\(X_e\)</span> est la grandeur échangée de l’extérieur <strong>vers</strong> le système).</p>
+<p class="card-text">Dans le cas d’une variation infinitésimale, on écrira ce bilan: <span class="math notranslate nohighlight">\(dX = \delta X_c + \delta X_e\)</span>. L’utilisation de la notation <span class="math notranslate nohighlight">\(\delta\)</span> est fondamentale pour les <strong>termes d’échange et de création</strong>: il signifie que ces deux termes <strong>dépendent du chemin parcouru pour passer de l’état initial à l’état final alors que la variation dX ne dépend que des données de l’état initial et de l’état final et non du chemin parcouru lors de la transformation.</strong></p>
+<p class="card-text">Ce bilan est général à toutes les grandeurs d’état extensives et notamment l’énergie et l’entropie. Nous verrons qu’une des caractéristiques des premier et second principe de la thermodynamique consiste à caractériser ces termes d’échanges et de création.</p>
 </div>
+</details></div>
 <div class="section" id="variable-extensive-energie-et-energie-interne">
 <h2>Variable extensive: Energie et énergie interne<a class="headerlink" href="#variable-extensive-energie-et-energie-interne" title="Permalink to this headline">¶</a></h2>
-<p><strong>Composantes énergétiques</strong><br />
+<p><strong>Composantes énergétiques :</strong><br />
 Prenons un système composé de particules (on les supposera identiques même si cela n’a que peu d’importance), nous supposerons pour simplifier ici qu’il n’y a pas de mouvement d’ensemble à l’intérieur du système: le centre d’inertie a un mouvement et les particules ont un mouvement chaotique dans le référentiel du centre d’inertie. Par définition, l’énergie du système est la somme de l’énergie de chaque particule. Pour le système complet, on peut distinguer plusieurs types d’énergie qu’on distinguera comme étant microscopique ou macroscopique.</p>
 <ul class="simple">
 <li><p>Les énergies cinétiques liés aux mouvement globaux du système:</p></li>
@@ -518,10 +525,10 @@ Prenons un système composé de particules (on les supposera identiques même si
 </ul>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p><strong>Définition : Energie totale et énergie interne</strong></p>
+<p><strong>Interprétation : Energie totale et énergie interne</strong></p>
 <p>On peut donc écrire l’énergie totale d’un système:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b9b08afa-004e-4a81-8139-c9c7c8dad448">
-<span class="eqno">(2)<a class="headerlink" href="#equation-b9b08afa-004e-4a81-8139-c9c7c8dad448" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-20522f13-df86-4a7b-a0c8-6f17754a5ad5">
+<span class="eqno">(2)<a class="headerlink" href="#equation-20522f13-df86-4a7b-a0c8-6f17754a5ad5" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 E = E_{C,macro} + E_{P,macro} + \underbrace{E_{th} + E_{rot,mic} + E_{vib,mic}}_{U}
 \end{equation}\]</div>
 <p>Les termes microscopiques, <span class="math notranslate nohighlight">\(E_{P,int}, E_{th}, E_{rot,mic}, E_{vib,mic}\)</span> ne sont pas observables à l’échelle macroscopique et leur participation à l’énergie totale ne peut être séparée. C’est pourquoi, on les englobe dans un seul terme énergétique: l’<strong>énergie interne</strong> U.</p>
@@ -530,9 +537,16 @@ E = E_{C,macro} + E_{P,macro} + \underbrace{E_{th} + E_{rot,mic} + E_{vib,mic}}_
 <p class="admonition-title">Attention</p>
 <p>Il s’agit d’une interprétation de l’énergie interne qui nous permettra de la calculer dans certains cas simples mais il ne s’agit pas d’une définition.</p>
 </div>
-<p><strong>Caractère extensif (anecdotique)</strong><br />
-Le caractère extensif de l’énergie interne est postulé (partie du premier principe) mais n’est pas évident et est même en toute rigueur faux à cause des forces surfaciques. Le caractère extensif suppose les forces de surface négligeable, c’est-à-dire que la surface du système n’est pas trop grande (il ne doit pas y avoir une dimension du système qui soit très faible devant les deux autres).</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Caractère extensif :</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">Le caractère extensif de l’énergie interne est postulé (partie du premier principe) mais n’est pas évident et est même en toute rigueur faux à cause des forces surfaciques. Le caractère extensif suppose les forces de surface négligeable, c’est-à-dire que la surface du système n’est pas trop grande (il ne doit pas y avoir une dimension du système qui soit très faible devant les deux autres).</p>
 </div>
+</details></div>
 <div class="section" id="energie-interne">
 <h2>Energie interne<a class="headerlink" href="#energie-interne" title="Permalink to this headline">¶</a></h2>
 <div class="attention admonition">
@@ -540,16 +554,11 @@ Le caractère extensif de l’énergie interne est postulé (partie du premier p
 <p>On considère un gaz non modélisable par le modèle du gaz parfait car les interactions à longue distance entre les particules du gaz ne sont pas négligeable. L’énergie totale se décompose en la partie macroscopique définie comme en mécanique et l’énergie interne. Un modélisation possible dite de Van der Waals consiste à écrire l’énergie interne du gaz à partir de celle du gaz parfait sous la forme <span class="math notranslate nohighlight">\(U = U_{GP} - \frac{n^2 a}{V} + U_0\)</span> où <span class="math notranslate nohighlight">\(U_0\)</span> est l’énergie interne aux conditions <span class="math notranslate nohighlight">\((T_0,V_0)\)</span> et <span class="math notranslate nohighlight">\(U_{GP}\)</span> l’énergie interne d’un gaz s’il suivait le modèle du gaz parfait dans les mêmes conditions.</p>
 <p>Préciser physiquement quel signe attend-on pour a.</p>
 </div>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Démonstration<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Les interactions dans un gaz de Van der Waals sont des interactions entre molécules neutres donc de …  Van der Waals. Elles sont donc attractives. L’énergie potentielle d’interaction doit donc être croissante avec la distance entre particules et l’énergie potentielle d’interaction totale sera donc aussi croissante avec le volume V. La différence proposée ici entre les deux modèles est qu’on tient compte des interactions. On attend donc un terme correction croissant avec le volume donc un coefficient a positif.</p>
+<blockquote>
+<div><p>Démonstration</p>
+<p>Les interactions dans un gaz de Van der Waals sont des interactions entre molécules neutres donc de …  Van der Waals. Elles sont donc attractives. L’énergie potentielle d’interaction doit donc être croissante avec la distance entre particules et l’énergie potentielle d’interaction totale sera donc aussi croissante avec le volume V. La différence proposée ici entre les deux modèles est qu’on tient compte des interactions. On attend donc un terme correction croissant avec le volume donc un coefficient a positif.</p>
+</div></blockquote>
 </div>
-</details></div>
 <div class="section" id="autres-grandeurs-energetiques">
 <h2>Autres grandeurs énergétiques<a class="headerlink" href="#autres-grandeurs-energetiques" title="Permalink to this headline">¶</a></h2>
 <p>On définit plusieurs autres grandeurs énergétiques (qui ont la dimension d’une énergie) à partir de l’énergie interne. Leur intérêt sera précisé par la suite. On peut déjà expliquer que leur introduction permettra de simplifier l’écriture du théorème énergétique (le premier principe) comme le passage de l’énergie cinétique à l’énergie mécanique modifie et simplifie l’écriture du théorème énergétique en mécanique (passage du TEC au TEM).</p>
@@ -560,11 +569,18 @@ Démonstration<div class="summary-down docutils">
 <p>On définit l’enthalpie H par <span class="math notranslate nohighlight">\(H = U + PV\)</span></p>
 <p>Comme on le verra, l’enthalpie simplifie le premier principe pour des transformations à pression constante.</p>
 </div>
-<p><strong>Autres grandeurs énergétiques (pas à connaître en physique)</strong><br />
-On définit l’énergie libre F par <span class="math notranslate nohighlight">\(F = U - TS\)</span></p>
-<p>On définit l’enthalpie libre G par <span class="math notranslate nohighlight">\(G = U - TS + PV = H - TS = F + PV\)</span></p>
-<p>L’énergie libre et l’enthalpie libre ne seront pas utilisées en physique mais deviennent très importantes en chimie (surtout l’enthalpie libre).</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Autres grandeurs énergétiques :</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">On définit l’énergie libre F par <span class="math notranslate nohighlight">\(F = U - TS\)</span></p>
+<p class="card-text">On définit l’enthalpie libre G par <span class="math notranslate nohighlight">\(G = U - TS + PV = H - TS = F + PV\)</span></p>
+<p class="card-text">L’énergie libre et l’enthalpie libre ne seront pas utilisées en physique mais deviennent très importantes en chimie (surtout l’enthalpie libre).</p>
 </div>
+</details></div>
 <div class="section" id="derivees-partielles-et-capacites-thermiques">
 <h2>Dérivées partielles et capacités thermiques.<a class="headerlink" href="#derivees-partielles-et-capacites-thermiques" title="Permalink to this headline">¶</a></h2>
 <p>L’énergie interne est une fonction d’état. Elle peut donc se définir comme une fonction de variables d’état indépendantes par exemple U(T,V,n) (en pratique on écrira en physique U(T,V) car on travaille avec des systèmes fermés où n peut être considéré comme un paramètre).</p>
@@ -578,7 +594,7 @@ On définit l’énergie libre F par <span class="math notranslate nohighlight">
 <p class="admonition-title">Compléments : Coefficients thermoélastiques</p>
 <p>On définit quelques dérivées partielles particulières:</p>
 <ul class="simple">
-<li><p>le <strong>coefficient de compressibilité isotherme</strong>: <span class="math notranslate nohighlight">\(\chi_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T\)</span>. On l’a déjà utilisé en statique des fluides: il permet de caarctéristier le caractère incompressible lorsqu’il est très faible.</p></li>
+<li><p>le <strong>coefficient de compressibilité isotherme</strong>: <span class="math notranslate nohighlight">\(\chi_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_T\)</span>. On l’a déjà utilisé en statique des fluides: il permet de caractéristier le caractère incompressible lorsqu’il est très faible.</p></li>
 <li><p>le <strong>coefficient de dilatation isobare</strong>: <span class="math notranslate nohighlight">\(\alpha = \frac{1}{V}\left(\frac{\partial V}{\partial T}\right)_P\)</span>. Il sera moins utilisé mais en général on fait l’hypothèse de fluide incompressible <strong>et indilatable</strong> pour les liquides. Ce second terme correspond à un très faible coefficient <span class="math notranslate nohighlight">\(\alpha\)</span> (d’où le nom indilatable).</p></li>
 <li><p>le <strong>coefficient de compressibilité isentropique</strong>: <span class="math notranslate nohighlight">\(\chi_S = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_S\)</span>. On ne l’utilisera pas en première année. Il sera utilisé en seconde année pour étudier la propagation d’onde sonore.</p></li>
 </ul>
@@ -588,15 +604,19 @@ On définit l’énergie libre F par <span class="math notranslate nohighlight">
 <p class="admonition-title">Important</p>
 <p><strong>Définition : Capacités thermiques</strong></p>
 <p>On définit aussi quelques caractéristiques particulières associées à l’énergie:</p>
-<p>\begin{enumerate}</p>
 <ul class="simple">
 <li><p>la <strong>capacité thermique à volume constant</strong>: <span class="math notranslate nohighlight">\(C_V = \left(\frac{\partial U}{\partial T}\right)_V\)</span>. Elle correspond à l’énergie qu’il faut apporter pour augmenter la température de 1K à volume constant. On lui associe la capacité thermique molaire/massique qui a l’avantage de ne pas dépendre de la taille du système.</p></li>
 <li><p>la <strong>capacité thermique à pression constant</strong>: <span class="math notranslate nohighlight">\(C_P = \left(\frac{\partial H}{\partial T}\right)_P\)</span>. Elle correspond à l’énergie qu’il faut apporter pour augmenter la température de 1K à pression constante. On lui associe la capacité thermique molaire/massique qui a l’avantage de ne pas dépendre de la taille du système.</p></li>
 </ul>
-<p><strong>On dérive l’enthalpie et non l’énergie interne</strong>. La justification de cette subitilité sera vue par la suite lorsqu’on utilisera le second principe.</p>
+<p><strong>On dérive l’enthalpie et non l’énergie interne</strong>. La justification de cette subitilité sera vue par la suite lorsqu’on utilisera le premier principe.</p>
 </div>
-<p><strong>Expression des différentielles</strong><br />
-On rappelle qu’on peut écrire une différentielle à partir des dérivées partielles. Si l’on considère l’énergie interne comme une fonction de T et V, alors la différentielle dU(T,V) s’écrit: <span class="math notranslate nohighlight">\(dU = \left(\frac{\partial U}{\partial T}\right)_V dT + \left(\frac{\partial U}{\partial V}\right)_T dV\)</span> ou <span class="math notranslate nohighlight">\(dU = C_V dT + \left(\frac{\partial U}{\partial V}\right)_T dV\)</span></p>
+<p><strong>Expression des différentielles :</strong><br />
+On rappelle qu’on peut écrire une différentielle à partir des dérivées partielles. Si l’on considère l’énergie interne comme une fonction de T et V, alors la différentielle dU(T,V) s’écrit:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+dU(T,V) &amp;= \left(\frac{\partial U}{\partial T}\right)_V dT (T,V) + \left(\frac{\partial U}{\partial V}\right)_T (T,V) dV
+dU(T,V) &amp;= C_V(T,V) dT + \left(\frac{\partial U}{\partial V}\right)_T (T,V) dV
+\end{align*}\]</div>
 </div>
 <div class="section" id="variable-d-etat-extensive-entropie">
 <h2>Variable d’état extensive: Entropie<a class="headerlink" href="#variable-d-etat-extensive-entropie" title="Permalink to this headline">¶</a></h2>
@@ -620,8 +640,8 @@ S &amp;= S_0 + \frac{nR}{\gamma-1}\ln \left(\frac{TV^{\gamma-1}}{T_0 V_0^{\gamma
 \end{align*}\]</div>
 <p>où <span class="math notranslate nohighlight">\(S_0\)</span> est l’entropie du gaz à <span class="math notranslate nohighlight">\((T_0,P_0,V_0)\)</span>.</p>
 </div>
-<p><strong>Description de l’entropie.</strong><br />
-L’entropie est une mesure du <strong>désordre</strong> d’un système. Nous verrons plus en détail la définition sous-jacente dans une activité documentaire. Pour l’instant, on peut comprendre le désordre de la manière suivante: plus il existe de façon de décrire un état d’équilibre macroscopique de manière microscopique différentes, plus le désordre est grand, donc plus l’entropie sera grande.</p>
+<p><strong>Description de l’entropie :</strong><br />
+L’entropie est une mesure du <strong>désordre</strong> d’un système. Nous verrons plus en détail la définition sous-jacente dans une activité. Pour l’instant, on peut comprendre le désordre de la manière suivante: plus il existe de façon de décrire un état d’équilibre macroscopique de manière microscopique différentes, plus le désordre est grand, donc plus l’entropie sera grande.</p>
 </div>
 <div class="section" id="entropie-analyse-qualitative">
 <h2>Entropie: Analyse qualitative<a class="headerlink" href="#entropie-analyse-qualitative" title="Permalink to this headline">¶</a></h2>
@@ -634,33 +654,23 @@ L’entropie est une mesure du <strong>désordre</strong> d’un système. Nous 
 <li><p>Peut-on prévoir qualitativement l’évolution de l’entropie de l’entropie si l’on augmente le volume et qu’on diminue la température?</p></li>
 </ul>
 </div>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Démonstration<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Si l’on augmente la température, cela signifie qu’on augmente l’énergie cinétique des molécules. On peut donc considérer qualitativement qu’on augmente le désordre (on augmente la gamme de vitesses accessibles) et donc l’entropie. C’est ce qu’on observe avec l’expression de S(T,V).</p>
-<p class="card-text">Si l’on augmente le volume, on augmente la place accessible et donc les positions possibles pour les particules: le désordre augmente donc l’entropie aussi. C’est aussi ce qu’on observe avec l’expression de S(T,V)</p>
-<p class="card-text">Si le volume augmente tandis que la température diminue, on ne peut déterminer si l’entropie va augmenter ou diminuer. En effet, il y a plus de place accessible mais l’’énergie cinétique moyenne va diminuer. L’expression de S nous permettra de remarquer qu’effectivement suivant les cas l’entropie va augmenter ou diminuer.</p>
-</div>
-</details><div class="attention admonition">
+<blockquote>
+<div><p>Démonstration</p>
+<p>Si l’on augmente la température, cela signifie qu’on augmente l’énergie cinétique des molécules. On peut donc considérer qualitativement qu’on augmente le désordre (on augmente la gamme de vitesses accessibles) et donc l’entropie. C’est ce qu’on observe avec l’expression de S(T,V).</p>
+<p>Si l’on augmente le volume, on augmente la place accessible et donc les positions possibles pour les particules: le désordre augmente donc l’entropie aussi. C’est aussi ce qu’on observe avec l’expression de S(T,V)</p>
+<p>Si le volume augmente tandis que la température diminue, on ne peut déterminer si l’entropie va augmenter ou diminuer. En effet, il y a plus de place accessible mais l’’énergie cinétique moyenne va diminuer. L’expression de S nous permettra de remarquer qu’effectivement suivant les cas l’entropie va augmenter ou diminuer.</p>
+</div></blockquote>
+<div class="attention admonition">
 <p class="admonition-title">Exercice</p>
 <p>On considère un corps pur à une pression P et une température T de changement d’état (ici vaporisation). Il peut alors exister sous sa forme gazeuse ou liquide (P,T). Dans quelle phase l’entropie sera la plus grande?</p>
 <p>Reprendre la question précédente pour les phases solides et liquides d’un corps pur à un couple (P,T) de solidification.</p>
 </div>
-<details class="sphinx-bs dropdown card mb-3">
-<summary class="summary-title card-header">
-Démonstration<div class="summary-down docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="summary-up docutils">
-<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="summary-content card-body docutils">
-<p class="card-text">Dans une phase gazeuse, les molécules peuvent se mouvoir sur de plus grandes distances avec peu d’interactions avec les autres particules: il naît donc un chaos plus important. L’entropie de la phase gazeuse sera donc plus grand (cela suppose évidemment qu’on compare la même quantité de matière).</p>
-<p class="card-text">De même l’entropie de la phase liquide, plus désordonnée, sera plus grande que l’entropie de la phase solide.</p>
+<blockquote>
+<div><p>Démonstration</p>
+<p>Dans une phase gazeuse, les molécules peuvent se mouvoir sur de plus grandes distances avec peu d’interactions avec les autres particules: il naît donc un chaos plus important. L’entropie de la phase gazeuse sera donc plus grand (cela suppose évidemment qu’on compare la même quantité de matière).</p>
+<p>De même l’entropie de la phase liquide, plus désordonnée, sera plus grande que l’entropie de la phase solide.</p>
+</div></blockquote>
 </div>
-</details></div>
 </div>
 
     <script type="text/x-thebe-config">
