@@ -250,22 +250,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="th_sp_expression.html">
-     encoding: ‘# -
-     <em>
-      - coding: utf-8 -
-     </em>
-     -‘
-formats: ipynb,md:myst
-split_at_heading: true
-text_representation:
-extension: .md
-format_name: myst
-format_version: 0.13
-jupytext_version: 1.10.3
-kernelspec:
-display_name: Python 3
-language: python
-name: python3
+     Expression des grandeurs
     </a>
    </li>
    <li class="toctree-l2">
@@ -531,17 +516,18 @@ Prenons un système composé de particules (on les supposera identiques même si
 <li><p>Le système peut-être soumis à des forces extérieures dérivant d’une énergie potentielle. Leur influence est observable à l’échelle macroscopique. On leur associe une énergie potentielle macroscopique <span class="math notranslate nohighlight">\(E_{P,macro}\)</span></p></li>
 <li><p>Les particules du systèmes peuvent être en interaction entre-elles. Ces interactions (forces newtoniennes principalement) dérivent d’une énergie potentielle mais n’ont pas d’effets mécaniques visibles à l’échelle macroscopique. On parle d’énergie potentielle d’interaction <span class="math notranslate nohighlight">\(E_{P, int}\)</span>.</p></li>
 </ul>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Energie totale et énergie interne</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Energie totale et énergie interne</strong></p>
 <p>On peut donc écrire l’énergie totale d’un système:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bbe7697d-133f-4170-aa47-63b8c65a991e">
-<span class="eqno">(2)<a class="headerlink" href="#equation-bbe7697d-133f-4170-aa47-63b8c65a991e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b9b08afa-004e-4a81-8139-c9c7c8dad448">
+<span class="eqno">(2)<a class="headerlink" href="#equation-b9b08afa-004e-4a81-8139-c9c7c8dad448" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 E = E_{C,macro} + E_{P,macro} + \underbrace{E_{th} + E_{rot,mic} + E_{vib,mic}}_{U}
 \end{equation}\]</div>
 <p>Les termes microscopiques, <span class="math notranslate nohighlight">\(E_{P,int}, E_{th}, E_{rot,mic}, E_{vib,mic}\)</span> ne sont pas observables à l’échelle macroscopique et leur participation à l’énergie totale ne peut être séparée. C’est pourquoi, on les englobe dans un seul terme énergétique: l’<strong>énergie interne</strong> U.</p>
 </div>
-<div class="note admonition">
-<p class="admonition-title">Attention :</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
 <p>Il s’agit d’une interprétation de l’énergie interne qui nous permettra de la calculer dans certains cas simples mais il ne s’agit pas d’une définition.</p>
 </div>
 <p><strong>Caractère extensif (anecdotique)</strong><br />
@@ -568,8 +554,9 @@ Démonstration<div class="summary-down docutils">
 <h2>Autres grandeurs énergétiques<a class="headerlink" href="#autres-grandeurs-energetiques" title="Permalink to this headline">¶</a></h2>
 <p>On définit plusieurs autres grandeurs énergétiques (qui ont la dimension d’une énergie) à partir de l’énergie interne. Leur intérêt sera précisé par la suite. On peut déjà expliquer que leur introduction permettra de simplifier l’écriture du théorème énergétique (le premier principe) comme le passage de l’énergie cinétique à l’énergie mécanique modifie et simplifie l’écriture du théorème énergétique en mécanique (passage du TEC au TEM).</p>
 <p>Toutes les grandeurs proposées ici sont des <strong>fonctions d’état extensives.</strong></p>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Enthalpie</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Enthalpie</strong></p>
 <p>On définit l’enthalpie H par <span class="math notranslate nohighlight">\(H = U + PV\)</span></p>
 <p>Comme on le verra, l’enthalpie simplifie le premier principe pour des transformations à pression constante.</p>
 </div>
@@ -597,8 +584,9 @@ On définit l’énergie libre F par <span class="math notranslate nohighlight">
 </ul>
 <p>La division par V permet d’obtenir des coefficients qui ne dépendent pas de la taille du système (on remarquera qu’on peut remplacer le volume par le volume molaire/massique sans changer l’expression).</p>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Capacités thermiques</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Capacités thermiques</strong></p>
 <p>On définit aussi quelques caractéristiques particulières associées à l’énergie:</p>
 <p>\begin{enumerate}</p>
 <ul class="simple">
@@ -615,8 +603,9 @@ On rappelle qu’on peut écrire une différentielle à partir des dérivées pa
 <p>L’entropie S d’un système est avec l’énergie la grandeur extrêmement importante en thermodynamique. Le second principe de la thermodynamique donnera ses caractéristiques générales.</p>
 <p>Il existe de nombreuses définitions de l’entropie (toutes cohérentes). On se propose de donner ici quelques caractéristiques et de donner une <strong>interprétation</strong> “microscopique” de l’entropie, c’est-à-dire basée sur les données microscopiques et donc la statistique des grandeurs microscopiques. On parle <strong>d’entropie statistique</strong>.</p>
 <p>Ce n’est pas la définition la plus utilisée durant cette année mais elle permet d’avoir de donner un sens “physique” à l’entropie.</p>
-<div class="attention admonition">
-<p class="admonition-title">Fondamental : Propriétés</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Propriétés</strong></p>
 <p>L’entropie S d’un système est <strong>une fonction d’état</strong>. Elle est <strong>extensive</strong>.</p>
 <p>En tant que fonction d’état, cela signifie que sa variation dans une transformation ne dépend pas du chemin mais des états initiaux et finaux ET que l’on peut l’exprimer comme une fonction d’autres variables d’état.</p>
 </div>

@@ -250,22 +250,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="th_sp_expression.html">
-     encoding: ‘# -
-     <em>
-      - coding: utf-8 -
-     </em>
-     -‘
-formats: ipynb,md:myst
-split_at_heading: true
-text_representation:
-extension: .md
-format_name: myst
-format_version: 0.13
-jupytext_version: 1.10.3
-kernelspec:
-display_name: Python 3
-language: python
-name: python3
+     Expression des grandeurs
     </a>
    </li>
    <li class="toctree-l2">
@@ -501,12 +486,14 @@ name: python3
 <p><em>Pour étudier un système physique, on doit définir des grandeurs permettant de le décrire. Comme on peut travailler à plusieurs échelles, on définira des grandeurs différentes suivant l’échelle d’analyse. A l’échelle microscopique, les grandeurs utilisées donneront lieu à des études <strong>statistiques</strong> tandis qu’aux échelles méso et macroscopique, on utilisera des grandeurs appelées <strong>variables d’état</strong>. Comme nous le verrons par la suite, on peut en général relier les grandeurs microscopiques aux grandeurs macroscopiques.</em></p>
 <div class="section" id="microetat">
 <h2>Microétat<a class="headerlink" href="#microetat" title="Permalink to this headline">¶</a></h2>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Etat d’une particule</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Etat d’une particule</strong></p>
 <p>A un instant t, on peut définir l’état d’une particule par différentes caractéristiques (qui sont microscopiques !): sa vitesse (3 coordonnées), sa position (3 coordonnées) et possiblement sa forme (vibration, rotation… ) si la particule n’est pas un simple atome (on ne s’intéresse pas ici à des phénomènes nucléaires).</p>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Microétat</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Microétat</strong></p>
 <p>Pour un système dynamique, on appelle <strong>microétat</strong> un état du système décrit par les données de toutes les grandeurs microscopiques de toutes les particules du système.</p>
 </div>
 <p><strong>Etude statistique</strong><br />
@@ -518,8 +505,9 @@ On ne peut décrire de manière exhaustive un microétat (on rappelle qu’une m
 <p>Comme nous le verrons par la suite, les hypothèses d’étude en théorie cinétique permettent d’obtenir des informations très utiles sur ces caractéristiques.</p>
 <p>Les grandeurs utiles correspondent en général à la moyenne ou à la variance/écart-type qu’on relie à des grandeurs macroscopiques. Il faut par contre faire attention, à la différence des valeurs moyennes étudiées en électrocinétique, il s’agit ici de moyennes sur un <strong>ensemble et non sur une durée</strong>.</p>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Vitesse quadratique moyenne</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Vitesse quadratique moyenne</strong></p>
 <p>On définit la vitesse quadratique moyenne comme la racine carré de la moyenne de la statistique des vitesses (en norme) au carré.</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -574,8 +562,9 @@ Le calcul de l’énergie cinétique par particule se fait en sommant toutes les
 </details></div>
 <div class="section" id="echelle-macroscopique-variables-d-etat">
 <h2>Echelle macroscopique: Variables d’état<a class="headerlink" href="#echelle-macroscopique-variables-d-etat" title="Permalink to this headline">¶</a></h2>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Variables d’état</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Variables d’état</strong></p>
 <p>Les variables d’état sont des grandeurs macroscopiques permettant de définir l’état du système à un instant donné à l’échelle macroscopique.</p>
 </div>
 <div class="tip dropdown admonition">
@@ -604,8 +593,8 @@ Très souvent, nos systèmes ne “bougent” pas. Le passage d’un état A à 
 <p class="admonition-title">Exemple : Température et vitesse quadratique</p>
 <p>Nous donnons à titre d’exemple <strong>l’interprétation</strong> (pas la définition) de la température.</p>
 <p>On peut montrer (HP) que pour un système maintenu à la température T, celle-ci est reliée à l’énergie cinétique moyenne de translation par particule:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-43e40caf-4049-4c6a-9c54-6ecddec70103">
-<span class="eqno">(1)<a class="headerlink" href="#equation-43e40caf-4049-4c6a-9c54-6ecddec70103" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-22bdb30f-7ead-4213-bc04-5ff8f1b3a430">
+<span class="eqno">(1)<a class="headerlink" href="#equation-22bdb30f-7ead-4213-bc04-5ff8f1b3a430" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \overline{E_c} = \frac{3}{2}k_B T
 \end{equation}\]</div>
 <p>L’expression trouvée précédemment de l’énergie moyenne relie la température à la vitesse quadratique moyenne. On retrouve l’idée déjà vue dans les classes précédentes que la température est liée à <strong>l’agitation moléculaire</strong> (on parle d’agitation thermique).</p>
@@ -613,12 +602,14 @@ Très souvent, nos systèmes ne “bougent” pas. Le passage d’un état A à 
 </div>
 <div class="section" id="grandeurs-extensives-et-intensives">
 <h2>Grandeurs extensives et intensives<a class="headerlink" href="#grandeurs-extensives-et-intensives" title="Permalink to this headline">¶</a></h2>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Grandeurs extensives</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Grandeurs extensives</strong></p>
 <p>Un grandeur est dite extensive si sa valeur considérée pour une portion de volume V d’un système homogène est proportionnelle à V.</p>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Grandeurs intensives</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Grandeurs intensives</strong></p>
 <p>Une grandeur est dite intensive si sa valeur considérée pour une portion de volume V d’un système homogène est indépendante de V.</p>
 </div>
 </div>
@@ -627,12 +618,14 @@ Très souvent, nos systèmes ne “bougent” pas. Le passage d’un état A à 
 <p><strong>Rapport de grandeurs extensives</strong><br />
 Le rapport de deux grandeurs extensives est une <strong>grandeur intensive</strong>. Par exemple, la masse volumique m/V est une grandeur intensive.</p>
 <p>Cette observation permet de définir les grandeurs molaires et massiques</p>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Grandeurs molaires</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Grandeurs molaires</strong></p>
 <p>Pour une grandeur <span class="math notranslate nohighlight">\(C\)</span> extensive, on définit une grandeur dite molaire, c’est-à-dire rapportée à une mole. On la note par convention <span class="math notranslate nohighlight">\(C_{m}\)</span>.</p>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Grandeurs massiques</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Grandeurs massiques</strong></p>
 <p>Pour une grandeur <span class="math notranslate nohighlight">\(C\)</span> extensive, on définit une grandeur dite massique, c’est-à-dire rapportée à une masse de <span class="math notranslate nohighlight">\(1 \rm{kg}\)</span>. On le note par convention <span class="math notranslate nohighlight">\(c\)</span> (minuscule).</p>
 </div>
 </div>

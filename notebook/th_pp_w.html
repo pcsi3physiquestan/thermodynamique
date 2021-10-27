@@ -500,8 +500,8 @@ On considère une action globale <span class="math notranslate nohighlight">\(\c
 <img alt="../_images/force_surfacique.png" src="../_images/force_surfacique.png" />
 </div>
 <p class="card-text">Le travail <strong>élémentaire</strong> total fournit par l’action globale s’obtient par intégration sur la surface de contact:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-34ae04ee-1935-456d-a868-47ebc547e333">
-<span class="eqno">(12)<a class="headerlink" href="#equation-34ae04ee-1935-456d-a868-47ebc547e333" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-af4cfa7b-bd75-4e2a-b31e-2cad79cc3d3d">
+<span class="eqno">(12)<a class="headerlink" href="#equation-af4cfa7b-bd75-4e2a-b31e-2cad79cc3d3d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \delta W = \iint_{M\in\Sigma} \overrightarrow{d^2 F}(M) \cdot \overrightarrow{dl}(M)
 \end{equation}\]</div>
 <p class="card-text">Si nous serons pas amené à calculer une telle intégrale, il faut comprendre le sens des différents infinitésimaux utilisés ici. Pour la force, il s’agit d’un infinitésimal <strong>spatial</strong> (un double infinitésimal puisque la force est surfacique). C’est ce double infinitésimal qu’on intégre (sur la surface donc).</p>
@@ -514,8 +514,8 @@ On considère une action globale <span class="math notranslate nohighlight">\(\c
 Soit un dipôle électrique D parcouru par une intensité i et dont la tension à ses bornes est u en convention récepteur. Alors la puissance qu’il reçoit du reste du circuit est <span class="math notranslate nohighlight">\(P = ui\)</span>.</p>
 <p>Si l’on isole le dipôle comme un système thermodynamique, il faut tenir compte de cette puissance mécanique (issue d’actions mécaniques de type électromagnétiques - on l’appelle parfois puissance électrique) quand on utilise le premier principe.</p>
 <p>Le “travail électrique” reçu par le dipôle durant un temps fini sera donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4585d4b0-3f34-4b68-8d79-1052b105cc9c">
-<span class="eqno">(13)<a class="headerlink" href="#equation-4585d4b0-3f34-4b68-8d79-1052b105cc9c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-438f41cb-3de1-422e-b8bc-e046253976c4">
+<span class="eqno">(13)<a class="headerlink" href="#equation-438f41cb-3de1-422e-b8bc-e046253976c4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 W = \int_{t_1}^{t_2}u(t)i(t)dt
 \end{equation}\]</div>
 <details class="sphinx-bs dropdown card mb-3">
@@ -553,8 +553,9 @@ On considère un système <span class="math notranslate nohighlight">\(\Sigma\)<
 <div class="figure align-center" id="fig-273">
 <img alt="../_images/travail_pression.png" src="../_images/travail_pression.png" />
 </div>
-<div class="attention admonition">
-<p class="admonition-title">Fondamental : Travail des contraintes normales: Expression générale</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Travail des contraintes normales: Expression générale</strong></p>
 <p>Considérons l’évolution du système durant un temps dt, le travail élémentaire des forces de contraintes normales extérieures s’écrit:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
@@ -566,8 +567,9 @@ On considère un système <span class="math notranslate nohighlight">\(\Sigma\)<
 <p><strong>Démonstration</strong><br />
 La première formule est la simple expression du travail élémentaire.</p>
 <p>La seconde vient du fait que <span class="math notranslate nohighlight">\(\overrightarrow{dl} \cdot \overrightarrow{n}\)</span> donne en valeur absolue la hauteur du cylindre de base dS balayé par la surface dS lors de la déformation de sorte que le produit scalaire donne bien le volume balayé <span class="math notranslate nohighlight">\(dV_{balaye}(M)\)</span>par la surface dS.</p>
-<div class="note admonition">
-<p class="admonition-title">Attention : Volume balayé</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p><strong>Volume balayé</strong></p>
 <p>Le volume balayé est <strong>albégrique</strong> (à cause du produit scalaire).</p>
 <ul class="simple">
 <li><p>Si le système perd ce volume, cela correspond au cas <span class="math notranslate nohighlight">\(\overrightarrow{dl}\cdot\overrightarrow{n} &lt; 0\)</span> (cas de la figure). Le travail est alors positif. On pourra le comprendre en observer que le travail est nécessairement moteur (la contrainte normale extérieure est dans le même sens que le déplacement du point de contact).</p></li>
@@ -579,8 +581,9 @@ La première formule est la simple expression du travail élémentaire.</p>
 </div>
 <div class="section" id="cas-a-connaitre-contrainte-uniforme">
 <h3>Cas à connaître: contrainte uniforme.<a class="headerlink" href="#cas-a-connaitre-contrainte-uniforme" title="Permalink to this headline">¶</a></h3>
-<div class="attention admonition">
-<p class="admonition-title">Fondamental : Contrainte uniforme sur l’ensemble du système.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Contrainte uniforme sur l’ensemble du système.</strong></p>
 <p>Si la contrainte normale <span class="math notranslate nohighlight">\(\sigma_{ext}\)</span> est uniforme l’ensemble du système (plus précisément sur l’ensemble des parois mobiles), alors le travail de la contrainte normale devient <span class="math notranslate nohighlight">\(\delta W = - \sigma_{ext} dV\)</span> où <span class="math notranslate nohighlight">\(dV\)</span> est la variation de volume du système total.</p>
 <p>Le caractère algébrique du système est relié au gain/à la perte de volume total.</p>
 </div>
@@ -595,8 +598,8 @@ Remarque<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><strong>Transformation finie</strong><br />
 Il vient que lors du passage d’un état A à un état B, le travail reçu par le système des contraintes normales extérieures devient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-232ad319-82aa-49f9-be39-cf1edc5581ba">
-<span class="eqno">(14)<a class="headerlink" href="#equation-232ad319-82aa-49f9-be39-cf1edc5581ba" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e23eac48-0ecd-4ba4-b976-7328adb9632b">
+<span class="eqno">(14)<a class="headerlink" href="#equation-e23eac48-0ecd-4ba4-b976-7328adb9632b" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 W = - \int_{V_A}^{V_B}\sigma_{ext}dV
 \end{equation}\]</div>
 </div>
@@ -611,11 +614,12 @@ Remarque<div class="summary-down docutils">
 Comme on l’a dit, on appelle, par abus de langage ce travail “travail des forces de pression extérieures”. On ne revient sur les raisons qui font de ce terme un abus mais il faut savoir que <span class="math notranslate nohighlight">\(\sigma_{ext}\)</span> est souvent noté <span class="math notranslate nohighlight">\(P_{ext}\)</span> (il est effectivement homogène à une pression). Si cette notation est acceptée (elle sera même trouvée dans la majorité des ouvrages), il faut faire attention car <strong>elle est très trompeuse</strong>.</p>
 <p class="card-text">Ce n’est en effet PAS une pression et la manière de calculer <span class="math notranslate nohighlight">\(\sigma_{ext}\)</span> ne se ramène pas simplement à le remplacer par P (la pression du système) ou par une pression extérieure notée <span class="math notranslate nohighlight">\(P_0\)</span>. Il faut <strong>réfléchir au système étudié pour déterminer son expression.</strong></p>
 </div>
-</details><div class="attention admonition">
-<p class="admonition-title">Fondamental : Cas d’une transformation quasi-statique</p>
+</details><div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Cas d’une transformation quasi-statique</strong></p>
 <p>Dans le cas d’une transformation quasi-statique, le travail des contraintes normales extérieures se réécrit:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-524df60f-3428-4221-8214-39b143313ac1">
-<span class="eqno">(15)<a class="headerlink" href="#equation-524df60f-3428-4221-8214-39b143313ac1" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ba8b2501-3ca1-41e9-a2cd-44051865c13a">
+<span class="eqno">(15)<a class="headerlink" href="#equation-ba8b2501-3ca1-41e9-a2cd-44051865c13a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \delta W = - P dV
 \end{equation}\]</div>
 <p>où P est la pression (interne) du système.</p>
@@ -633,16 +637,18 @@ Le cas d’une transformation quasi-statique présente plusieurs intérêts. Nou
 </div>
 <div class="section" id="diagramme-de-watt">
 <h3>Diagramme de Watt<a class="headerlink" href="#diagramme-de-watt" title="Permalink to this headline">¶</a></h3>
-<div class="note admonition">
-<p class="admonition-title">Attention :</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
 <p>Dans toute la suite, on considère le cas du travail des contraintes extérieures <strong>dans le cas quasi-statique</strong>. Dans ce cas, la contrainte extérieure est uniforme et égale à la pression P du système, on rappelle que dans ces conditions, le travail se réécrit <span class="math notranslate nohighlight">\(\delta W = - PdV\)</span>.</p>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Diagramme de Watt</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Diagramme de Watt</strong></p>
 <p>Un diagramme de Watt est la représentation de la pression du système en fonction du volume du système.</p>
 </div>
-<div class="attention admonition">
-<p class="admonition-title">Fondamental : Interprétation géométrique du travail des contraintes normales extérieures</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Interprétation géométrique du travail des contraintes normales extérieures</strong></p>
 <p>Dans le cas d’une transformation quasi-statique, on peut représenter la transformation entre un état A et un état B pour un chemin dans un diagramme de Watt. Le travail des contraintes normales extérieures y est alors représenté par l’opposé de l’aire sous la courbe ainsi dessinée.</p>
 <p>La justification vient de l’expression du travail: <span class="math notranslate nohighlight">\(W = \int - PdV\)</span>.</p>
 <p>L’orientation du chemin permet alors de savoir si le travail reçu par le système est moteur ou résistant:</p>
@@ -654,16 +660,19 @@ Le cas d’une transformation quasi-statique présente plusieurs intérêts. Nou
 <img alt="../_images/thermo_diag_watt.jpg" src="../_images/thermo_diag_watt.jpg" />
 </div>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Cycle</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Cycle</strong></p>
 <p>Un cycle est une transformation ou une série de transformations ramenant le système dans son état initial.</p>
 </div>
-<div class="attention admonition">
-<p class="admonition-title">Fondamental : Grandeurs d’état et cycle</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Grandeurs d’état et cycle</strong></p>
 <p>La variation d’une variable d’état sur un cycle est trivialement nulle.</p>
 </div>
-<div class="attention admonition">
-<p class="admonition-title">Fondamental : Cas des cycles: Travail des contraintes normales</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Cas des cycles: Travail des contraintes normales</strong></p>
 <p>Dans une transformation quasi-statique cyclique, le travail fourni passe par des phases motrices puis résistantes. Le signe du travail globale défini si le système a reçu ou fourni de l’énergie. On relie ce signe au sens de parcours du cycle:</p>
 <ul class="simple">
 <li><p>Si le cycle est parcouru dans le sens horaire, <span class="math notranslate nohighlight">\(W&lt;0\)</span>: le système est un moteur car il fournit un travail mécanique.</p></li>

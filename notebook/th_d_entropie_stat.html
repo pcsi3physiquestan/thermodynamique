@@ -493,8 +493,9 @@ On appelle macro-état d’un système thermodynamique, l’état du système d�
 On appelle micro-état d’un système thermodynamique, un état du système décrit par les données de toutes les grandeurs microscopiques (vitesses et positions) des particules du système.</p>
 <p>On rappelle que la connaissance d’un micro-état précis est impossible et que de plus, le micro-état du système change à chaque instant (sous le simple effet des déplacements).</p>
 <p>A l’inverse, à l’équilibre le macro-état reste le même et est mesurable.</p>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Microétat compatible</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Microétat compatible</strong></p>
 <p>Pour un macro-état observé, les micro-états dont les données sont cohérentes avec le macro-état observé sont dits micro-état compatibles ou accessibles.</p>
 <p>Pour un macro-état <span class="math notranslate nohighlight">\(\mathfrak{E}\)</span>donné, on notera le nombre de micro-état compatibles <span class="math notranslate nohighlight">\(\Omega(\mathfrak{E})\)</span>.</p>
 </div>
@@ -515,14 +516,16 @@ On appelle micro-état d’un système thermodynamique, un état du système dé
 <h2>Hypothèse microcanonique<a class="headerlink" href="#hypothese-microcanonique" title="Permalink to this headline">¶</a></h2>
 <p>Les différentes macro-état possibles n’ont pas tous le même nombre de micro-états compatibles. Si l’on attend suffisamment longtemps, on peut supposer qu’on va atteindre un état d’équilibre donc une valeur d’énergie particulière. Quelle valeur sera atteinte ? <span class="math notranslate nohighlight">\(E=3E_1\)</span> ou <span class="math notranslate nohighlight">\(E=2E_1\)</span> ? On pourrait le penser puisque ces états compte le plus de micro-états. Cela dit, il faut encore être sûr que chaque micro-état possède la même probabilité d’exister.</p>
 <p>C’est pourquoi on doit faire une hypothèse fondamentale pour la physique statistique.</p>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Système microcanonique</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Système microcanonique</strong></p>
 <p>Un système pour lequel l’énergie du macroétat est imposé (système isolé) est appelé distribution microcanonique. Les variables privilégiées seront donc l’énergie E, le volume V et le nombre de mole n (ou le nombre de particules N).</p>
 </div>
 <p>Il existe d’autres types de distributions statistiques où l’on impose d’autres grandeurs (on peut imposer le volume et la température ou la pression et la température… )</p>
 <p>On impose E, V et N mais les autres grandeurs peuvent parfaitement varier. Autrement dit, même si on fixe E,V et n, les autres grandeurs T et P ne sont pas forcément fixées. Il peut donc y avoir plusieurs macroétats possibles. Dans ces conditions, celui qui décrira le mieux le système à l’équilibre sera le macroétats le plus probables. L’hypothèse microcanonique assure que <strong>le macroétat le plus probable</strong> est celui pour lequel la grandeur <span class="math notranslate nohighlight">\(\Omega(E,V,n)\)</span>. On appelle la fonction <span class="math notranslate nohighlight">\(\Omega\)</span> nombre <strong>d’états accessibles</strong>.</p>
-<div class="attention admonition">
-<p class="admonition-title">Fondamental : Hypothèse microcanonique</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Hypothèse microcanonique</strong></p>
 <p>Dans un système isolé, tous les états microscopiques, ou micro-états, possibles, c’est-à-dire correspondant à un macro-état donné sont équiprobables.</p>
 </div>
 <p>Qu’est-ce que ça veut dire ? Imaginons qu’on puissent distinguer tous les micro-états possibles d’un système quand on a fixé ses grandeurs macroscopiques (donc son macroétat). Si chaque état est équiprobable, cela veut dire que pendant un temps déterminer <span class="math notranslate nohighlight">\(\tau\)</span>, le système passe autant de temps dans chaque état du système. Plus généralement, si un microétat <span class="math notranslate nohighlight">\(\Sigma_1\)</span> possède une probabilité p de se réaliser, le système, pendant un temps <span class="math notranslate nohighlight">\(\tau\)</span> donné, passera un temps <span class="math notranslate nohighlight">\(p\tau\)</span> dans le microétat <span class="math notranslate nohighlight">\(\Sigma_1\)</span>.</p>
@@ -548,11 +551,12 @@ On appelle micro-état d’un système thermodynamique, un état du système dé
 <p>On définit l’entropie statistique d’un système, dans un état macroscopique (ou macro-état) donné par la quantité: <span class="math notranslate nohighlight">\(S = - k_B \sum_s P_s \ln(P_s)\)</span> où s est le microétat compatible avec le macroétat et <span class="math notranslate nohighlight">\(P_s\)</span> la probabilité d’occurence de s.</p>
 </div>
 <p>Cette définition n’est pas à connaître.</p>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Entropie statistique - Cas microcanonique (A connaître)</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Entropie statistique - Cas microcanonique (A connaître)</strong></p>
 <p>Dans le cas d’un système isolé, l’entropîe se réécrire en fonction de la seule fonction de répartition <span class="math notranslate nohighlight">\(\Omega\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-836c61cf-5edf-4dc1-ad31-b7ccae697c60">
-<span class="eqno">(6)<a class="headerlink" href="#equation-836c61cf-5edf-4dc1-ad31-b7ccae697c60" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f04da645-f536-449e-8929-f4b281b8a588">
+<span class="eqno">(6)<a class="headerlink" href="#equation-f04da645-f536-449e-8929-f4b281b8a588" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 S = k_B \ln \Omega
 \end{equation}\]</div>
 </div>
