@@ -482,53 +482,49 @@
 <h1>Travail mécanique<a class="headerlink" href="#travail-mecanique" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="travail-generalites">
 <h2>Travail: Généralités<a class="headerlink" href="#travail-generalites" title="Permalink to this headline">¶</a></h2>
-<p><em>Rappel : Calcul du travail mécanique</em><br />
-Le calcul du travail mécanique s’effectue au moyen des définitions classiques présentées dans le cours de mécanique.</p>
+<p><em>Rappel : Calcul du travail mécanique. Le calcul du travail mécanique s’effectue au moyen des définitions classiques présentées dans le cours de mécanique.</em></p>
 <p>Dans le cas (rare au programme) où il s’agit d’une action globale, on pensera bien à calcul le travail de chaque action ponctuelle puis de réaliser la sommation (en général une intégrale- cf. suite).</p>
 <p>Dans le cas de force conservative, on peut utiliser l’énergie potentielle mais attention, elle fait partie de l’énergie totale et non de W.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
-Remarque<div class="summary-down docutils">
+<strong>Remarque : Action globale surfacique</strong><div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>Action globale surfacique</strong><br />
-On considère une action globale <span class="math notranslate nohighlight">\(\cal A\)</span> regroupant des actions ponctuelles en plusieurs points M d’une surface <span class="math notranslate nohighlight">\(\Sigma\)</span> du système. On modélise chaque action ponctuelle par une force <span class="math notranslate nohighlight">\(\overrightarrow{d^2F}(M)\)</span> qui s’applique sur la petite surface <span class="math notranslate nohighlight">\(\overrightarrow{d^2S}(M)\)</span> autour du point M.</p>
+<p class="card-text">On considère une action globale <span class="math notranslate nohighlight">\(\cal A\)</span> regroupant des actions ponctuelles en plusieurs points M d’une surface <span class="math notranslate nohighlight">\(\Sigma\)</span> du système. On modélise chaque action ponctuelle par une force <span class="math notranslate nohighlight">\(\overrightarrow{d^2F}(M)\)</span> qui s’applique sur la petite surface <span class="math notranslate nohighlight">\(\overrightarrow{d^2S}(M)\)</span> autour du point M.</p>
 <p class="card-text">Le travail élémentaire fournit par l’action ponctuelle autour de M pendant un temps dt s’écrit: <span class="math notranslate nohighlight">\(\delta^3 W = \overrightarrow{d^2F}(M)\cdot\overrightarrow{dl}(M)\)</span> où M est le déplacement élementaire du point M (et donc de la surface <span class="math notranslate nohighlight">\(\overrightarrow{dS}(M)\)</span>.</p>
 <div class="figure align-center" id="fig-272">
 <img alt="../_images/force_surfacique.png" src="../_images/force_surfacique.png" />
 </div>
 <p class="card-text">Le travail <strong>élémentaire</strong> total fournit par l’action globale s’obtient par intégration sur la surface de contact:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-af4cfa7b-bd75-4e2a-b31e-2cad79cc3d3d">
-<span class="eqno">(12)<a class="headerlink" href="#equation-af4cfa7b-bd75-4e2a-b31e-2cad79cc3d3d" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-fdbde6a9-4180-4674-b106-477490f2139c">
+<span class="eqno">(12)<a class="headerlink" href="#equation-fdbde6a9-4180-4674-b106-477490f2139c" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \delta W = \iint_{M\in\Sigma} \overrightarrow{d^2 F}(M) \cdot \overrightarrow{dl}(M)
 \end{equation}\]</div>
-<p class="card-text">Si nous serons pas amené à calculer une telle intégrale, il faut comprendre le sens des différents infinitésimaux utilisés ici. Pour la force, il s’agit d’un infinitésimal <strong>spatial</strong> (un double infinitésimal puisque la force est surfacique). C’est ce double infinitésimal qu’on intégre (sur la surface donc).</p>
+<p class="card-text">Si nous ne serons pas amenés à calculer une telle intégrale, il faut comprendre le sens des différents infinitésimaux utilisés ici. Pour la force, il s’agit d’un infinitésimal <strong>spatial</strong> (un double infinitésimal puisque la force est surfacique). C’est ce double infinitésimal qu’on intégre (sur la surface donc).</p>
 <p class="card-text">Pour le déplacement élémentaire et le <span class="math notranslate nohighlight">\(\delta W\)</span>, il s’agit d’un infinitésimal <strong>temporel</strong>: un déplacement et un transfert énergétique durant un instant dt.</p>
 </div>
 </details></div>
 <div class="section" id="dipole-electrique">
 <h2>Dipôle électrique<a class="headerlink" href="#dipole-electrique" title="Permalink to this headline">¶</a></h2>
-<p><em>Rappel : Puissance électrique reçue</em><br />
-Soit un dipôle électrique D parcouru par une intensité i et dont la tension à ses bornes est u en convention récepteur. Alors la puissance qu’il reçoit du reste du circuit est <span class="math notranslate nohighlight">\(P = ui\)</span>.</p>
+<p><em>Rappel : Puissance électrique reçue. Soit un dipôle électrique D parcouru par une intensité i et dont la tension à ses bornes est u en convention récepteur. Alors la puissance qu’il reçoit du reste du circuit est <span class="math notranslate nohighlight">\(P = ui\)</span>.</em></p>
 <p>Si l’on isole le dipôle comme un système thermodynamique, il faut tenir compte de cette puissance mécanique (issue d’actions mécaniques de type électromagnétiques - on l’appelle parfois puissance électrique) quand on utilise le premier principe.</p>
 <p>Le “travail électrique” reçu par le dipôle durant un temps fini sera donc:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-438f41cb-3de1-422e-b8bc-e046253976c4">
-<span class="eqno">(13)<a class="headerlink" href="#equation-438f41cb-3de1-422e-b8bc-e046253976c4" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9d743cf2-88ae-4a6d-9e65-5a8e4a6563bd">
+<span class="eqno">(13)<a class="headerlink" href="#equation-9d743cf2-88ae-4a6d-9e65-5a8e4a6563bd" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 W = \int_{t_1}^{t_2}u(t)i(t)dt
 \end{equation}\]</div>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
-Remarque<div class="summary-down docutils">
+Remarque :<strong>Cas d’une résistance - Effet Joule</strong><div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
-<p class="card-text"><strong>Cas d’une résistance - Effet Joule</strong><br />
-Dans le cas d’une résistance, <strong>le travail reçu W</strong> se calcule en utilisant la loi d’Ohm (la puissance <strong>reçue</strong> est <span class="math notranslate nohighlight">\(P = Ri^2(t)\)</span>).</p>
+<p class="card-text">Dans le cas d’une résistance, <strong>le travail reçu W</strong> se calcule en utilisant la loi d’Ohm (la puissance <strong>reçue</strong> est <span class="math notranslate nohighlight">\(P = Ri^2(t)\)</span>).</p>
 <p class="card-text">Cette énergie est transformée à l’échelle microscopique de manière désordonnée, c’est <strong>l’effet Joule</strong>. <strong>Une partie</strong> de cette est énergie va être transmise <strong>par la résistance au système extérieur</strong> sous forme de transfert thermique Q.</p>
-<p class="card-text">Il est important de comprendre que a priori, <strong><span class="math notranslate nohighlight">\(W \neq Q\)</span></strong>. En effet, une partie de l’énergie reçu par travail électrique peut être conservée par la résistance pour augmenter son énergie interne. L’application du premier principe à la résistance donne bien <span class="math notranslate nohighlight">\(\Delta U = W + Q\)</span> avec <span class="math notranslate nohighlight">\(\Delta U = C_V \Delta T\)</span> en considérant que la résistance est un solide.</p>
+<p class="card-text">Il est important de comprendre que <em>a priori</em>, <strong><span class="math notranslate nohighlight">\(W \neq Q\)</span></strong>. En effet, une partie de l’énergie reçu par travail électrique peut être conservée par la résistance pour augmenter son énergie interne. L’application du premier principe à la résistance donne bien <span class="math notranslate nohighlight">\(\Delta U = W + Q\)</span> avec <span class="math notranslate nohighlight">\(\Delta U = C_V \Delta T\)</span> en considérant que la résistance est un solide.</p>
 <p class="card-text">Il est important de bien considérer les échanges pour une résistance: elle <strong>reçoit un travail</strong> et <strong>fournit un transfert thermique</strong>. Le type de transfert d’énergie à  considérer sera donc différent que l’on considère la résistance à l’intérieur ou à l’extérieur du système étudié.</p>
 </div>
 </details></div>
@@ -564,9 +560,11 @@ On considère un système <span class="math notranslate nohighlight">\(\Sigma\)<
 \end{align*}\]</div>
 <p>où <span class="math notranslate nohighlight">\(dV_{balaye}\)</span> est le volume balayé par la surface durant la durée dt. Il est compté positivement s’il correspond à un gain de volume pour le système et négativement s’il correspond à une perte de volume pour le système</p>
 </div>
-<p><strong>Démonstration</strong><br />
+<blockquote>
+<div><p><strong>Démonstration</strong><br />
 La première formule est la simple expression du travail élémentaire.</p>
 <p>La seconde vient du fait que <span class="math notranslate nohighlight">\(\overrightarrow{dl} \cdot \overrightarrow{n}\)</span> donne en valeur absolue la hauteur du cylindre de base dS balayé par la surface dS lors de la déformation de sorte que le produit scalaire donne bien le volume balayé <span class="math notranslate nohighlight">\(dV_{balaye}(M)\)</span>par la surface dS.</p>
+</div></blockquote>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p><strong>Volume balayé</strong></p>
@@ -587,8 +585,10 @@ La première formule est la simple expression du travail élémentaire.</p>
 <p>Si la contrainte normale <span class="math notranslate nohighlight">\(\sigma_{ext}\)</span> est uniforme l’ensemble du système (plus précisément sur l’ensemble des parois mobiles), alors le travail de la contrainte normale devient <span class="math notranslate nohighlight">\(\delta W = - \sigma_{ext} dV\)</span> où <span class="math notranslate nohighlight">\(dV\)</span> est la variation de volume du système total.</p>
 <p>Le caractère algébrique du système est relié au gain/à la perte de volume total.</p>
 </div>
-<p><strong>Démonstration</strong><br />
+<blockquote>
+<div><p><strong>Démonstration</strong><br />
 La contrainte normale étant uniforme, on peut la sortir de l’intégrale. Il reste la sommation des volumes balayés par chaque paroi qui correspond effectivement au volume total gagné par le système.</p>
+</div></blockquote>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
 Remarque<div class="summary-down docutils">
@@ -598,8 +598,8 @@ Remarque<div class="summary-down docutils">
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><strong>Transformation finie</strong><br />
 Il vient que lors du passage d’un état A à un état B, le travail reçu par le système des contraintes normales extérieures devient:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e23eac48-0ecd-4ba4-b976-7328adb9632b">
-<span class="eqno">(14)<a class="headerlink" href="#equation-e23eac48-0ecd-4ba4-b976-7328adb9632b" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9acb6668-c54f-4163-b901-82fcee06aaf3">
+<span class="eqno">(14)<a class="headerlink" href="#equation-9acb6668-c54f-4163-b901-82fcee06aaf3" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 W = - \int_{V_A}^{V_B}\sigma_{ext}dV
 \end{equation}\]</div>
 </div>
@@ -618,17 +618,19 @@ Comme on l’a dit, on appelle, par abus de langage ce travail “travail des fo
 <p class="admonition-title">Important</p>
 <p><strong>Fondamental : Cas d’une transformation quasi-statique</strong></p>
 <p>Dans le cas d’une transformation quasi-statique, le travail des contraintes normales extérieures se réécrit:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ba8b2501-3ca1-41e9-a2cd-44051865c13a">
-<span class="eqno">(15)<a class="headerlink" href="#equation-ba8b2501-3ca1-41e9-a2cd-44051865c13a" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-05954060-939c-4db8-b681-a5b41430fe0e">
+<span class="eqno">(15)<a class="headerlink" href="#equation-05954060-939c-4db8-b681-a5b41430fe0e" title="Permalink to this equation">¶</a></span>\[\begin{equation}
 \delta W = - P dV
 \end{equation}\]</div>
 <p>où P est la pression (interne) du système.</p>
 </div>
-<p><strong>Démonstration</strong><br />
+<blockquote>
+<div><p><strong>Démonstration</strong><br />
 Dans le cas d’une évolution quasi-statique, le système étant en quasi-équilibre mécanique à chaque instant, on peut définir la pression P du système <strong>qui est la même dans tout le système.</strong>.</p>
 <p>La force normale qu’exerce alors le système sur le milieu extérieur est alors (en norme) PdS. Le principe des actions réciproques permet alors d’écrire <span class="math notranslate nohighlight">\(\sigma_{ext} = P\)</span> (le signe des deux forces réciproques apparaît dans le vecteur directeur de la force, pas dans la contrainte) qui est uniforme.</p>
 <p>Il vient que le travail élémentaire des contraintes extérieures s’écrit alors <span class="math notranslate nohighlight">\(\delta W = - P dV\)</span>.</p>
-<p><strong>Intérêt du cas quasi-statique</strong><br />
+</div></blockquote>
+<p><strong>Intérêt du cas quasi-statique :</strong><br />
 Le cas d’une transformation quasi-statique présente plusieurs intérêts. Nous en citons deux ici:</p>
 <ul class="simple">
 <li><p>il ramène l’expression du travail à une expression ne dépendant plus que des paramètres d’état du système (on rappelle qu’on ne peut l’utiliser que si l’évolution est quasi-statique) ce qui permet souvent de calculer le travail reçu (calcul d’une intégrale) alors que dans le cas non quasi-statique, le calcul est souvent plus délicat (mais pas impossible - toute dépend des cas).</p></li>
@@ -679,12 +681,16 @@ Le cas d’une transformation quasi-statique présente plusieurs intérêts. Nou
 <li><p>Si le cycle est parcouru dans le sens anti-horaire, <span class="math notranslate nohighlight">\(W&gt;0\)</span>: le système est un récépteur car il reçoit un travail mécanique.</p></li>
 </ul>
 </div>
-<p><strong>Justification</strong></p>
+<blockquote>
+<div><p><strong>Justification</strong></p>
+</div></blockquote>
 <div class="figure align-center" id="fig-275">
 <img alt="../_images/thermo_watt_cycle.jpg" src="../_images/thermo_watt_cycle.jpg" />
 </div>
-<p>Si le cycle est parcouru dans le sens horaire, on observe que le temps où le système est récepteur correspond à un travail mécanique <span class="math notranslate nohighlight">\(\left\vert W_{recepteur} \right\vert\)</span> plus faible que le travail mécanique <span class="math notranslate nohighlight">\(\left\vert W_{moteur} \right\vert\)</span> du temps moteur (aire sous la courbe plus faible): le travail total reçu sera donc négatif:  le système fournit de du travail mécanique, c’est un moteur.</p>
+<blockquote>
+<div><p>Si le cycle est parcouru dans le sens horaire, on observe que le temps où le système est récepteur correspond à un travail mécanique <span class="math notranslate nohighlight">\(\left\vert W_{recepteur} \right\vert\)</span> plus faible que le travail mécanique <span class="math notranslate nohighlight">\(\left\vert W_{moteur} \right\vert\)</span> du temps moteur (aire sous la courbe plus faible): le travail total reçu sera donc négatif:  le système fournit de du travail mécanique, c’est un moteur.</p>
 <p>Si le cycle est parcouru dans le sens anti-horaire, on observe que le temps où le système est récepteur correspond à un travail mécanique <span class="math notranslate nohighlight">\(\left\vert W_{recepteur} \right\vert\)</span> plus grand que le travail mécanique <span class="math notranslate nohighlight">\(\left\vert W_{moteur} \right\vert\)</span> du temps moteur (aire sous la courbe plus grande) : le travail total reçu sera donc positif:  le système reçoit de du travail mécanique, c’est un récepteur.</p>
+</div></blockquote>
 </div>
 </div>
 </div>
