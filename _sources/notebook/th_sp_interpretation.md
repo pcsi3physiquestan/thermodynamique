@@ -50,16 +50,16 @@ dS_f &= \frac{dU_f + P_f dV_f}{T_f}
 \end{align*}
 Ces relations ne font intervenir que des variables d'état, elles peuvent donc être généraliser à toute transformation, même non réversible.Il vient donc dans l'équation du second principedu système total:
 
-\begin{equation}
+$$
 dS = \frac{dU_c}{T_c} + \frac{P_c}{T_c} dV_c + \frac{dU_f}{T_f} + \frac{P_f}{T_f} dV_f \geq 0
-\end{equation}
+$$
 __On a utilisé ici l'extensivité de l'entropie__.
 
 On a montré que $dU_c = - dU_f$ et on travaille à volume constant (sinon il y aurait des travaux des forces de pression et le système ne serait pas isolé) $dV_c = - dV_f$ soit:
 
-\begin{equation}
+$$
 dS = (\frac{1}{T_f} - \frac{1}{T_c})dU_f + (\frac{P_f}{T_f} - \frac{P_c}{T_c})dV_f \geq 0
-\end{equation}
+$$
 Pour des solides, $dV_f = 0$ soit $(\frac{1}{T_f} - \frac{1}{T_c})dU_f \geq 0$ avec $(\frac{1}{T_f} - \frac{1}{T_c})>0$ si $T_f < T_c$. Il vient donc que $dU_f \geq 0$ soit $\delta Q_f = dU_f - \delta W_f = dU_f \geq 0$ et $\delta Q_c = - \delta Q_f \leq 0$. La chaleur ne peut donc bien passer que du corps chaud au corps froid.
 
 

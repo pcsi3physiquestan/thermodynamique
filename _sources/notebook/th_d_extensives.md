@@ -66,9 +66,9 @@ Ces deux composantes sont associées à des mouvement macroscopiques observables
 
 On peut donc écrire l'énergie totale d'un système:
 
-\begin{equation}
+$$
 E = E_{C,macro} + E_{P,macro} + \underbrace{E_{th} + E_{rot,mic} + E_{vib,mic}}_{U}
-\end{equation}
+$$
 Les termes microscopiques, $E_{P,int}, E_{th}, E_{rot,mic}, E_{vib,mic}$ ne sont pas observables à l'échelle macroscopique et leur participation à l'énergie totale ne peut être séparée. C'est pourquoi, on les englobe dans un seul terme énergétique: l'__énergie interne__ U.
 
 ````

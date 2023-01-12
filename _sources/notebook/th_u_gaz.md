@@ -64,9 +64,9 @@ Rappelons nous que le modèle du gaz parfait correspond à des particules dont l
 __Equation d'état de Van der Waals__  
 Pour décrire le comportement réels des gaz, on dispose notamment d'un modèle: le gaz de Van der Waals. On propose comme équation d'état des gaz:
 
-\begin{equation}
+$$
 (P + \frac{n^2 a}{V^2})(V - nb) = nRT
-\end{equation}
+$$
 où a et b sont des constantes positives. Les termes correctifs $\frac{n^2 a}{V^2}$ et nb sont, en général, faibles devant respectivement P et V aux basses pressions. On appelle le terme $\frac{n^2 a}{V^2}$ __pression moléculaire__ et b le __covolume molaire__.
 
 
@@ -251,9 +251,9 @@ On rappelle que le comportement de l'énergie interne vis-à-vis d'une des varia
 
 La différentielle de l'énergie interne peut alors s'écrire:
 
-\begin{equation}
+$$
 dU(T,V) = C_V(T,V) dT + {\left(\frac{\partial U}{\partial V}\right)}(T,V)_T dV
-\end{equation}
+$$
 
 
 On a choisi ici d'exprimer U comme une fonction de T et V. Ce sera souvent le cas dans les premiers temps mais il faut savoir qu'on peut aussi exprimer U comme une fonction de S et V. Les dérivées partielles sont alors différentes (on pourra remarquer qu'il s'agit alors de la température et de la pression).
@@ -284,9 +284,9 @@ On rappelle que le comportement de l'enthalpie vis-à-vis d'une des variables es
 
 La différentielle de l'enthalpie peut alors s'écrire:
 
-\begin{equation}
+$$
 dH(T,P) = C_P(T,P) dT + {\left(\frac{\partial H}{\partial P}\right)}(T,P)_T dP
-\end{equation}
+$$
 
 
 On a choisi ici d'exprimer H comme une fonction de T et P alors qu'on a exprimé U comme une fonction de T et V. On aurait très bien pu exprimer H comme une fonction de T et V mais comme on le verra par la suite, il est préférable d'exprimer H(T,P) plutôt que H(T,V) à cause de l'utilisation faite de H. De même, il arrive qu'on préfère écrire H(S,P) mais nous nous servirons peu de cette vision de l'enthalpie.

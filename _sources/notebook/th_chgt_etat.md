@@ -15,7 +15,7 @@ kernelspec:
 ---
 # Transitions de phases
 
-````{admonition} Objectifs
+````{admonition} Compétences
 :class: tip
 * Analyser un diagramme (P,T)
 * Proposer un jeu de variables d'état suffisant pour caractériser l'état d'équilibre d'un corps pur diphasé soumis aux seules forces de pression.

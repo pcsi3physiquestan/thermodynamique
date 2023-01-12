@@ -15,7 +15,7 @@ kernelspec:
 ---
 # Description d'un système thermodynamique
 
-````{admonition} Objectifs
+````{admonition} Compétences
 :class: tip
 * Définir l'échelle mésoscopique et en expliquer la nécessité.
 * Connaître quelques ordres de grandeurs du libre parcours moyen.

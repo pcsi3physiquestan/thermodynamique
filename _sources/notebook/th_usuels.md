@@ -15,7 +15,7 @@ kernelspec:
 ---
 # Systèmes thermodynamiques usuels
 
-````{admonition} Objectifs
+````{admonition} Compétences
 :class: tip
 * Connaître et utiliser l'équation d'état des gaz parfaits.
 * Exprimer l'énergie interne d'un gaz parfait monoatomique à partir de l'interprétation microscopique de la température.

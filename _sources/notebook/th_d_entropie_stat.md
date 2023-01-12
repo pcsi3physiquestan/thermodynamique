@@ -119,9 +119,9 @@ Cette définition n'est pas à connaître.
 
 Dans le cas d'un système isolé, l'entropîe se réécrire en fonction de la seule fonction de répartition $\Omega$:
 
-\begin{equation}
+$$
 S = k_B \ln \Omega
-\end{equation}
+$$
 
 ````
 

@@ -146,9 +146,9 @@ Nous donnons à titre d'exemple __l'interprétation__ (pas la définition) de la
 
 On peut montrer (HP) que pour un système maintenu à la température T, celle-ci est reliée à l'énergie cinétique moyenne de translation par particule: 
 
-\begin{equation}
+$$
 \overline{E_c} = \frac{3}{2}k_B T
-\end{equation}
+$$
 L'expression trouvée précédemment de l'énergie moyenne relie la température à la vitesse quadratique moyenne. On retrouve l'idée déjà vue dans les classes précédentes que la température est liée à __l'agitation moléculaire__ (on parle d'agitation thermique).
 ````
 

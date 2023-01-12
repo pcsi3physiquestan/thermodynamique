@@ -22,9 +22,9 @@ kernelspec:
 
 Pour tout système thermodynamique, on définit une fonction d'état $S$, extensive, appelée entropie telle que la variation d'entropie $\Delta S$ pour un système isolé ne peut qu'être positive.
 
-\begin{equation}
+$$
 \Delta S_{isole} \geq 0
-\end{equation}
+$$
 ````
 
 ````{important} __Fondamental : Réécriture du second principe__

@@ -24,9 +24,9 @@ kernelspec:
 __Entropie échangée - Expression générale (pas à connaître)__  
 L'entropie échangée a pour expression générale:
 
-\begin{equation}
+$$
 \delta S_{ech} = \iint_{M \in \textrm{frontiere}} \frac{\delta Q_{dS}}{T_{dS}}
-\end{equation}
+$$
 $T_{dS}$ est la température à la surface $dS$ et $\delta Q_{dS}$ le transfert thermique qui se produit à travers la surface élémentaire. L'expression générale n'est pas à connaître, mais les cas particuliers le sont.
 
 
@@ -88,14 +88,14 @@ On peut aussi voir l'entropie comme une variable d'état comme l'est le volume o
 
 Toute fonction d'état est alors fonction de S et V: l'énergie interne notamment U(S,V) et sa différentielle: 
 
-\begin{equation}
+$$
 dU = \frac{\partial U}{\partial S}_V dS + \frac{\partial U}{\partial V}_S dV
-\end{equation}
+$$
 Cette relation amène la définition thermodynamique de la température et de la pression vues précédemment. On obtient alors __l'identité thermodynamique:__  
 
-\begin{equation}
+$$
 dU = TdS - PdV
-\end{equation}
+$$
 
 ### Entropie des gaz parfaits
 
@@ -153,9 +153,9 @@ La preuve de ces deux propriétés découle directement de l'expression de l'ent
 
 Pour des solides et des fluides peu dilatables et peu compressibles, on peut écrire:
 
-\begin{equation}
+$$
 dS \approx \frac{dU}{T} \approx \frac{dH}{T} \approx C \frac{dT}{T}
-\end{equation}
+$$
 ````
 
 

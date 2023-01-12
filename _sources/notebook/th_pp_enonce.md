@@ -21,9 +21,9 @@ kernelspec:
 
 Pour tout système fermé, on peut définir une fonction U des variables d'état, extensive, appelée énergie interne, telle que l'énergie totale E soit conservative, c'est-à-dire qu'elle est constante si le système est isolé:
 
-\begin{equation}
+$$
 E_{TOT} = E_{c,macro} + E_{p,macro} + U
-\end{equation}
+$$
 ````
 
 
@@ -49,9 +49,9 @@ Puisque l'énergie totale est conservative, elle ne peut varier que s'il y a des
 
 Le premier principe s'exprime donc: 
 
-\begin{equation}
+$$
 \Delta E_{TOT} = W +Q
-\end{equation}
+$$
 ````
 
 ````{attention}

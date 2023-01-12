@@ -46,9 +46,9 @@ Si la transformation est de plus quasi-statique, elle devient isobare.
 
 Soit un système fermé dont la pression extérieure agissante sur le système est maintenue constante $P_0$ passant d'un état d'équilibre à un autre. La variation d'enthalpie $\Delta H$ s'écrit:
 
-\begin{equation}
+$$
 \Delta E_{M,macro} + \Delta H = Q + W_{autre}
-\end{equation}
+$$
 où $W_{autre}$ est le travail autre que les forces de pression.
 ````
 

@@ -38,9 +38,9 @@ Le travail élémentaire fournit par l'action ponctuelle autour de M pendant un 
 
 Le travail __élémentaire__ total fournit par l'action globale s'obtient par intégration sur la surface de contact:
 
-\begin{equation}
+$$
 \delta W = \iint_{M\in\Sigma} \overrightarrow{d^2 F}(M) \cdot \overrightarrow{dl}(M)
-\end{equation}
+$$
 Si nous ne serons pas amenés à calculer une telle intégrale, il faut comprendre le sens des différents infinitésimaux utilisés ici. Pour la force, il s'agit d'un infinitésimal __spatial__ (un double infinitésimal puisque la force est surfacique). C'est ce double infinitésimal qu'on intégre (sur la surface donc).
 
 Pour le déplacement élémentaire et le $\delta W$, il s'agit d'un infinitésimal __temporel__: un déplacement et un transfert énergétique durant un instant dt.
@@ -54,9 +54,9 @@ Si l'on isole le dipôle comme un système thermodynamique, il faut tenir compte
 
 Le "travail électrique" reçu par le dipôle durant un temps fini sera donc:
 
-\begin{equation}
+$$
 W = \int_{t_1}^{t_2}u(t)i(t)dt
-\end{equation}\end{rappel}
+$$\end{rappel}
 
 ````{dropdown} Remarque :__Cas d'une résistance - Effet Joule__  
 
@@ -161,9 +161,9 @@ Le caractère algébrique du système est relié au gain/à la perte de volume t
 __Transformation finie__  
 Il vient que lors du passage d'un état A à un état B, le travail reçu par le système des contraintes normales extérieures devient:
 
-\begin{equation}
+$$
 W = - \int_{V_A}^{V_B}\sigma_{ext}dV
-\end{equation}
+$$
 ````
 
 ````{dropdown} Remarque
@@ -177,9 +177,9 @@ Ce n'est en effet PAS une pression et la manière de calculer $\sigma_{ext}$ ne 
 
 Dans le cas d'une transformation quasi-statique, le travail des contraintes normales extérieures se réécrit:
 
-\begin{equation}
+$$
 \delta W = - P dV
-\end{equation}
+$$
 où P est la pression (interne) du système.
 ````
 

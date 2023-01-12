@@ -23,9 +23,9 @@ kernelspec:
 
 Soit un système dont l'entropie est notée S, l'énergie interne U et le volume V. On définit la température du système par la grandeur:
 
-\begin{equation}
+$$
 T = {\left(\frac{\partial U}{\partial S}\right)}_{V}
-\end{equation}
+$$
 ````
 
 
@@ -38,9 +38,9 @@ Il s'agit d'une définition très abstraite qui nous servira peu par la suite. N
 
 L'énergie cinétique moyenne de translation des particules d'un gaz s'écrit en fonction de la température sous la forme:
 
-\begin{equation}
+$$
 \overline{E_c} = \frac{3}{2}k_B T
-\end{equation}
+$$
 On parle pour interprêter cette température de "température cinétique".
 
 $k_B$ est la constante de Boltzmann.
@@ -151,9 +151,9 @@ Comme on l'a déjà précisé, cette interprétation sera surtout utilisée pour
 
 Soit un système dont l'entropie est notée S, l'énergie interne U et le volume V. On définit la pression du système par la grandeur:
 
-\begin{equation}
+$$
 P = - {\left(\frac{\partial U}{\partial V}\right)}_{S}
-\end{equation}
+$$
 
 ````
 

@@ -29,9 +29,9 @@ L'efficacité d'un réfrigérateur correspond donc au rapport entre la quantité
 
 L'efficacité maximale d'un réfrigérateur ditherme ne dépend que des températures des sources chaudes et froides. Il s'obtient lors d'un cycle réversible et a pour expression:
 
-\begin{equation}
+$$
 e_{C} = \frac{T_f}{T_c - T_f}
-\end{equation}
+$$
 On appelle cette efficacité, efficacité de Carnot pour un réfrigérateur.
 ````
 
@@ -88,9 +88,9 @@ L'efficacité d'une pompe à chaleur correspond donc au rapport entre la quantit
 
 L'efficacité maximale d'une pompe à chaleur ditherme ne dépend que des températures des sources chaudes et froides. Il s'obtient lors d'un cycle réversible et a pour expression:
 
-\begin{equation}
+$$
 e_{C} = \frac{T_c}{T_c - T_f}
-\end{equation}
+$$
 On appelle cette efficacité, efficacité de Carnot pour une pompe à chaleur.
 ````
 
