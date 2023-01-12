@@ -16,18 +16,15 @@ kernelspec:
 # Interprétations
 
 ## Enoncé de Clausius
-
-
 Il s'agit de l'énoncé historique qui a conduit Clausius à élaborer le concept d'entropie.
 
-
-````{important} __Fondamental : Enoncé historique de Clausius__
+````{important} __Enoncé historique de Clausius__
 
 Considérons deux solides en contact thermique. Le premier est à température $T_f$ et le second à température $T_c > T_f$. Le transfert thermique ne s'effectuer spontanément (sans intervention du milieu extérieur) que du corps chaud vers le corps froid.
 ````
 
+````{note} __Démonstration__  
 
-__Démonstration__  
 Les caractéristiques du corps chaud (système $\Sigma_c$) seront notés avec un indice $c$ et celles du corps froid (système $\Sigma_f$) avec un indice $f$. Les grandeurs sans indices concernent le système total $\{\Sigma_f + \Sigma_f\}$
 
 Considérons __le système $\{\Sigma_f + \Sigma_c$}__. Les deux principes s'écrivent appliqué à une transformation infinitésimale:
@@ -68,11 +65,9 @@ Cette démonstration contient de nombreux points de méthodes extrêmement impor
 * Prise de recul: On est souvent amené à prendre l'intégrale des sous-systèmes dans un seul système pour ne pas avoir à étudier les échanges internes.
 * Diviser pour mieux régner: A l'inverse, dans les systèmes composés de sous-ensemble on profitera de __l'extensivité__ de l'énergie interne et de l'entropie pour les calculer comme des sommes de grandeurs exprimables en fonction des variables d'état de chaque sous système (impossible pour l'ensemble si T ou P n'est pas identique).
 * Fonction d'état: l'utilisation de la propriété de l'entropie (ou de U) d'être une fonction d'état est fondamentale dans de nombreuses démonstration. Elle permet de calculer leur variation sur un chemin choisi (réversible) puis de __généraliser ces expressions puisqu'elles ne dépendent pas du chemin parcouru__.
+````
 
- 
-
-````{admonition} Compléments : Equilibre thermique
-:class: hint, dropdown
+````{topic} Compléments : Equilibre thermique
 
 Remarquons que les expressions précédentes font apparaître $S$ comme une fonction de $U_f$ et $V_f$ (et non plus de $U$ et $V$) et définit les dérivées partielles:
 
@@ -85,17 +80,15 @@ On a vu que pour un système isolé, l'entropie ne pouvait qu'agmenter. Elle va 
 
 ## Enoncé de Thomson
 
-
 L'énoncé de Thomson est fondamental pour comprendre les limites des machines thermiques. Là où l'énoncé de Clausius s'intéresse à l'évolution interne d'un système et l'homogénéisation des grandeurs intensives, l'énoncé de Thomson traite de la dissymétrie entre le travail et le transfert thermique échangé.
 
 
-````{important} __Fondamental : Enoncé de Thomson__
-
+````{important} __Enoncé de Thomson__
 Un système en contact avec une seule source de chaleur (thermostat) ne peut, au cours d'un cycle, que recevoir du travail pour fournir de la chaleur.
 ````
 
+````{note} __Démonstration__  
 
-__Démonstration__  
 Notons $T_0$ la température de la source de chaleur. Les deux principe appliqué au système sur un cycle s'écrivent (les variations des fonctions d'état sont nulles sur un cycle):
 
 \begin{align*}
@@ -103,5 +96,4 @@ Notons $T_0$ la température de la source de chaleur. Les deux principe appliqu�
 \Delta S = 0 = S_{e} + S_c = \frac{Q}{T_0} + S_c \geq \frac{Q}{T_0} & \Longrightarrow \frac{Q}{T_0} \leq 0
 \end{align*}
 soit $Q <0$ et $W > 0$.
-
-
+````

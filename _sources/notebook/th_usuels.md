@@ -15,13 +15,6 @@ kernelspec:
 ---
 # Systèmes thermodynamiques usuels
 
-````{admonition} Compétences
-:class: tip
-* Connaître et utiliser l'équation d'état des gaz parfaits.
-* Exprimer l'énergie interne d'un gaz parfait monoatomique à partir de l'interprétation microscopique de la température.
-* Savoir que l'énergie interne d'un gaz parfait ne dépend que de la température.
-* Savoir que l'énergie interne d'une phase condensée incompressible et indilatable ne dépend que de la température.
-* Comparer le comportement d'un gaz réel au comportement d'un gaz parfait.
-
-````
-
+Nous allons étudier deux types de systèmes :
+* les gaz, et notamment la modèle du gaz parfait
+* les phases condensées peu compressibles et peu dilatables qui permettront de décrire la plupart des liquides et des solides.

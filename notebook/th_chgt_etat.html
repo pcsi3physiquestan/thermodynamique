@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Transitions de phases &#8212; Thermodynamique</title>
+    <title>Equilibres diphasés &#8212; Thermodynamique</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,12 +49,14 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/thermodynamique/notebook/th_chgt_etat.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Observations expérimentales" href="th_cg_obs.html" />
-    <link rel="prev" title="Second principe: Travaux dirigés" href="th_sp_td.html" />
+    <link rel="next" title="S’entrainer" href="th_d_ex.html" />
+    <link rel="prev" title="Phases condensées" href="th_u_condenses.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -90,82 +92,128 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="th_description.html">
    Description d’un système thermodynamique
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_d_systeme.html">
-     Système thermodynamique
+  <ul class="current">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="th_d_contxt.html">
+     Comprendre le contexte
     </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_d_systeme.html">
+       Système thermodynamique
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_d_echelle.html">
+       Echelles d’étude
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="th_d_variables.html">
+       Variables d’état et variables microscopiques
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+      <label for="toctree-checkbox-3">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="th_d_equilibre.html">
+         Equilibre thermodynamique
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="th_d_extensives.html">
+         Variables extensives
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="th_d_intensives.html">
+         Grandeurs intensives
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="th_usuels.html">
+       Systèmes thermodynamiques usuels
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+      <label for="toctree-checkbox-4">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="th_u_gaz.html">
+         Etude des gaz
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="th_u_condenses.html">
+         Phases condensées
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Equilibres diphasés
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_d_echelle.html">
-     Echelles d’étude
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="th_d_ex.html">
+     S’entrainer
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_d_variables.html">
-     Variables d’état et variables microscopiques
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_d_equilibre.html">
-     Equilibre thermodynamique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_d_extensives.html">
-     Variables extensives
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_d_intensives.html">
-     Grandeurs intensives
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_d_ex_app.html">
-     Exercices d’application
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_d_entropie_stat.html">
-     Approche statistique de l’entropie
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="th_usuels.html">
-   Systèmes thermodynamiques usuels
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_u_gaz.html">
-     Etude des gaz
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_u_condenses.html">
-     Phases condensées
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_u_ex_app.html">
-     Exercices d’application
-    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_d_methodes.html">
+       Méthodes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_d_activite.html">
+       Activités
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_d_entropie_stat.html">
+       Activités : Approche statistique de l’entropie
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_d_ex_app.html">
+       Applications
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_d_td.html">
+       Entrainement
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -173,56 +221,48 @@
   <a class="reference internal" href="th_premier_pcp.html">
    Premier principe
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_pp_intro.html">
-     Introduction
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="th_pp_ex.html">
+     S’entrainer
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_pp_enonce.html">
-     Premier principe: Enoncé
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_pp_q.html">
-     Transfert thermique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_pp_w.html">
-     Travail mécanique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_pp_transfo.html">
-     Etude de transformations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_pp_compression.html">
-     Compression isotherme d’un gaz parfait
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_pp_act_meth.html">
-     Activités méthodes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_pp_ex_app.html">
-     Exercices d’application
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_pp_td.html">
-     Travaux dirigés
-    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_pp_transfo.html">
+       Activités - Etude de transformations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_pp_act_meth.html">
+       Activités - Cas du gaz parfait
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_pp_compression.html">
+       Méthodes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_pp_ex_app.html">
+       Exercices d’application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_pp_td.html">
+       Travaux dirigés
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -230,73 +270,70 @@
   <a class="reference internal" href="th_second_pcp.html">
    Second principe
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_sp_intro.html">
-     Introduction
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="th_sp_contxt.html">
+     Connaître le contexte
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_sp_intro.html">
+       Introduction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_sp_enonce.html">
+       Enoncé
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_sp_expression.html">
+       Expression des grandeurs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_sp_interpretation.html">
+       Interprétations
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_sp_enonce.html">
-     Second principe: Enoncé
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="th_sp_ex.html">
+     S’entrainer
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_sp_expression.html">
-     Expression des grandeurs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_sp_interpretation.html">
-     Interprétations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_sp_exemples.html">
-     Exemples d’application
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_sp_ex_app.html">
-     Second principe: Exercice d’application
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_sp_td.html">
-     Second principe: Travaux dirigés
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
-   Transitions de phases
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_cg_obs.html">
-     Observations expérimentales
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_cg_quant.html">
-     Analyse quantitative
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_cg_td.html">
-     Travaux dirigés: Changements d’état
-    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_sp_exemples.html">
+       Exemples d’application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_sp_ex_app.html">
+       Second principe: Exercice d’application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_sp_td.html">
+       Second principe: Travaux dirigés
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -304,41 +341,65 @@
   <a class="reference internal" href="th_machines.html">
    Machines thermiques
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_mc_gene.html">
-     Généralités
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="th_machines_contxt.html">
+     Comprendre le contexte
     </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_mc_gene.html">
+       Généralités
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_mc_moteur.html">
+       Moteurs thermiques
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_mc_recepteur.html">
+       Récepteurs
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_mc_moteur.html">
-     Moteurs thermiques
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="th_machines_ex.html">
+     S’entrainer
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_mc_recepteur.html">
-     Récepteurs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_mc_methodes.html">
-     Méthodes d’études
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_mc_ex_app.html">
-     Exercice d’application
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="th_mc_td.html">
-     Travaux dirigés
-    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_mc_methodes.html">
+       Méthodes d’études
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_mc_ex_app.html">
+       Exercice d’application
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="th_mc_td.html">
+       Travaux dirigés
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -428,6 +489,92 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#differentes-phases-et-transitions">
+   Différentes phases et transitions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#phases-definitions">
+     Phases: Définitions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transitions-de-phases">
+     Transitions de phases
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equilibres-monophases-et-diphases">
+   Equilibres monophasés et diphasés
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fractions-molaires-et-massiques">
+   Fractions molaires et massiques
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diagramme-t-p">
+     Diagramme (T,P)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diagramme-de-clapeyron">
+     Diagramme de Clapeyron
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cas-de-l-equilibre-liquide-vapeur-partie-a-savoir-tracer">
+       Cas de l’équilibre liquide-vapeur (partie à savoir tracer)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#theoreme-des-moments">
+       Théorème des moments
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#retard-au-changement-d-etat-etat-metastable">
+     Retard au changement d’état: Etat métastable
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#enthalpie-de-fusion">
+   Enthalpie de fusion
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enthalpie-de-changement-d-etat">
+     Enthalpie de changement d’état
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diagramme-p-h">
+     Diagramme p-H
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#synthese-dans-un-diagramme-p-v-t-en-ligne">
+   Synthèse dans un diagramme (P,V,T) (en ligne)
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -436,21 +583,414 @@
         
               <div>
                 
-  <div class="section" id="transitions-de-phases">
-<h1>Transitions de phases<a class="headerlink" href="#transitions-de-phases" title="Permalink to this headline">¶</a></h1>
-<div class="tip admonition">
-<p class="admonition-title">Objectifs</p>
+  <div class="section" id="equilibres-diphases">
+<h1>Equilibres diphasés<a class="headerlink" href="#equilibres-diphases" title="Permalink to this headline">¶</a></h1>
+<p><em>Jusqu’à présent, nous avons toujours supposer que les différents corps étudiés restaient sous la même phase au cours de la transformation. Ceci n’est pas toujours vérifié et on peut même chercher à vaporiser un gaz (climatisation des terrasses) ou à le liquéfier pour diverses utilisation (transport, refroidissement… ). Nous nous proposons ici d’étudier le comportement d’un corps pur lors d’un changement de phase. En première année, nous nous intéressons simplement aux changements de phase d’un <strong>corps pur</strong> ou à la coexistence de plusieurs phases d’un même corps (corps pur).</em></p>
+<div class="section" id="differentes-phases-et-transitions">
+<h2>Différentes phases et transitions<a class="headerlink" href="#differentes-phases-et-transitions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="phases-definitions">
+<h3>Phases: Définitions<a class="headerlink" href="#phases-definitions" title="Permalink to this headline">¶</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Phase</strong></p>
+<p>Une phase est un système (ou un sous-système) dans lequel les paramètres intensifs sont continus. A l’équilibre ces paramètres sont uniformes.</p>
+<p>Un système composé d’une phase est appelé système monophasé.</p>
+</div>
+<div class="topic">
+<p class="topic-title">Description des phases</p>
 <ul class="simple">
-<li><p>Analyser un diagramme (P,T)</p></li>
-<li><p>Proposer un jeu de variables d’état suffisant pour caractériser l’état d’équilibre d’un corps pur diphasé soumis aux seules forces de pression.</p></li>
-<li><p>Positionner les phases dans les diagrammes (P,T) et (P,v)</p></li>
-<li><p>Déterminer la composition d’un mélange diphasé en un point d’un diagramme (P,v)</p></li>
-<li><p>Expliquer la problématique du stockage des fluides.</p></li>
-<li><p>Exploiter l’extensivité de l’enthalpie et réaliser des bilans énergétiques en prenant en compte des transitions de phases.</p></li>
-<li><p>Connaître et utiliser la relation entre les variations d’entropie et d’enthalpie associées à une transition de phase.</p></li>
+<li><p>La phase gazeuse est un état où le corps occupe tout l’espace qui lui est offert, les interactions entre particules sont faibles devant leur agitation thermique (gaz de Van der Waals) ou négligeables (gaz parfait). C’est un état très désordonné.</p></li>
+<li><p>La phase liquide est un état où le volume est limité par des interactions entre particules plus importantes. Les fluides sont en général peu compressibles, plus dense que le gaz correspondant et épousent la forme des récipients, sous l’effet de la pesanteur.</p></li>
+<li><p>La phase solide correspond à l’état le plus ordonnée: les déplacements des particules sont très limités par les interactions importantes qui les lient. Le solide garde donc sa forme.</p></li>
 </ul>
 </div>
-<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="transitions-de-phases">
+<h3>Transitions de phases<a class="headerlink" href="#transitions-de-phases" title="Permalink to this headline">¶</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Transitions des phases</strong></p>
+<p>Les différents noms des changements d’état sont à connaître.</p>
+<div class="figure align-center" id="fig-279">
+<img alt="../_images/thermo_chap_6_nom_chang.jpg" src="../_images/thermo_chap_6_nom_chang.jpg" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="equilibres-monophases-et-diphases">
+<h2>Equilibres monophasés et diphasés<a class="headerlink" href="#equilibres-monophases-et-diphases" title="Permalink to this headline">¶</a></h2>
+<p><em>On peut représenter sur un diagramme (T,P) les zones où peuvent exister de manière stable les différentes phases d’un même corps pur. En réalisant l’étude expérimentale complète des états possibles, on peut déjà faire quelques observations qui vont se retrouver sur  le diagramme. Ces observations expérimentales sont à connaître.</em></p>
+</div>
+<div class="section" id="fractions-molaires-et-massiques">
+<h2>Fractions molaires et massiques<a class="headerlink" href="#fractions-molaires-et-massiques" title="Permalink to this headline">¶</a></h2>
+<p><em>Dans toutes cette partie, nous n’étudierons que la transition liquide-vapeur. La plupart des résultats donnés peuvent néanmoins se transposer facilement aux autres transitions.</em></p>
+<p><em>Notation: Dans la suite, on notera avec un indice l les grandeurs liées au liquide et avec un indice g les grandeurs liées au gaz.</em></p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>On a <span class="math notranslate nohighlight">\(x_l + x_g = 1\)</span> et <span class="math notranslate nohighlight">\(X_{ml} + X_{mg} = 1\)</span></p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Fraction massique et molaire</strong></p>
+<p>Dans un système où deux phases liquide et gaz coexistent, on définit la fraction molaire <span class="math notranslate nohighlight">\(X_{ml}\)</span> de la phase liquide par la grandeur: <span class="math notranslate nohighlight">\(X_{ml} = \frac{n_l}{n_T}\)</span> où <span class="math notranslate nohighlight">\(n_l\)</span> est la quantité de matière de la phase liquide et <span class="math notranslate nohighlight">\(n_T\)</span> la quantité de matière totale.</p>
+<p>Dans un système où deux phases liquide et gaz coexistent, on définit la fraction massique <span class="math notranslate nohighlight">\(x_l\)</span> de la phase liquide par la grandeur: <span class="math notranslate nohighlight">\(x_l =\frac{m_l}{m_T}\)</span> où <span class="math notranslate nohighlight">\(m_l\)</span> est la masse de la phase liquide et <span class="math notranslate nohighlight">\(m_T\)</span> la masse totale.</p>
+<p>On définira bien entendu les mêmes grandeurs pour la phase gazeuse.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Utilisation des grandeurs massiques et molaires</p>
+<p>Soit une grandeur extensive Y du système diphasé. On a les relations suivantes:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+y &amp;= x_l y_l  + x_g y_g\\
+Y_m &amp;= X_{ml} Y_{ml} + X_{mg} Y_{mg} 
+\end{align*}\]</div>
+<p>où <span class="math notranslate nohighlight">\(y_l\)</span> et <span class="math notranslate nohighlight">\(y_g\)</span> sont respectivement les grandeurs massiques de la phase liquide et gazeuse seule aux mêmes conditions de pression et température et <span class="math notranslate nohighlight">\(Y_{ml}\)</span> et <span class="math notranslate nohighlight">\(Y_{mg}\)</span> les grandeurs molaires de la phase liquide et gazeuse seule aux mêmes conditions de pression et température.</p>
+</div>
+<div class="topic">
+<p class="topic-title">Démonstration</p>
+<p>Prouvons pour la grandeur molaire:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+Y_m &amp;= \frac{Y}{n_T} = \frac{Y_l + Y_g}{n_T} + \frac{n_l Y_{ml} + n_g Y_{mg}}{n_T}\\
+&amp;= X_{ml} Y_{ml} + X_{mg} Y_{mg}
+\end{align*}\]</div>
+</div>
+<div class="section" id="diagramme-t-p">
+<h3>Diagramme (T,P)<a class="headerlink" href="#diagramme-t-p" title="Permalink to this headline">¶</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Diagramme (T,P)</strong></p>
+<div class="figure align-center" id="diag-pt">
+<img alt="../_images/thermo_chap_6_diag_pt.jpg" src="../_images/thermo_chap_6_diag_pt.jpg" />
+</div>
+<ul class="simple">
+<li><p>Observations générales</p>
+<ul>
+<li><p>Observation 1: L’existence stable des différentes phases dépend des données de température et de pression du système. Pour un couple (T,P), il n’existe qu’une seule configuration (1, 2 ou 3 phases données) pouvant exister de manière stable.</p></li>
+<li><p>Observation 2: L’existence stable d’un système monophasé n’impose aucune relation entre température et pression: les zones d’existence seront donc des surfaces sur le diagramme.</p></li>
+<li><p>Observation 3: La coexistence de deux phases à l’équilibre <strong>impose une relation entre la température et la pression</strong>. Autrement dit, si on impose la température (réciproquement la pression) d’un mélange de 2 phases données, on impose alors la pression (réciproquement la température): les zones de coexistence de 2 phases seront donc des courbes sur le diagramme. Ces courbes sont appelées courbe de changement d’état.</p>
+<ul>
+<li><p>__Conséquence : une transformation où coexistent deux phases d’un même corps <em>pur</em>, si elle est isobare sera aussi isotherme.</p></li>
+<li><p>__Conséquence : une transformation où coexistent deux phases d’un même corps <em>pur</em>, si elle est isotherme sera aussi isobare.</p></li>
+</ul>
+</li>
+<li><p>Observation 4: La coexistence des trois phases d’un même corps pur ne peut exister que pour un couple de température et pression. Le point ainsi défini sur le diagramme est appelé <strong>point triple</strong>. Ses coordonnées varient suivant le corps considérés. (Ce point peut ne pas exister: c’est le cas de l’Hélium)</p></li>
+<li><p>Observation 5: Pour des températures et pressions suffisamment élevées, le passage de l’état liquide à l’état gazeux et inversement s’effectue de manière continue, c’est-à-dire qu’on observera pas deux phases distinctes séparées par un ménisque lors de la transformation. Le point dont les coordonnées terminent la courbe de changement d’état liquide-vapeur est appelé <strong>point critique</strong>. On parle généralement de fluide hypercritique pour désigner l’état au-delà du point critique car liquide et gaz sont alors indiscernables.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title">Point triple - Exemples</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Composé</p></th>
+<th class="text-align:center head"><p>T(K)</p></th>
+<th class="text-align:center head"><p>P(Pa)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Eau</p></td>
+<td class="text-align:center"><p>273.15</p></td>
+<td class="text-align:center"><p>611</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Dioxyde de carbone</p></td>
+<td class="text-align:center"><p>216.5</p></td>
+<td class="text-align:center"><p>519</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>Diazote</p></td>
+<td class="text-align:center"><p>63.16</p></td>
+<td class="text-align:center"><p>12868</p></td>
+</tr>
+</tbody>
+</table>
+<p>Le point triple du dioxyde de carbone présente un intérêt: la pression Pr est supérieure à la pression atmosphérique. Cela veut dire qu’à pression atmosphérique, le <span class="math notranslate nohighlight">\(CO_2\)</span> ne peut que se sublimer. C’est l’intérêt de la neige carbonique. Le <span class="math notranslate nohighlight">\(CO_2\)</span> à très basse température est solide à pression atmosphérique. Du gaz sous pression projeté sur des flammes va se détendre et diminuer sa température: il se solidifie. Il va alors étouffer les flammes (en raréfiant l’air en dioxygène) mais contrairement à l’eau, l’augmentation de température ne le transforme pas en liquide mais en gaz à pression ambiante: il ne stagne pas sur le matériel touché par le feu et ce dernier sera moins détérioré. Le CO2 est surtout utilisé pour les feux de classe B et C.</p>
+</div>
+<div class="topic">
+<p class="topic-title">Point critique - Exemples</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Composé</p></th>
+<th class="text-align:center head"><p>T(K)</p></th>
+<th class="text-align:center head"><p>P(Pa)</p></th>
+<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(\rho(kg.m^3)\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>Eau</p></td>
+<td class="text-align:center"><p>647.3</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(22.12 \times 10^6\)</span></p></td>
+<td class="text-align:center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>Dioxyde de carbone</p></td>
+<td class="text-align:center"><p>304.45</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(22.12 \times 10^6\)</span></p></td>
+<td class="text-align:center"><p>0.46</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>SF6</p></td>
+<td class="text-align:center"><p>318.65</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(3.76 \times 10^6\)</span></p></td>
+<td class="text-align:center"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>Le point critique est défini par la donnée de <span class="math notranslate nohighlight">\(T_c\)</span> et <span class="math notranslate nohighlight">\(P_c\)</span>. Le volume massique critique <span class="math notranslate nohighlight">\(v_c\)</span> est alors fixé, on peut utiliser cette propriété pour élaborer des systèmes simples permettant de se placer au point critique: pour une quantité de matière n fixée, on en déterminer le volume critique correspondant et on place le corps pur seul dans une enceinte de volume <span class="math notranslate nohighlight">\(V_c\)</span>. On peut en faisant varier la température se placer à <span class="math notranslate nohighlight">\(T_c\)</span>, on est alors automatiquement à <span class="math notranslate nohighlight">\(P_c\)</span>, donc au point triple: on appelle ce montage un tube de Natterer.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Tracé un diagramme (T,P)</p>
+<ul class="simple">
+<li><p>Place des phases: Le placement des phases s’obtient par un raisonnement simple: à pression constante, l’augmentation de température entraîne le passage vers des phases présentant moins de cohésion.</p></li>
+<li><p>Nom des courbes: En général, on parle de courbe de sublimation, de saturation (ou de vaporisation) et de solidification (ou de liquéfaction).</p></li>
+<li><p>Frontière liquide-vapeur: Elle est toujours croissante car le gaz est moins dense que le liquide, on l’appelle <strong>courbe de saturation</strong>. On appelle la pression <span class="math notranslate nohighlight">\(P_{sat}(T)\)</span> où coexistent gaz et liquide à une température donnée <strong>pression de vapeur saturante</strong>. Il existe certaines expressions de la fonction <span class="math notranslate nohighlight">\(P_{sat}(T)\)</span> pour certaines corps et certaines gammes de température (ex: formule de Duperray pour l’eau). Aucune n’est à connaître. La frontière liquide-vapeur est bornée en bas par le point triple et en haut, elle est bornée par le point critique.</p></li>
+<li><p>Frontière solide-liquide: Elle est beaucoup plus pentue. Pour la plupart des corps, elle est croissante: cela veut dire qu’en comprimant le corps (en diminuant son volume), il se solidifie: <strong>le solide est ainsi en général plus dense que le liquide</strong>. Deux corps en particulier font <strong>exception: l’eau</strong> et le bismuth. Pour <a class="reference internal" href="#diag-pt-eau"><span class="std std-ref">ces deux corps</span></a>, la frontière est décroissante et on fait fondre le solide quand on compresse: <strong>le solide est donc moins dense que le liquide pour l’eau</strong>. Les liaisons hydrogène expliquent en grande partie ce phénomène pour l’eau. La frontière n’a pas de limite supérieure connue mais possède une limite inférieure: le point triple.</p></li>
+<li><p>Frontière solide-gaz: Elle est aussi croissante (le gaz est moins dense que le solide). Elle possède une limite supérieure: le point triple. Cette frontière peut être en réalité un ensemble de frontière successive quand le corps possède plusieurs variétés allotropiques solides. Sauf indication, on pourra tracer une courbe simple.</p></li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title">Diagramme de l’eau</p>
+<div class="figure align-center" id="diag-pt-eau">
+<img alt="../_images/thermo_chap_6_diag_pt_eau.jpg" src="../_images/thermo_chap_6_diag_pt_eau.jpg" />
+</div>
+<p>Ce phénomène (pente inversée) s’observe de deux façons:</p>
+<ul class="simple">
+<li><p>la première est simplement la flottaison des glaçons dans l’eau (cf. Statique des fluides)</p></li>
+<li><p>la seconde est l’expérience du regel de l’eau: on place sur un glaçon un fil tendu par deux masses suspendues à ses extrémités: la pression imposée fait fondre localement la glace et le fil s’enfonce. Mais la pression exercée est locale est une fois le fil descendu, la pression redescend et l’eau regèle: on observe ainsi un fil qui s’enfonce dans la glace qui se referme petit à petit derrière lui.</p></li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title">Variétés allotropiques</p>
+<p>Il existe des corps qui possèdent plusieurs état correspondant à une même phase, on parle alors de variétés allotropiques d’un corps.</p>
+<p>Très souvent, les corps possèdent des variétés allotropiques solides: il s’agit de différents arrangements cristallins possibles des différents atomes (cf cours de Cristallographie en chimie).</p>
+<blockquote>
+<div><p>Exemple : La glace possède 7 variétés allotropiques différentes. Un zoom sur sur le diagramme (T,P) permet de faire figurer ces différentes variétésOn peut s’en convaincre en regardant un glaçon sorti du congélateur, le contour est transparent (c’est un arrangement laissant passer la lumière) alors que le centre est opaque (c’est un arrangement qui ne laisse pas passer la lumière).</p>
+</div></blockquote>
+<div class="figure align-center" id="fig-283">
+<img alt="../_images/thermo_chap_6_diag_pt_glace.jpg" src="../_images/thermo_chap_6_diag_pt_glace.jpg" />
+</div>
+<blockquote>
+<div><p>Exemple : L’hélium 4 est un exemple de corps possédant des variétés allotropiques liquide appelées hélium fluide (Type I) et hélium superfluide (Type II). Le second existe à très basse température et ne possède pas de viscosité (frottements): il peut monter par capillarité le long des parois d’un verre.</p>
+</div></blockquote>
+<blockquote>
+<div><p>Exemple : Le fer possède deux arrangements cristallins solides à pression atmosphérique: cubique centré et cubique face centrée. Le passage de l’un à l’autre en présence de carbone est appelé austénisation (terme qui n’est pas à connaître) et est à la base de la formation d’un acier dur.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="diagramme-de-clapeyron">
+<h3>Diagramme de Clapeyron<a class="headerlink" href="#diagramme-de-clapeyron" title="Permalink to this headline">¶</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Diagramme de Clapeyron</strong></p>
+<ul class="simple">
+<li><p>Un <strong>diagramme de Clapeyron</strong> et un diagramme où l’on représente la pression du système en fonction du volume massique total du système.</p></li>
+<li><p>Une <strong>isotherme d’Andrews</strong> correspond au tracé d’une transformation isotherme d’un corps pur donné sur un diagramme de Clapeyron.</p></li>
+</ul>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Observations</strong>
+Sur une isotherme d’Andrews :</p>
+<ul class="simple">
+<li><p>Quand 2 phases coexistent à température constante, la pression est fixée.</p></li>
+<li><p>Mais le volume massique total du système peut encore varier (et donc le volume aussi).</p></li>
+</ul>
+<blockquote>
+<div><p>On parle donc de <strong>palier</strong> de changement de phase.</p>
+</div></blockquote>
+</div>
+<div class="topic">
+<p class="topic-title">Description générale des isothermes</p>
+<div class="figure align-center" id="fig-284">
+<img alt="../_images/thermo_chap_6_diag_pv.jpg" src="../_images/thermo_chap_6_diag_pv.jpg" />
+</div>
+<ul class="simple">
+<li><p>Parties liquides et solides: On remarque que dans la zone où le solide existe seul, la pression augmente très fortement pour une faible variation de volume massique: cela signifie que soumis à des contraintes “normales”, le volume d’un solide varie très peu. Il en est de même pour la phase liquide (cf zoom): on parle alors de <strong>fluide incompressible</strong>.</p></li>
+<li><p>Partie gazeuse: Dans les zones où seul le gaz existe, les variations sont plus faibles, on peut essayer de modéliser ces variations (gaz de Van der Waals ou développement du Viriel - cf. TP).</p></li>
+<li><p>Equilibre de deux phases: Dans les zones où deux phases sont en équilibre, on observe des paliers. On retrouve le fait que si on fixe la température, la pression au changement d’état est fixée. Le “point triple” correspond ici…  à une droite: on peut encore faire varier le volume massique.</p></li>
+<li><p>Point critique: Au dessus d’une température appelée température critique <span class="math notranslate nohighlight">\(T_C\)</span>, il n’existe plus de zone de coexistence liquide/gaz et on passe continuement d’un fluide à l’autre: il n’existe donc qu’un fluide discernable appelé fluide hypercritique.</p></li>
+</ul>
+</div>
+<div class="section" id="cas-de-l-equilibre-liquide-vapeur-partie-a-savoir-tracer">
+<h4>Cas de l’équilibre liquide-vapeur (partie à savoir tracer)<a class="headerlink" href="#cas-de-l-equilibre-liquide-vapeur-partie-a-savoir-tracer" title="Permalink to this headline">¶</a></h4>
+<p>On retiendra qu’on a déjà vu:</p>
+<ul class="simple">
+<li><p>l’existence du point critique</p></li>
+<li><p>l’influence du caractère incompressible des liquide sur les isothermes.</p></li>
+</ul>
+<div class="important admonition">
+<p class="admonition-title">Déscription du tracé</p>
+<div class="figure align-center" id="fig-285">
+<img alt="../_images/thermo_chap_6_diag_pv_liqvap.jpg" src="../_images/thermo_chap_6_diag_pv_liqvap.jpg" />
+</div>
+<ul class="simple">
+<li><p><strong>Courbes frontières et existence des phases</strong><br />
+Aux faibles volumes, on trouve la zone de phase liquide. Aux forts volumes la zone de phase gazeuse. Entre les deux se trouve la zone de coexistence liquide-vapeur. Aux fortes pressions/fortes températures, une zone correspond à un état super-critique.</p>
+<ul>
+<li><p><strong>Courbe d’ébullition:</strong> C’est la courbe qui sépare l’état {liquide seul} de l’état {liquide+gaz}. Elle correspond à l’apparition de la première bulle de gaz dans le liquide. La masse volumique d’un point de la courbe d’ébullition à la température T (point I) correspond à <strong>la masse volumique du liquide</strong> à cette température qu’il soit seul ou en équilibre avec le gaz.</p></li>
+<li><p><strong>Courbe de rosée</strong>: C’est la courbe qui sépare l’état {gaz seul} de l’état {liquide+gaz}. Elle correspond à  l’apparition de la première goutte de liquide dans le gaz. La masse volumique d’un point de la courbe de rosée à la température T (point F) correspond à <strong>la masse volumique du gaz</strong> à cette température qu’il soit seul en en équilibre avec le gaz.</p></li>
+<li><p>Les deux courbes se rejoignent au _<em>point critique</em>. Pour une température supérieure, il n’y a plus de séparation liquide/gaz.</p></li>
+</ul>
+</li>
+<li><p><strong>Types d’isothermes</strong></p></li>
+<li><p>Isotherme supercritique <span class="math notranslate nohighlight">\(T &gt; T_C\)</span>: Elles sont toujours descroissantes, sans point où la pente est nulle. On rappelle qu’on ne distingue alors pas de phase gazeuse ou liquide et qu’on parle de phase supercritique.</p></li>
+<li><p>Isotherme critique <span class="math notranslate nohighlight">\(T = T_C\)</span>: Elle passe par le point critique. La courbe a en ce point un point d’inflexion et la pente est nulle.</p></li>
+<li><p>Isotherme sous-critique à <span class="math notranslate nohighlight">\(T &lt; T_C\)</span>: Au dessous de la température critique, l’isotherme d’Andrews passe par un palier à une pression donnée lors de l’équilibre liquide-gaz. Cette pression est appelée pression de vapeur saturante.</p></li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title">Evolution des masses volumiques</p>
+<p>On remarque d’abord que le volume massique du gaz est supérieure à le volume massique du liquide. Quand on est suffisamment loin de <span class="math notranslate nohighlight">\(T_C\)</span>, <strong>le volume massique du liquide est souvent négligeable devant le volume massique du gaz</strong>.</p>
+<p>Par contre, la largeur du palier diminue quand la température augmente: cela signifie que les masses volumiques des deux fluides tendent à se rapprocher quand on se rapproche du point critique.</p>
+</div>
+</div>
+<div class="section" id="theoreme-des-moments">
+<h4>Théorème des moments<a class="headerlink" href="#theoreme-des-moments" title="Permalink to this headline">¶</a></h4>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Théorème des moments</strong></p>
+<p>Soit, sur un diagramme de Clapeyron, un point B du palier à une température T et les points I et F du même palier placées respectivement sur la courbe d’ébullition et la courbe de rosée. On peut alors écrire: <span class="math notranslate nohighlight">\(x_l BF = x_g BI\)</span> où BF et BI correspondent aux longueurs des deux segments.</p>
+<div class="figure align-center" id="fig-289">
+<img alt="../_images/thermo_chap_6_diag_pv_liqvap.jpg" src="../_images/thermo_chap_6_diag_pv_liqvap.jpg" />
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>On retiendra que cette preuve <strong>permet aussi d’obtenir les fractions massiques</strong> en fonction des volumes massiques des différentes phases et du système.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Démonstration</strong></p>
+<p>On a <span class="math notranslate nohighlight">\(n_T = n_l + n_g \Longrightarrow 1 = x_l + x_g\)</span>. De plus: <span class="math notranslate nohighlight">\(v = x_l v_l + x_g v_g\)</span> par extensivité du volume. Soit:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+v &amp; = x_l (v_l - v_g) + v_g \Longrightarrow x_l = \frac{v_g - v}{v_g - v_l} = \frac{MB}{EB}\\
+v &amp; = x_g (v_g - v_l) + v_l \Longrightarrow x_g = \frac{v - v_l}{v_g - v_l} = \frac{ME}{EB}
+\end{align*}\]</div>
+<p>En divisant les deux expressions, on retrouve le théorème des moments.</p>
+</div>
+<div class="topic">
+<p class="topic-title">Diagramme P-h</p>
+<p>Le même raisonnement peut-être réalisé sur le diagramme <span class="math notranslate nohighlight">\((h-p)\)</span>. C’est ce qui permet de tracer les isotitre en vapeur comme on peut les voir sur le graphique.</p>
+</div>
+</div>
+</div>
+<div class="section" id="retard-au-changement-d-etat-etat-metastable">
+<h3>Retard au changement d’état: Etat métastable<a class="headerlink" href="#retard-au-changement-d-etat-etat-metastable" title="Permalink to this headline">¶</a></h3>
+<div class="topic">
+<p class="topic-title">Etat métastable</p>
+<p>Un état métastable est un état du système thermodynamiquement instable, c’est-à-dire ne pouvant exister dans les conditions de température et de pression données, mais pouvant exister sur un temps relativement long (on parle de stabilité cinétique).</p>
+<p>Un très légère perturbation suffit en général à permettre au système de retourner dans un état stable. Ce retour est extrêmement rapide.</p>
+<blockquote>
+<div><p>Exemple : Eau en surfusion : Si l’on place une bouteille d’eau au congélateur, on peut, en refroidissant doucement obtenir de l’eau encore liquide à <span class="math notranslate nohighlight">\(T&lt;0^{\circ}C\)</span> et <span class="math notranslate nohighlight">\(P=1atm\)</span>. On parle de surfusion du liquide ou de liquide en surfusion (terme général). On pourra observer ce phénomène dans de nombreuses vidéos en ligne.</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+<div class="section" id="enthalpie-de-fusion">
+<h2>Enthalpie de fusion<a class="headerlink" href="#enthalpie-de-fusion" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="enthalpie-de-changement-d-etat">
+<h3>Enthalpie de changement d’état<a class="headerlink" href="#enthalpie-de-changement-d-etat" title="Permalink to this headline">¶</a></h3>
+<div class="topic">
+<p class="topic-title">Observations expérimentales</p>
+<p>On considère un 1kg de glace à <span class="math notranslate nohighlight">\(-10 ^{\circ}C\)</span>. On le chauffe par apport constant de chaleur en maintenant la pression du système constante et on mesure l’évolution temporelle de la température. On observe l’évolution ci-après:</p>
+<ul class="simple">
+<li><p>Quand on observe la montée chute de température, le système est toujours solide.</p></li>
+<li><p>Au moment où la température se stabilise, la glace commence à fondre</p></li>
+<li><p>Quand la température recommence à monter, on a observé que la totalité de la glace s’était liquéfiée.</p></li>
+</ul>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Cela ne veut pas dire que la température du corps ne peut pas varier <em>en même temps</em> que celui-ci change d’état. Cela signifie simplement que ce n’est PAS une <em>nécessité</em>.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Interprétation</p>
+<ul class="simple">
+<li><p>Pour un corps pur pouvant changer d’état, un apport/retrait d’énergie <strong>ne se traduit pas forcément pas un changement de température</strong> : cette énergie peut servir à changer l’état du corps.</p></li>
+<li><p>Réciproquement, lors d’un changement d’état, le système peut subir une variation d’énergie uniquement causée par ce changement.</p></li>
+</ul>
+<p><strong>D’une manière générale, quand il se produit un changement d’état du système, l’enthalpie de ce dernier varie (positivement ou négativement).</strong></p>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>On parle aussi de chaleur latente massique de changement d’état. L’association à un terme de chaleur sera expliqué dans le chapitre sur le premier principe.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Enthalpie massique de changement d’état</strong></p>
+<p>On appelle enthalpie massique de changement d’état à la pression P, la variation d’enthalpie <span class="math notranslate nohighlight">\(\Delta h\)</span> du corps pur au cours du changement d’état complet d’un kilogramme du corps pur considéré à la pression donnée.</p>
+<p><strong>Elle correspond à la différence d’enthalpie massique entre la phase finale pure et la phase initiale pure dans les mêmes conditions de pression:</strong></p>
+<div class="amsmath math notranslate nohighlight" id="equation-6fdb42e7-e825-4946-8463-07a76cbc7167">
+<span class="eqno">(2)<a class="headerlink" href="#equation-6fdb42e7-e825-4946-8463-07a76cbc7167" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\Delta h_{ph1 \to ph2} (T_{sat}) = h_{ph2}(T_{sat}) - h_{ph1} (T_{sat})
+\end{equation}\]</div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Même si on l’appelle “enthalpie”, il s’agit bien d’une <strong>variation d’enthalpie</strong>. Sa valeur dépend du corps pur <strong>et de la température</strong>.</p>
+<p>Il est important de savoir que l’enthalpie de changement d’état dépend de la température. Il existe certaines loi pour certains corps purs sur certaines gammes de températures mais aucune n’est à connaître.</p>
+<p><em>Note : L’enthalpie de changement d’état tend vers 0 quand on se rapproche du point critique.</em></p>
+</div>
+<div class="topic">
+<p class="topic-title">Exemples et ordre de grandeur</p>
+<p>La variation d’enthalpie en cours d’une vaporisation d’1kg de liquide est appelée enthalpie massique de vaporisation. On la note <span class="math notranslate nohighlight">\(\Delta h_{v}\)</span> ou <span class="math notranslate nohighlight">\(l_{v}\)</span>. On pourra nommer chaque enthalpie massique de changement d’état de la même manière. On indice en général les enthalpie de changement d’état de manière claire pour préciser de quel changement d’état il s’agit.</p>
+<p><strong>Ordre de grandeur</strong><br />
+Pour l’eau à pression atmosphérique (<span class="math notranslate nohighlight">\(P=101,3\rm{kPa}\)</span>).</p>
+<ul class="simple">
+<li><p>Enthalpie de fusion (T=273K): 334kJ/kg</p></li>
+<li><p>Enthalpie de vaporisation (T=373K): 2830 kJ/kg</p></li>
+</ul>
+<p><em>Il faudrait donc fournir 334kJ pour faire fondre 1kg de glace. A titre de comparaison, il faudrait fournir 4,2kJ=1kcal pour augmenter de 1K la température de l’eau liquide à température ambiante. La quantité d’énergie nécessaire à la fonte d’1kg de glace permettrait donc de faire passer ce meme kg d’eau liquide de 0°C à… presque 80°C.</em></p>
+<p><strong>Intérêt des changements d’état</strong><br />
+On remarque que pour vaporiser du liquide, il faut fournir de l’énergie. Ce principe est utilisé dans des systèmes de climatisation des terrasses. On projette de fines gouttelettes d’eau dans l’air. Ce dernier étant plus sec, les gouttelettes vont se vaporiser mais pour cela elle vont capter l’énergie nécessaire au changement d’état au milieu extérieur. En prélevant ainsi de la chaleur à l’air ambiant, elle refroidissent l’air de la terrasse.</p>
+<p>De manière générale, les grandeurs quantité d’énergie libérée ou prélevée lors d’un changements d’état encouragent à les utiliser dans des machines thermiques.</p>
+</div>
+<div class="sidebar">
+<p class="sidebar-title">Sens du changement d’état</p>
+<p>Il est important de prendre l’enthalpie massique de changement d’état dans le <strong>bon sens</strong> : si c’est une fusion, il faut prendre l’enthalpie massique de fusion et si c’est une solidification, l’enthalpie massique de solidification (<em>même si l’énoncé donne l’enthalpie massique de fusion…)</em>).</p>
+</div>
+<div class="topic">
+<p class="topic-title">Calcul d’enthalpie</p>
+<p>Pour un changement d’état <strong>partiel ou total</strong> où une masse <span class="math notranslate nohighlight">\(m\)</span> de la phase 1 change d’état à température constante, alors la variation d’enthalpie du système est:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-919dbca4-2165-430f-bdff-c1b1cebb82d6">
+<span class="eqno">(3)<a class="headerlink" href="#equation-919dbca4-2165-430f-bdff-c1b1cebb82d6" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\Delta H = m \Delta h_{ph1 \to ph2}
+\end{equation}\]</div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Signe des enthalpies de changement d’état</strong></p>
+<p>Observation: Expérimentalement on observe que, pour tous les corps, il faut fournir de l’énergie au système pour passer du solide au liquide, du solide au gaz et du liquide au gaz. Il vient donc que:</p>
+<p>\begin{align*}
+&amp;\Delta h_{vap} &gt;0; \Delta h_{fus} &gt;0; \Delta h_{sub} &gt;0;\
+&amp;\Delta h_{liq} &lt;0; \Delta h_{sol} &lt;0; \Delta h_{cond} &lt;0</p>
+</div>
+</div>
+<div class="section" id="diagramme-p-h">
+<h3>Diagramme p-H<a class="headerlink" href="#diagramme-p-h" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center" id="fig-287">
+<img alt="../_images/thermo_chap_6_diag_ph.png" src="../_images/thermo_chap_6_diag_ph.png" />
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Diagramme p-H</strong></p>
+<p>Comme son nom l’indique, un diagramme p-H est un diagramme où l’on représente la pression en fonction de l’enthalpie. Plusieurs propriétés sont observées.</p>
+<ul class="simple">
+<li><p>Isotherme et isobare: On retrouve que les isotherme sont aussi les isobare <strong>quand le système est diphasé.</strong>.</p></li>
+<li><p>Isotherme de la phase liquide: En phase liquide (phase condensée), l’enthalpie ne dépend presque que de la température, donc les isothermes sont quasi-verticales.</p></li>
+<li><p>Isotherme de la phase gazeuse: En phase gazeuse suffisamment loin de la courbe de rosée, les isothermes sont quasiverticales, ce qui signifie qu’en première approximation, le gaz sui la deuxième loi de Joule.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="synthese-dans-un-diagramme-p-v-t-en-ligne">
+<h2>Synthèse dans un diagramme (P,V,T) (en ligne)<a class="headerlink" href="#synthese-dans-un-diagramme-p-v-t-en-ligne" title="Permalink to this headline">¶</a></h2>
+<div class="topic">
+<p class="topic-title">Diagramme (P,V,T)</p>
+<p>On donne à titre indictaif la surface des états possibles ainsi que les différentes phases dans un diagramme à 3 dimensions. Sa représentation ou son analyse ne sont pas à connaître.</p>
+<div class="figure align-center" id="fig-288">
+<img alt="../_images/thermo_chap_6_diag_ptv.jpg" src="../_images/thermo_chap_6_diag_ptv.jpg" />
+</div>
+</div>
 </div>
 </div>
 
@@ -479,8 +1019,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="th_sp_td.html" title="previous page">Second principe: Travaux dirigés</a>
-    <a class='right-next' id="next-link" href="th_cg_obs.html" title="next page">Observations expérimentales</a>
+    <a class='left-prev' id="prev-link" href="th_u_condenses.html" title="previous page">Phases condensées</a>
+    <a class='right-next' id="next-link" href="th_d_ex.html" title="next page">S’entrainer</a>
 
         </div>
         
