@@ -1,47 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Activités : Approche statistique de l’entropie &#8212; Thermodynamique</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>Activités : Approche statistique de l’entropie &#8212; Thermodynamique</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -51,58 +64,98 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/th_d_entropie_stat';</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/thermodynamique/notebook/th_d_entropie_stat.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Applications" href="th_d_ex_app.html" />
     <link rel="prev" title="Activités" href="th_d_activite.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Thermodynamique</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="../thermodynamique.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Thermodynamique</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -112,626 +165,256 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="th_description.html">
-   Description d’un système thermodynamique
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_d_contxt.html">
-     Comprendre le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_systeme.html">
-       Système thermodynamique
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_echelle.html">
-       Echelles d’étude
-      </a>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="th_d_variables.html">
-       Variables d’état et variables microscopiques
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-      <label for="toctree-checkbox-3">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_d_equilibre.html">
-         Equilibre thermodynamique
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_d_extensives.html">
-         Variables extensives
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_d_intensives.html">
-         Grandeurs intensives
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="th_usuels.html">
-       Systèmes thermodynamiques usuels
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-      <label for="toctree-checkbox-4">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_u_gaz.html">
-         Etude des gaz
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_u_condenses.html">
-         Phases condensées
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_chgt_etat.html">
-       Equilibres diphasés
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 current active has-children">
-    <a class="reference internal" href="th_d_ex.html">
-     S’entrainer
-    </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul class="current">
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_methodes.html">
-       Méthodes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_activite.html">
-       Activités
-      </a>
-     </li>
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
-       Activités : Approche statistique de l’entropie
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_ex_app.html">
-       Applications
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_td.html">
-       Entrainement
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="th_premier_pcp.html">
-   Premier principe
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_pp_ctxt.html">
-     Comprendre le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_intro.html">
-       Introduction (en ligne)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_enonce.html">
-       Premier principe: Enoncé
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_q.html">
-       Transfert thermique
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_w.html">
-       Travail mécanique
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_pp_ex.html">
-     S’entrainer
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_transfo.html">
-       Activités - Etude de transformations
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_act_meth.html">
-       Activités - Cas du gaz parfait
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_compression.html">
-       Méthodes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_ex_app.html">
-       Exercices d’application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_td.html">
-       Travaux dirigés
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="th_second_pcp.html">
-   Second principe
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_sp_contxt.html">
-     Connaître le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_intro.html">
-       Introduction
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_enonce.html">
-       Enoncé
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_expression.html">
-       Expression des grandeurs
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_interpretation.html">
-       Interprétations
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_sp_ex.html">
-     S’entrainer
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_exemples.html">
-       Exemples d’application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_ex_app.html">
-       Second principe: Exercice d’application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_td.html">
-       Second principe: Travaux dirigés
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="th_machines.html">
-   Machines thermiques
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_machines_contxt.html">
-     Comprendre le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_gene.html">
-       Généralités
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_moteur.html">
-       Moteurs thermiques
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_recepteur.html">
-       Récepteurs
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_machines_ex.html">
-     S’entrainer
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_methodes.html">
-       Méthodes d’études
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_ex_app.html">
-       Exercice d’application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_td.html">
-       Travaux dirigés
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="th_description.html">Description d’un système thermodynamique</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_d_contxt.html">Comprendre le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_d_systeme.html">Système thermodynamique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_echelle.html">Echelles d’étude</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="th_d_variables.html">Variables d’état et variables microscopiques</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="th_d_equilibre.html">Equilibre thermodynamique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="th_d_extensives.html">Variables extensives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="th_d_intensives.html">Grandeurs intensives</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="th_usuels.html">Systèmes thermodynamiques usuels</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="th_u_gaz.html">Etude des gaz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="th_u_condenses.html">Phases condensées</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="th_chgt_etat.html">Equilibres diphasés</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="th_d_ex.html">S’entrainer</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="th_d_methodes.html">Méthodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_activite.html">Activités</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Activités : Approche statistique de l’entropie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_ex_app.html">Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_td.html">Entrainement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="th_premier_pcp.html">Premier principe</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_pp_ctxt.html">Comprendre le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_intro.html">Introduction (en ligne)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_enonce.html">Premier principe: Enoncé</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_q.html">Transfert thermique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_w.html">Travail mécanique</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_pp_ex.html">S’entrainer</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_transfo.html">Activités - Etude de transformations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_act_meth.html">Activités - Cas du gaz parfait</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_compression.html">Méthodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_ex_app.html">Exercices d’application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_td.html">Travaux dirigés</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="th_second_pcp.html">Second principe</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_sp_contxt.html">Connaître le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_intro.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_enonce.html">Enoncé</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_expression.html">Expression des grandeurs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_interpretation.html">Interprétations</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_sp_ex.html">S’entrainer</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_exemples.html">Exemples d’application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_ex_app.html">Second principe: Exercice d’application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_td.html">Second principe: Travaux dirigés</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="th_machines.html">Machines thermiques</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_machines_contxt.html">Comprendre le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_gene.html">Généralités</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_moteur.html">Moteurs thermiques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_recepteur.html">Récepteurs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_machines_ex.html">S’entrainer</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_methodes.html">Méthodes d’études</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_ex_app.html">Exercice d’application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_td.html">Travaux dirigés</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/th_d_entropie_stat.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebook/th_d_entropie_stat.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/notebook/th_d_entropie_stat.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download notebook file"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="../_sources/notebook/th_d_entropie_stat.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#macroetat-et-microetat">
-   Macroétat et microétat
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decompte-des-microetats">
-   Décompte des microétats
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hypothese-microcanonique">
-   Hypothèse microcanonique
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-billes">
-   Les billes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#entropie-statistique">
-   Entropie statistique
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#entropie-d-un-systeme-isole-exemple-des-billes">
-   Entropie d’un système isolé: Exemple des billes
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Activités : Approche statistique de l’entropie</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#macroetat-et-microetat">
-   Macroétat et microétat
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decompte-des-microetats">
-   Décompte des microétats
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hypothese-microcanonique">
-   Hypothèse microcanonique
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#les-billes">
-   Les billes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#entropie-statistique">
-   Entropie statistique
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#entropie-d-un-systeme-isole-exemple-des-billes">
-   Entropie d’un système isolé: Exemple des billes
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Activités : Approche statistique de l’entropie</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroetat-et-microetat">Macroétat et microétat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decompte-des-microetats">Décompte des microétats</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothese-microcanonique">Hypothèse microcanonique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-billes">Les billes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropie-statistique">Entropie statistique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropie-d-un-systeme-isole-exemple-des-billes">Entropie d’un système isolé: Exemple des billes</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="activites-approche-statistique-de-l-entropie">
-<h1>Activités : Approche statistique de l’entropie<a class="headerlink" href="#activites-approche-statistique-de-l-entropie" title="Permalink to this headline">#</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="activites-approche-statistique-de-l-entropie">
+<h1>Activités : Approche statistique de l’entropie<a class="headerlink" href="#activites-approche-statistique-de-l-entropie" title="Permalink to this heading">#</a></h1>
 <p><em>L’entropie définie par le second principe permet de prévoir le sens des transformations, elle peut se calculer au moyen de diverses expressions. Néanmoins, sa définition, quoique très utile, semble très abstraite et ad hoc. Comment l’interpréter ? Et surtout a-t-elle une signification microscopique ou est-elle une construction mathématique purement abstraite qui cache un aspect plus fondamental de la matière ?</em></p>
 <p>Jusqu’à présent, nous avions dit que nous ne pouvions étudié le comportement de chaque particule du système tant elles sont nombreuses. Néanmoins, les progrès mathématiques permettent une étude globale à l’échelle microscopique: on va faire des statistiques. Les concepts de valeurs moyennes, écart-type, variance…  vont intervenir en physique. Boltzmann va ajouter le concept de probabilité et de variabilité pour remonter à la vision macroscopique du système et surtout de l’entropie. C’est pourquoi, on parlera d’<strong>entropie statistique de Boltzmann</strong>.</p>
-<div class="section" id="macroetat-et-microetat">
-<h2>Macroétat et microétat<a class="headerlink" href="#macroetat-et-microetat" title="Permalink to this headline">#</a></h2>
-<div class="margin sidebar">
+<section id="macroetat-et-microetat">
+<h2>Macroétat et microétat<a class="headerlink" href="#macroetat-et-microetat" title="Permalink to this heading">#</a></h2>
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>On rappelle que la connaissance d’un micro-état précis est impossible et que de plus, le micro-état du système change à chaque instant (sous le simple effet des déplacements). A l’inverse, à l’équilibre le macro-état reste le même et est mesurable.</p>
-</div>
+</aside>
 <ul class="simple">
 <li><p><em>Rappel : Macroétat -</em>  On appelle macro-état d’un système thermodynamique, l’état du système défini par les seules variables marocroscopiques du système (par exemple E,V,n).</p></li>
 <li><p><em>Rappel : Microétat -</em>  On appelle micro-état d’un système thermodynamique, un état du système décrit par les données de toutes les grandeurs microscopiques (vitesses et positions) des particules du système.</p></li>
@@ -744,28 +427,28 @@ title="Print to PDF"
 <li><p>Pour un macro-état <span class="math notranslate nohighlight">\(\mathfrak{E}\)</span>donné, on notera le nombre de micro-état compatibles <span class="math notranslate nohighlight">\(\Omega(\mathfrak{E})\)</span>.</p></li>
 </ul>
 </div>
-</div>
-<div class="section" id="decompte-des-microetats">
-<h2>Décompte des microétats<a class="headerlink" href="#decompte-des-microetats" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="decompte-des-microetats">
+<h2>Décompte des microétats<a class="headerlink" href="#decompte-des-microetats" title="Permalink to this heading">#</a></h2>
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
 <p>Prenons pour simplifier un gaz composé de 5 particules dans une enceinte rigide et calorifugée. On suppose que l’état de chaque particule du gaz n’est donné que par son énergie (pas sa position ou sa vitesse) qui ne peut prendre que deux valeurs 0 ou E1. Nous supposons de plus que l’état macroscopique du système est donné par la donnée de son énergie E totale.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Donner l’écriture d’un macro état puis d’un micro-état compatible.</p></li>
 <li><p>On suppose que le système est dans l’état <span class="math notranslate nohighlight">\(E = 4E_1\)</span>. Recenser tous les micro-état accessibles.</p></li>
 <li><p>Donner l’expression de la fonction <span class="math notranslate nohighlight">\(\Omega(E)\)</span> pour chaque valeur possibles de E.</p></li>
 </ol>
 </div>
-</div>
-<div class="section" id="hypothese-microcanonique">
-<h2>Hypothèse microcanonique<a class="headerlink" href="#hypothese-microcanonique" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="hypothese-microcanonique">
+<h2>Hypothèse microcanonique<a class="headerlink" href="#hypothese-microcanonique" title="Permalink to this heading">#</a></h2>
 <p>Les différentes macro-état possibles n’ont pas tous le même nombre de micro-états compatibles. Si l’on attend suffisamment longtemps, on peut supposer qu’on va atteindre un état d’équilibre donc une valeur d’énergie particulière. Quelle valeur sera atteinte ? <span class="math notranslate nohighlight">\(E=3E_1\)</span> ou <span class="math notranslate nohighlight">\(E=2E_1\)</span> ? On pourrait le penser puisque ces états compte le plus de micro-états. Cela dit, il faut encore être sûr que chaque micro-état possède la même probabilité d’exister.</p>
 <p>C’est pourquoi on doit faire une hypothèse fondamentale pour la physique statistique.</p>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">Autres ensembles</p>
 <p>Il existe d’autres types de distributions statistiques où l’on impose d’autres grandeurs (on peut imposer le volume et la température ou la pression et la température… )</p>
 <p>On impose E, V et N mais les autres grandeurs peuvent parfaitement varier. Autrement dit, même si on fixe E,V et n, les autres grandeurs T et P ne sont pas forcément fixées. Il peut donc y avoir plusieurs macroétats possibles. Dans ces conditions, celui qui décrira le mieux le système à l’équilibre sera le macroétats le plus probables. L’hypothèse microcanonique assure que <strong>le macroétat le plus probable</strong> est celui pour lequel la grandeur <span class="math notranslate nohighlight">\(\Omega(E,V,n)\)</span>. On appelle la fonction <span class="math notranslate nohighlight">\(\Omega\)</span> nombre <strong>d’états accessibles</strong>.</p>
-</div>
+</aside>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Système microcanonique</strong></p>
@@ -776,17 +459,17 @@ title="Print to PDF"
 <p><strong>Hypothèse microcanonique</strong></p>
 <p>Dans un système isolé, tous les états microscopiques, ou micro-états, possibles, c’est-à-dire correspondant à un macro-état donné sont équiprobables.</p>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Interprétation</p>
 <p>Qu’est-ce que ça veut dire ? Imaginons qu’on puissent distinguer tous les micro-états possibles d’un système quand on a fixé ses grandeurs macroscopiques (donc son macroétat). Si chaque état est équiprobable, cela veut dire que pendant un temps déterminer <span class="math notranslate nohighlight">\(\tau\)</span>, le système passe autant de temps dans chaque état du système. Plus généralement, si un microétat <span class="math notranslate nohighlight">\(\Sigma_1\)</span> possède une probabilité p de se réaliser, le système, pendant un temps <span class="math notranslate nohighlight">\(\tau\)</span> donné, passera un temps <span class="math notranslate nohighlight">\(p\tau\)</span> dans le microétat <span class="math notranslate nohighlight">\(\Sigma_1\)</span>.</p>
-</div>
-</div>
-<div class="section" id="les-billes">
-<h2>Les billes<a class="headerlink" href="#les-billes" title="Permalink to this headline">#</a></h2>
+</aside>
+</section>
+<section id="les-billes">
+<h2>Les billes<a class="headerlink" href="#les-billes" title="Permalink to this heading">#</a></h2>
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
 <p>On suppose un ensemble de N billes situées dans une enceinte rigide et calorifugée. On a séparé l’enceinte en 2 parties de volumes égaux V/2. On note le compartiment de gauche 1 et celui de droite 2. On suppose que le macroétat est défini par le nombre de particules <span class="math notranslate nohighlight">\(N_1\)</span> contenues dans le compartiment 1 (on peut imaginer que ce sont des billes suffisamment grandes pour qu’on puisse les compter par chronophotographie). La fonction de partition sera donc exprimée en fonction de N et <span class="math notranslate nohighlight">\(N_1\)</span>.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Déterminer la fonction <span class="math notranslate nohighlight">\(\Omega(N,N_1)\)</span>. La représenter.</p></li>
 <li><p>Quel est le macroétat le plus probable ? En déduire l’état du système à l’équilibre ?</p></li>
 <li><p>Dans l’hypothèse des grands ensembles de particules (N grand) la fonction  peut se réécrire: <span class="math notranslate nohighlight">\(\Omega(N,N_1)\approx 2^N \exp\left(-2 \frac{{(N_1 - 0.5 N)}^2}{N}\right)\)</span>. Déterminer la largeur à mi-hauteur du pic autour du maximum. Commenter sa largeur.</p></li>
@@ -794,14 +477,14 @@ title="Print to PDF"
 </ol>
 <p>On retiendra que si les grandeurs non imposées fluctuent (ici la concentration à gauche, mais ce pourrait être la température, la pression… ), la largeur de fluctuation est tellement faible qu’il est légitime de les considérées comme constante à l’équilibre.</p>
 </div>
-</div>
-<div class="section" id="entropie-statistique">
-<h2>Entropie statistique<a class="headerlink" href="#entropie-statistique" title="Permalink to this headline">#</a></h2>
-<div class="topic">
+</section>
+<section id="entropie-statistique">
+<h2>Entropie statistique<a class="headerlink" href="#entropie-statistique" title="Permalink to this heading">#</a></h2>
+<aside class="topic">
 <p class="topic-title">Compléments : Entropie statistique</p>
 <p>On définit l’entropie statistique d’un système, dans un état macroscopique (ou macro-état) donné par la quantité: <span class="math notranslate nohighlight">\(S = - k_B \sum_s P_s \ln(P_s)\)</span> où s est le microétat compatible avec le macroétat et <span class="math notranslate nohighlight">\(P_s\)</span> la probabilité d’occurence de s.</p>
 <p><em>Cette définition n’est pas à connaître.</em></p>
-</div>
+</aside>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Entropie statistique - Cas microcanonique (A connaître)</strong></p>
@@ -811,31 +494,31 @@ title="Print to PDF"
 S = k_B \ln \Omega
 \]</div>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Entropie de Boltzmann et vision macroscopique</p>
 <p>La vision macroscopique de l’entropie est donnée par le second principe. Nous reviendrons par la suite sur ce dernier mais notons déjà que l’entropie est alors donnée comme une fonction d’état extensive.</p>
 <p>La propriété d’être une fonction d’état pour l’entropie de Boltzmann est assez évidente. Le caractère extensif est par délicat puisqu’il est en pratique faux, un terme supplémentaire apparaît quand on mélange deux systèmes (entropie dite de mélange). L’hypothèse d’extensivité consiste à supposer ce terme négligeable, ce qui revient, comme pour l’énergie à considérer que les effets de surface sont négligeables. <strong>On admettra que dans le cadre du cours, l’entropie de Boltzmann est cohérente avec la définition de l’entropie qui sera vue avec le second principe.</strong></p>
-</div>
-</div>
-<div class="section" id="entropie-d-un-systeme-isole-exemple-des-billes">
-<h2>Entropie d’un système isolé: Exemple des billes<a class="headerlink" href="#entropie-d-un-systeme-isole-exemple-des-billes" title="Permalink to this headline">#</a></h2>
+</aside>
+</section>
+<section id="entropie-d-un-systeme-isole-exemple-des-billes">
+<h2>Entropie d’un système isolé: Exemple des billes<a class="headerlink" href="#entropie-d-un-systeme-isole-exemple-des-billes" title="Permalink to this heading">#</a></h2>
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
 <p>On reprend le systèmes composé de N billes. A l’instant initial, toutes les billes sont dans la partie gauche.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Le système est-il à l’équilibre? Déterminer la valeur de l’entropie en supposant comme précédemment que la fonction <span class="math notranslate nohighlight">\(\Omega\)</span> ne dépend que de N et <span class="math notranslate nohighlight">\(N_1\)</span>.</p></li>
 <li><p>Lorsque l’équilibre est atteint, déterminer la valeur de l’entropie. Montrer que l’entropie a atteint à l’équilibre un maximum.</p></li>
 </ol>
 <p>Le second principe va permettre de généraliser cette propriété: à l’équilibre, un système <strong>isolé aura une entropie maximale</strong>.</p>
 <p>Cette propriété explique l’intérêt du second principe car il va permettre, à l’échelle macroscopique (sans passer par le dénombrement des microétat compatibles) et déterminer <strong>le sens d’évolution possible d’une transformation</strong>. On pourra ainsi expliquer pourquoi le transfert thermique s’effectue toujours du corps chaud vers le corps froid, pourquoi certaines réactions chimiques ont lieu dans un sens privilégié. Ces explications feronts directement intervenir l’entropie et son expression en fonction des variables d’état (vision macroscopique donc) et non un dénombrement à l’échelle microscopique.</p>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Entropie et désordre</p>
 <p>La vision microscopique explique la notion de désordre introduit précédemment. Le “désordre” correspond au fait qu’un macroétat peut posséder de nombreux microétats compatibles et que le système va passer de manière désordonnée d’un microétat à un autre. Plus l’entropie est grand, plus il y a de microétat (dans le cas d’un système isolé) et donc plus le système est désordonné.</p>
 <p>On interprète aussi l’entropie comme une mesure de l’information manquante (entropie de Shannon) puisque plus l’entropie est grand, plus il existe de microétats. Comme on ne sait pas dans quel microétat se trouve le système, on perd d’autant plus d’information.</p>
-</div>
-</div>
-</div>
+</aside>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -849,7 +532,7 @@ S = k_B \ln \Omega
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebook"
         },
         predefinedOutput: true
@@ -857,50 +540,106 @@ S = k_B \ln \Omega
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="th_d_activite.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Activités</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="th_d_activite.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Activités</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="th_d_ex_app.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="th_d_ex_app.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Applications</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macroetat-et-microetat">Macroétat et microétat</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decompte-des-microetats">Décompte des microétats</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hypothese-microcanonique">Hypothèse microcanonique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-billes">Les billes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropie-statistique">Entropie statistique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropie-d-un-systeme-isole-exemple-des-billes">Entropie d’un système isolé: Exemple des billes</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By C. Lacpatia<br/>
-  
-      &copy; Copyright 2021.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By C. Lacpatia
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

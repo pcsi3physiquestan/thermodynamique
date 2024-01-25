@@ -1,47 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Equilibres diphasés &#8212; Thermodynamique</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>Equilibres diphasés &#8212; Thermodynamique</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -51,58 +64,98 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/th_chgt_etat';</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/thermodynamique/notebook/th_chgt_etat.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="S’entrainer" href="th_d_ex.html" />
     <link rel="prev" title="Phases condensées" href="th_u_condenses.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Thermodynamique</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="../thermodynamique.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Thermodynamique</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -112,758 +165,308 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="th_description.html">
-   Description d’un système thermodynamique
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active has-children">
-    <a class="reference internal" href="th_d_contxt.html">
-     Comprendre le contexte
-    </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul class="current">
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_systeme.html">
-       Système thermodynamique
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_echelle.html">
-       Echelles d’étude
-      </a>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="th_d_variables.html">
-       Variables d’état et variables microscopiques
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-      <label for="toctree-checkbox-3">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_d_equilibre.html">
-         Equilibre thermodynamique
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_d_extensives.html">
-         Variables extensives
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_d_intensives.html">
-         Grandeurs intensives
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="th_usuels.html">
-       Systèmes thermodynamiques usuels
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-      <label for="toctree-checkbox-4">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_u_gaz.html">
-         Etude des gaz
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_u_condenses.html">
-         Phases condensées
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
-       Equilibres diphasés
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_d_ex.html">
-     S’entrainer
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_methodes.html">
-       Méthodes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_activite.html">
-       Activités
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_entropie_stat.html">
-       Activités : Approche statistique de l’entropie
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_ex_app.html">
-       Applications
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_td.html">
-       Entrainement
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="th_premier_pcp.html">
-   Premier principe
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_pp_ctxt.html">
-     Comprendre le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_intro.html">
-       Introduction (en ligne)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_enonce.html">
-       Premier principe: Enoncé
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_q.html">
-       Transfert thermique
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_w.html">
-       Travail mécanique
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_pp_ex.html">
-     S’entrainer
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_transfo.html">
-       Activités - Etude de transformations
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_act_meth.html">
-       Activités - Cas du gaz parfait
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_compression.html">
-       Méthodes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_ex_app.html">
-       Exercices d’application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_td.html">
-       Travaux dirigés
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="th_second_pcp.html">
-   Second principe
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_sp_contxt.html">
-     Connaître le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_intro.html">
-       Introduction
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_enonce.html">
-       Enoncé
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_expression.html">
-       Expression des grandeurs
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_interpretation.html">
-       Interprétations
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_sp_ex.html">
-     S’entrainer
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_exemples.html">
-       Exemples d’application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_ex_app.html">
-       Second principe: Exercice d’application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_td.html">
-       Second principe: Travaux dirigés
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="th_machines.html">
-   Machines thermiques
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_machines_contxt.html">
-     Comprendre le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_gene.html">
-       Généralités
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_moteur.html">
-       Moteurs thermiques
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_recepteur.html">
-       Récepteurs
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_machines_ex.html">
-     S’entrainer
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_methodes.html">
-       Méthodes d’études
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_ex_app.html">
-       Exercice d’application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_td.html">
-       Travaux dirigés
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="th_description.html">Description d’un système thermodynamique</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="th_d_contxt.html">Comprendre le contexte</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="th_d_systeme.html">Système thermodynamique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_echelle.html">Echelles d’étude</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="th_d_variables.html">Variables d’état et variables microscopiques</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="th_d_equilibre.html">Equilibre thermodynamique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="th_d_extensives.html">Variables extensives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="th_d_intensives.html">Grandeurs intensives</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="th_usuels.html">Systèmes thermodynamiques usuels</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="th_u_gaz.html">Etude des gaz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="th_u_condenses.html">Phases condensées</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Equilibres diphasés</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_d_ex.html">S’entrainer</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_d_methodes.html">Méthodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_activite.html">Activités</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_entropie_stat.html">Activités : Approche statistique de l’entropie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_ex_app.html">Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_td.html">Entrainement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="th_premier_pcp.html">Premier principe</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_pp_ctxt.html">Comprendre le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_intro.html">Introduction (en ligne)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_enonce.html">Premier principe: Enoncé</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_q.html">Transfert thermique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_w.html">Travail mécanique</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_pp_ex.html">S’entrainer</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_transfo.html">Activités - Etude de transformations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_act_meth.html">Activités - Cas du gaz parfait</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_compression.html">Méthodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_ex_app.html">Exercices d’application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_td.html">Travaux dirigés</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="th_second_pcp.html">Second principe</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_sp_contxt.html">Connaître le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_intro.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_enonce.html">Enoncé</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_expression.html">Expression des grandeurs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_interpretation.html">Interprétations</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_sp_ex.html">S’entrainer</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_exemples.html">Exemples d’application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_ex_app.html">Second principe: Exercice d’application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_td.html">Second principe: Travaux dirigés</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="th_machines.html">Machines thermiques</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_machines_contxt.html">Comprendre le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_gene.html">Généralités</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_moteur.html">Moteurs thermiques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_recepteur.html">Récepteurs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_machines_ex.html">S’entrainer</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_methodes.html">Méthodes d’études</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_ex_app.html">Exercice d’application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_td.html">Travaux dirigés</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/th_chgt_etat.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebook/th_chgt_etat.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/notebook/th_chgt_etat.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download notebook file"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="../_sources/notebook/th_chgt_etat.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#differentes-phases-et-transitions">
-   Différentes phases et transitions
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#phases-definitions">
-     Phases: Définitions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#transitions-de-phases">
-     Transitions de phases
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#equilibres-monophases-et-diphases">
-   Equilibres monophasés et diphasés
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fractions-molaires-et-massiques">
-   Fractions molaires et massiques
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diagramme-t-p">
-     Diagramme (T,P)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diagramme-de-clapeyron">
-     Diagramme de Clapeyron
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cas-de-l-equilibre-liquide-vapeur-partie-a-savoir-tracer">
-       Cas de l’équilibre liquide-vapeur (partie à savoir tracer)
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#theoreme-des-moments">
-       Théorème des moments
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#retard-au-changement-d-etat-etat-metastable">
-     Retard au changement d’état: Etat métastable
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#enthalpie-de-fusion">
-   Enthalpie de fusion
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#enthalpie-de-changement-d-etat">
-     Enthalpie de changement d’état
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diagramme-p-h">
-     Diagramme p-H
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#synthese-dans-un-diagramme-p-v-t-en-ligne">
-   Synthèse dans un diagramme (P,V,T) (en ligne)
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Equilibres diphasés</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#differentes-phases-et-transitions">
-   Différentes phases et transitions
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#phases-definitions">
-     Phases: Définitions
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#transitions-de-phases">
-     Transitions de phases
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#equilibres-monophases-et-diphases">
-   Equilibres monophasés et diphasés
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#fractions-molaires-et-massiques">
-   Fractions molaires et massiques
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diagramme-t-p">
-     Diagramme (T,P)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diagramme-de-clapeyron">
-     Diagramme de Clapeyron
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#cas-de-l-equilibre-liquide-vapeur-partie-a-savoir-tracer">
-       Cas de l’équilibre liquide-vapeur (partie à savoir tracer)
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#theoreme-des-moments">
-       Théorème des moments
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#retard-au-changement-d-etat-etat-metastable">
-     Retard au changement d’état: Etat métastable
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#enthalpie-de-fusion">
-   Enthalpie de fusion
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#enthalpie-de-changement-d-etat">
-     Enthalpie de changement d’état
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#diagramme-p-h">
-     Diagramme p-H
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#synthese-dans-un-diagramme-p-v-t-en-ligne">
-   Synthèse dans un diagramme (P,V,T) (en ligne)
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Equilibres diphasés</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentes-phases-et-transitions">Différentes phases et transitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phases-definitions">Phases: Définitions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transitions-de-phases">Transitions de phases</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equilibres-monophases-et-diphases">Equilibres monophasés et diphasés</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fractions-molaires-et-massiques">Fractions molaires et massiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagramme-t-p">Diagramme (T,P)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagramme-de-clapeyron">Diagramme de Clapeyron</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cas-de-l-equilibre-liquide-vapeur-partie-a-savoir-tracer">Cas de l’équilibre liquide-vapeur (partie à savoir tracer)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#theoreme-des-moments">Théorème des moments</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retard-au-changement-d-etat-etat-metastable">Retard au changement d’état: Etat métastable</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enthalpie-de-fusion">Enthalpie de fusion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enthalpie-de-changement-d-etat">Enthalpie de changement d’état</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagramme-p-h">Diagramme p-H</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese-dans-un-diagramme-p-v-t-en-ligne">Synthèse dans un diagramme (P,V,T) (en ligne)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="equilibres-diphases">
-<h1>Equilibres diphasés<a class="headerlink" href="#equilibres-diphases" title="Permalink to this headline">#</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="equilibres-diphases">
+<h1>Equilibres diphasés<a class="headerlink" href="#equilibres-diphases" title="Permalink to this heading">#</a></h1>
 <p><em>Jusqu’à présent, nous avons toujours supposer que les différents corps étudiés restaient sous la même phase au cours de la transformation. Ceci n’est pas toujours vérifié et on peut même chercher à vaporiser un gaz (climatisation des terrasses) ou à le liquéfier pour diverses utilisation (transport, refroidissement… ). Nous nous proposons ici d’étudier le comportement d’un corps pur lors d’un changement de phase. En première année, nous nous intéressons simplement aux changements de phase d’un <strong>corps pur</strong> ou à la coexistence de plusieurs phases d’un même corps (corps pur).</em></p>
-<div class="section" id="differentes-phases-et-transitions">
-<h2>Différentes phases et transitions<a class="headerlink" href="#differentes-phases-et-transitions" title="Permalink to this headline">#</a></h2>
-<div class="section" id="phases-definitions">
-<h3>Phases: Définitions<a class="headerlink" href="#phases-definitions" title="Permalink to this headline">#</a></h3>
+<section id="differentes-phases-et-transitions">
+<h2>Différentes phases et transitions<a class="headerlink" href="#differentes-phases-et-transitions" title="Permalink to this heading">#</a></h2>
+<section id="phases-definitions">
+<h3>Phases: Définitions<a class="headerlink" href="#phases-definitions" title="Permalink to this heading">#</a></h3>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Phase</strong></p>
 <p>Une phase est un système (ou un sous-système) dans lequel les paramètres intensifs sont continus. A l’équilibre ces paramètres sont uniformes.</p>
 <p>Un système composé d’une phase est appelé système monophasé.</p>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Description des phases</p>
 <ul class="simple">
 <li><p>La phase gazeuse est un état où le corps occupe tout l’espace qui lui est offert, les interactions entre particules sont faibles devant leur agitation thermique (gaz de Van der Waals) ou négligeables (gaz parfait). C’est un état très désordonné.</p></li>
 <li><p>La phase liquide est un état où le volume est limité par des interactions entre particules plus importantes. Les fluides sont en général peu compressibles, plus dense que le gaz correspondant et épousent la forme des récipients, sous l’effet de la pesanteur.</p></li>
 <li><p>La phase solide correspond à l’état le plus ordonnée: les déplacements des particules sont très limités par les interactions importantes qui les lient. Le solide garde donc sa forme.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="transitions-de-phases">
-<h3>Transitions de phases<a class="headerlink" href="#transitions-de-phases" title="Permalink to this headline">#</a></h3>
+</aside>
+</section>
+<section id="transitions-de-phases">
+<h3>Transitions de phases<a class="headerlink" href="#transitions-de-phases" title="Permalink to this heading">#</a></h3>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Transitions des phases</strong></p>
 <p>Les différents noms des changements d’état sont à connaître.</p>
-<div class="figure align-center" id="fig-279">
+<figure class="align-center" id="fig-279">
 <img alt="../_images/thermo_chap_6_nom_chang.jpg" src="../_images/thermo_chap_6_nom_chang.jpg" />
+</figure>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="equilibres-monophases-et-diphases">
-<h2>Equilibres monophasés et diphasés<a class="headerlink" href="#equilibres-monophases-et-diphases" title="Permalink to this headline">#</a></h2>
+</section>
+</section>
+<section id="equilibres-monophases-et-diphases">
+<h2>Equilibres monophasés et diphasés<a class="headerlink" href="#equilibres-monophases-et-diphases" title="Permalink to this heading">#</a></h2>
 <p><em>On peut représenter sur un diagramme (T,P) les zones où peuvent exister de manière stable les différentes phases d’un même corps pur. En réalisant l’étude expérimentale complète des états possibles, on peut déjà faire quelques observations qui vont se retrouver sur  le diagramme. Ces observations expérimentales sont à connaître.</em></p>
-</div>
-<div class="section" id="fractions-molaires-et-massiques">
-<h2>Fractions molaires et massiques<a class="headerlink" href="#fractions-molaires-et-massiques" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="fractions-molaires-et-massiques">
+<h2>Fractions molaires et massiques<a class="headerlink" href="#fractions-molaires-et-massiques" title="Permalink to this heading">#</a></h2>
 <p><em>Dans toutes cette partie, nous n’étudierons que la transition liquide-vapeur. La plupart des résultats donnés peuvent néanmoins se transposer facilement aux autres transitions.</em></p>
 <p><em>Notation: Dans la suite, on notera avec un indice l les grandeurs liées au liquide et avec un indice g les grandeurs liées au gaz.</em></p>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>On a <span class="math notranslate nohighlight">\(x_l + x_g = 1\)</span> et <span class="math notranslate nohighlight">\(X_{ml} + X_{mg} = 1\)</span></p>
-</div>
+</aside>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Définition : Fraction massique et molaire</strong></p>
@@ -881,7 +484,7 @@ Y_m &amp;= X_{ml} Y_{ml} + X_{mg} Y_{mg}
 \end{align*}\]</div>
 <p>où <span class="math notranslate nohighlight">\(y_l\)</span> et <span class="math notranslate nohighlight">\(y_g\)</span> sont respectivement les grandeurs massiques de la phase liquide et gazeuse seule aux mêmes conditions de pression et température et <span class="math notranslate nohighlight">\(Y_{ml}\)</span> et <span class="math notranslate nohighlight">\(Y_{mg}\)</span> les grandeurs molaires de la phase liquide et gazeuse seule aux mêmes conditions de pression et température.</p>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Démonstration</p>
 <p>Prouvons pour la grandeur molaire:</p>
 <div class="amsmath math notranslate nohighlight">
@@ -889,15 +492,15 @@ Y_m &amp;= X_{ml} Y_{ml} + X_{mg} Y_{mg}
 Y_m &amp;= \frac{Y}{n_T} = \frac{Y_l + Y_g}{n_T} + \frac{n_l Y_{ml} + n_g Y_{mg}}{n_T}\\
 &amp;= X_{ml} Y_{ml} + X_{mg} Y_{mg}
 \end{align*}\]</div>
-</div>
-<div class="section" id="diagramme-t-p">
-<h3>Diagramme (T,P)<a class="headerlink" href="#diagramme-t-p" title="Permalink to this headline">#</a></h3>
+</aside>
+<section id="diagramme-t-p">
+<h3>Diagramme (T,P)<a class="headerlink" href="#diagramme-t-p" title="Permalink to this heading">#</a></h3>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Diagramme (T,P)</strong></p>
-<div class="figure align-center" id="diag-pt">
+<figure class="align-center" id="diag-pt">
 <img alt="../_images/thermo_chap_6_diag_pt.jpg" src="../_images/thermo_chap_6_diag_pt.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Observations générales</p>
 <ul>
@@ -915,62 +518,62 @@ Y_m &amp;= \frac{Y}{n_T} = \frac{Y_l + Y_g}{n_T} + \frac{n_l Y_{ml} + n_g Y_{mg}
 </li>
 </ul>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Point triple - Exemples</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Composé</p></th>
-<th class="text-align:center head"><p>T(K)</p></th>
-<th class="text-align:center head"><p>P(Pa)</p></th>
+<tr class="row-odd"><th class="head text-left"><p>Composé</p></th>
+<th class="head text-center"><p>T(K)</p></th>
+<th class="head text-center"><p>P(Pa)</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:left"><p>Eau</p></td>
-<td class="text-align:center"><p>273.15</p></td>
-<td class="text-align:center"><p>611</p></td>
+<tr class="row-even"><td class="text-left"><p>Eau</p></td>
+<td class="text-center"><p>273.15</p></td>
+<td class="text-center"><p>611</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>Dioxyde de carbone</p></td>
-<td class="text-align:center"><p>216.5</p></td>
-<td class="text-align:center"><p>519</p></td>
+<tr class="row-odd"><td class="text-left"><p>Dioxyde de carbone</p></td>
+<td class="text-center"><p>216.5</p></td>
+<td class="text-center"><p>519</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>Diazote</p></td>
-<td class="text-align:center"><p>63.16</p></td>
-<td class="text-align:center"><p>12868</p></td>
+<tr class="row-even"><td class="text-left"><p>Diazote</p></td>
+<td class="text-center"><p>63.16</p></td>
+<td class="text-center"><p>12868</p></td>
 </tr>
 </tbody>
 </table>
 <p>Le point triple du dioxyde de carbone présente un intérêt: la pression Pr est supérieure à la pression atmosphérique. Cela veut dire qu’à pression atmosphérique, le <span class="math notranslate nohighlight">\(CO_2\)</span> ne peut que se sublimer. C’est l’intérêt de la neige carbonique. Le <span class="math notranslate nohighlight">\(CO_2\)</span> à très basse température est solide à pression atmosphérique. Du gaz sous pression projeté sur des flammes va se détendre et diminuer sa température: il se solidifie. Il va alors étouffer les flammes (en raréfiant l’air en dioxygène) mais contrairement à l’eau, l’augmentation de température ne le transforme pas en liquide mais en gaz à pression ambiante: il ne stagne pas sur le matériel touché par le feu et ce dernier sera moins détérioré. Le CO2 est surtout utilisé pour les feux de classe B et C.</p>
-</div>
-<div class="topic">
+</aside>
+<aside class="topic">
 <p class="topic-title">Point critique - Exemples</p>
-<table class="colwidths-auto table">
+<table class="table">
 <thead>
-<tr class="row-odd"><th class="text-align:left head"><p>Composé</p></th>
-<th class="text-align:center head"><p>T(K)</p></th>
-<th class="text-align:center head"><p>P(Pa)</p></th>
-<th class="text-align:center head"><p><span class="math notranslate nohighlight">\(\rho(kg.m^3)\)</span></p></th>
+<tr class="row-odd"><th class="head text-left"><p>Composé</p></th>
+<th class="head text-center"><p>T(K)</p></th>
+<th class="head text-center"><p>P(Pa)</p></th>
+<th class="head text-center"><p><span class="math notranslate nohighlight">\(\rho(kg.m^3)\)</span></p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:left"><p>Eau</p></td>
-<td class="text-align:center"><p>647.3</p></td>
-<td class="text-align:center"><p><span class="math notranslate nohighlight">\(22.12 \times 10^6\)</span></p></td>
-<td class="text-align:center"><p></p></td>
+<tr class="row-even"><td class="text-left"><p>Eau</p></td>
+<td class="text-center"><p>647.3</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(22.12 \times 10^6\)</span></p></td>
+<td class="text-center"><p></p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>Dioxyde de carbone</p></td>
-<td class="text-align:center"><p>304.45</p></td>
-<td class="text-align:center"><p><span class="math notranslate nohighlight">\(22.12 \times 10^6\)</span></p></td>
-<td class="text-align:center"><p>0.46</p></td>
+<tr class="row-odd"><td class="text-left"><p>Dioxyde de carbone</p></td>
+<td class="text-center"><p>304.45</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(22.12 \times 10^6\)</span></p></td>
+<td class="text-center"><p>0.46</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>SF6</p></td>
-<td class="text-align:center"><p>318.65</p></td>
-<td class="text-align:center"><p><span class="math notranslate nohighlight">\(3.76 \times 10^6\)</span></p></td>
-<td class="text-align:center"><p></p></td>
+<tr class="row-even"><td class="text-left"><p>SF6</p></td>
+<td class="text-center"><p>318.65</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(3.76 \times 10^6\)</span></p></td>
+<td class="text-center"><p></p></td>
 </tr>
 </tbody>
 </table>
 <p>Le point critique est défini par la donnée de <span class="math notranslate nohighlight">\(T_c\)</span> et <span class="math notranslate nohighlight">\(P_c\)</span>. Le volume massique critique <span class="math notranslate nohighlight">\(v_c\)</span> est alors fixé, on peut utiliser cette propriété pour élaborer des systèmes simples permettant de se placer au point critique: pour une quantité de matière n fixée, on en déterminer le volume critique correspondant et on place le corps pur seul dans une enceinte de volume <span class="math notranslate nohighlight">\(V_c\)</span>. On peut en faisant varier la température se placer à <span class="math notranslate nohighlight">\(T_c\)</span>, on est alors automatiquement à <span class="math notranslate nohighlight">\(P_c\)</span>, donc au point triple: on appelle ce montage un tube de Natterer.</p>
-</div>
+</aside>
 <div class="hint admonition">
 <p class="admonition-title">Tracé un diagramme (T,P)</p>
 <ul class="simple">
@@ -981,37 +584,37 @@ Y_m &amp;= \frac{Y}{n_T} = \frac{Y_l + Y_g}{n_T} + \frac{n_l Y_{ml} + n_g Y_{mg}
 <li><p>Frontière solide-gaz: Elle est aussi croissante (le gaz est moins dense que le solide). Elle possède une limite supérieure: le point triple. Cette frontière peut être en réalité un ensemble de frontière successive quand le corps possède plusieurs variétés allotropiques solides. Sauf indication, on pourra tracer une courbe simple.</p></li>
 </ul>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Diagramme de l’eau</p>
-<div class="figure align-center" id="diag-pt-eau">
+<figure class="align-center" id="diag-pt-eau">
 <img alt="../_images/thermo_chap_6_diag_pt_eau.jpg" src="../_images/thermo_chap_6_diag_pt_eau.jpg" />
-</div>
+</figure>
 <p>Ce phénomène (pente inversée) s’observe de deux façons:</p>
 <ul class="simple">
 <li><p>la première est simplement la flottaison des glaçons dans l’eau (cf. Statique des fluides)</p></li>
 <li><p>la seconde est l’expérience du regel de l’eau: on place sur un glaçon un fil tendu par deux masses suspendues à ses extrémités: la pression imposée fait fondre localement la glace et le fil s’enfonce. Mais la pression exercée est locale est une fois le fil descendu, la pression redescend et l’eau regèle: on observe ainsi un fil qui s’enfonce dans la glace qui se referme petit à petit derrière lui.</p></li>
 </ul>
-</div>
-<div class="topic">
+</aside>
+<aside class="topic">
 <p class="topic-title">Variétés allotropiques</p>
 <p>Il existe des corps qui possèdent plusieurs état correspondant à une même phase, on parle alors de variétés allotropiques d’un corps.</p>
 <p>Très souvent, les corps possèdent des variétés allotropiques solides: il s’agit de différents arrangements cristallins possibles des différents atomes (cf cours de Cristallographie en chimie).</p>
 <blockquote>
 <div><p>Exemple : La glace possède 7 variétés allotropiques différentes. Un zoom sur sur le diagramme (T,P) permet de faire figurer ces différentes variétésOn peut s’en convaincre en regardant un glaçon sorti du congélateur, le contour est transparent (c’est un arrangement laissant passer la lumière) alors que le centre est opaque (c’est un arrangement qui ne laisse pas passer la lumière).</p>
 </div></blockquote>
-<div class="figure align-center" id="fig-283">
+<figure class="align-center" id="fig-283">
 <img alt="../_images/thermo_chap_6_diag_pt_glace.jpg" src="../_images/thermo_chap_6_diag_pt_glace.jpg" />
-</div>
+</figure>
 <blockquote>
 <div><p>Exemple : L’hélium 4 est un exemple de corps possédant des variétés allotropiques liquide appelées hélium fluide (Type I) et hélium superfluide (Type II). Le second existe à très basse température et ne possède pas de viscosité (frottements): il peut monter par capillarité le long des parois d’un verre.</p>
 </div></blockquote>
 <blockquote>
 <div><p>Exemple : Le fer possède deux arrangements cristallins solides à pression atmosphérique: cubique centré et cubique face centrée. Le passage de l’un à l’autre en présence de carbone est appelé austénisation (terme qui n’est pas à connaître) et est à la base de la formation d’un acier dur.</p>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="diagramme-de-clapeyron">
-<h3>Diagramme de Clapeyron<a class="headerlink" href="#diagramme-de-clapeyron" title="Permalink to this headline">#</a></h3>
+</aside>
+</section>
+<section id="diagramme-de-clapeyron">
+<h3>Diagramme de Clapeyron<a class="headerlink" href="#diagramme-de-clapeyron" title="Permalink to this heading">#</a></h3>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Diagramme de Clapeyron</strong></p>
@@ -1032,20 +635,20 @@ Sur une isotherme d’Andrews :</p>
 <div><p>On parle donc de <strong>palier</strong> de changement de phase.</p>
 </div></blockquote>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Description générale des isothermes</p>
-<div class="figure align-center" id="fig-284">
+<figure class="align-center" id="fig-284">
 <img alt="../_images/thermo_chap_6_diag_pv.jpg" src="../_images/thermo_chap_6_diag_pv.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Parties liquides et solides: On remarque que dans la zone où le solide existe seul, la pression augmente très fortement pour une faible variation de volume massique: cela signifie que soumis à des contraintes “normales”, le volume d’un solide varie très peu. Il en est de même pour la phase liquide (cf zoom): on parle alors de <strong>fluide incompressible</strong>.</p></li>
 <li><p>Partie gazeuse: Dans les zones où seul le gaz existe, les variations sont plus faibles, on peut essayer de modéliser ces variations (gaz de Van der Waals ou développement du Viriel - cf. TP).</p></li>
 <li><p>Equilibre de deux phases: Dans les zones où deux phases sont en équilibre, on observe des paliers. On retrouve le fait que si on fixe la température, la pression au changement d’état est fixée. Le “point triple” correspond ici…  à une droite: on peut encore faire varier le volume massique.</p></li>
 <li><p>Point critique: Au dessus d’une température appelée température critique <span class="math notranslate nohighlight">\(T_C\)</span>, il n’existe plus de zone de coexistence liquide/gaz et on passe continuement d’un fluide à l’autre: il n’existe donc qu’un fluide discernable appelé fluide hypercritique.</p></li>
 </ul>
-</div>
-<div class="section" id="cas-de-l-equilibre-liquide-vapeur-partie-a-savoir-tracer">
-<h4>Cas de l’équilibre liquide-vapeur (partie à savoir tracer)<a class="headerlink" href="#cas-de-l-equilibre-liquide-vapeur-partie-a-savoir-tracer" title="Permalink to this headline">#</a></h4>
+</aside>
+<section id="cas-de-l-equilibre-liquide-vapeur-partie-a-savoir-tracer">
+<h4>Cas de l’équilibre liquide-vapeur (partie à savoir tracer)<a class="headerlink" href="#cas-de-l-equilibre-liquide-vapeur-partie-a-savoir-tracer" title="Permalink to this heading">#</a></h4>
 <p>On retiendra qu’on a déjà vu:</p>
 <ul class="simple">
 <li><p>l’existence du point critique</p></li>
@@ -1053,9 +656,9 @@ Sur une isotherme d’Andrews :</p>
 </ul>
 <div class="important admonition">
 <p class="admonition-title">Déscription du tracé</p>
-<div class="figure align-center" id="fig-285">
+<figure class="align-center" id="fig-285">
 <img alt="../_images/thermo_chap_6_diag_pv_liqvap.jpg" src="../_images/thermo_chap_6_diag_pv_liqvap.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p><strong>Courbes frontières et existence des phases</strong><br />
 Aux faibles volumes, on trouve la zone de phase liquide. Aux forts volumes la zone de phase gazeuse. Entre les deux se trouve la zone de coexistence liquide-vapeur. Aux fortes pressions/fortes températures, une zone correspond à un état super-critique.</p>
@@ -1071,26 +674,26 @@ Aux faibles volumes, on trouve la zone de phase liquide. Aux forts volumes la zo
 <li><p>Isotherme sous-critique à <span class="math notranslate nohighlight">\(T &lt; T_C\)</span>: Au dessous de la température critique, l’isotherme d’Andrews passe par un palier à une pression donnée lors de l’équilibre liquide-gaz. Cette pression est appelée pression de vapeur saturante.</p></li>
 </ul>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Evolution des masses volumiques</p>
 <p>On remarque d’abord que le volume massique du gaz est supérieure à le volume massique du liquide. Quand on est suffisamment loin de <span class="math notranslate nohighlight">\(T_C\)</span>, <strong>le volume massique du liquide est souvent négligeable devant le volume massique du gaz</strong>.</p>
 <p>Par contre, la largeur du palier diminue quand la température augmente: cela signifie que les masses volumiques des deux fluides tendent à se rapprocher quand on se rapproche du point critique.</p>
-</div>
-</div>
-<div class="section" id="theoreme-des-moments">
-<h4>Théorème des moments<a class="headerlink" href="#theoreme-des-moments" title="Permalink to this headline">#</a></h4>
+</aside>
+</section>
+<section id="theoreme-des-moments">
+<h4>Théorème des moments<a class="headerlink" href="#theoreme-des-moments" title="Permalink to this heading">#</a></h4>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Théorème des moments</strong></p>
 <p>Soit, sur un diagramme de Clapeyron, un point B du palier à une température T et les points I et F du même palier placées respectivement sur la courbe d’ébullition et la courbe de rosée. On peut alors écrire: <span class="math notranslate nohighlight">\(x_l BF = x_g BI\)</span> où BF et BI correspondent aux longueurs des deux segments.</p>
-<div class="figure align-center" id="fig-289">
+<figure class="align-center" id="fig-289">
 <img alt="../_images/thermo_chap_6_diag_pv_liqvap.jpg" src="../_images/thermo_chap_6_diag_pv_liqvap.jpg" />
+</figure>
 </div>
-</div>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>On retiendra que cette preuve <strong>permet aussi d’obtenir les fractions massiques</strong> en fonction des volumes massiques des différentes phases et du système.</p>
-</div>
+</aside>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Démonstration</strong></p>
@@ -1102,29 +705,29 @@ v &amp; = x_g (v_g - v_l) + v_l \Longrightarrow x_g = \frac{v - v_l}{v_g - v_l} 
 \end{align*}\]</div>
 <p>En divisant les deux expressions, on retrouve le théorème des moments.</p>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Diagramme P-h</p>
 <p>Le même raisonnement peut-être réalisé sur le diagramme <span class="math notranslate nohighlight">\((h-p)\)</span>. C’est ce qui permet de tracer les isotitre en vapeur comme on peut les voir sur le graphique.</p>
-</div>
-</div>
-</div>
-<div class="section" id="retard-au-changement-d-etat-etat-metastable">
-<h3>Retard au changement d’état: Etat métastable<a class="headerlink" href="#retard-au-changement-d-etat-etat-metastable" title="Permalink to this headline">#</a></h3>
-<div class="topic">
+</aside>
+</section>
+</section>
+<section id="retard-au-changement-d-etat-etat-metastable">
+<h3>Retard au changement d’état: Etat métastable<a class="headerlink" href="#retard-au-changement-d-etat-etat-metastable" title="Permalink to this heading">#</a></h3>
+<aside class="topic">
 <p class="topic-title">Etat métastable</p>
 <p>Un état métastable est un état du système thermodynamiquement instable, c’est-à-dire ne pouvant exister dans les conditions de température et de pression données, mais pouvant exister sur un temps relativement long (on parle de stabilité cinétique).</p>
 <p>Un très légère perturbation suffit en général à permettre au système de retourner dans un état stable. Ce retour est extrêmement rapide.</p>
 <blockquote>
 <div><p>Exemple : Eau en surfusion : Si l’on place une bouteille d’eau au congélateur, on peut, en refroidissant doucement obtenir de l’eau encore liquide à <span class="math notranslate nohighlight">\(T&lt;0^{\circ}C\)</span> et <span class="math notranslate nohighlight">\(P=1atm\)</span>. On parle de surfusion du liquide ou de liquide en surfusion (terme général). On pourra observer ce phénomène dans de nombreuses vidéos en ligne.</p>
 </div></blockquote>
-</div>
-</div>
-</div>
-<div class="section" id="enthalpie-de-fusion">
-<h2>Enthalpie de fusion<a class="headerlink" href="#enthalpie-de-fusion" title="Permalink to this headline">#</a></h2>
-<div class="section" id="enthalpie-de-changement-d-etat">
-<h3>Enthalpie de changement d’état<a class="headerlink" href="#enthalpie-de-changement-d-etat" title="Permalink to this headline">#</a></h3>
-<div class="topic">
+</aside>
+</section>
+</section>
+<section id="enthalpie-de-fusion">
+<h2>Enthalpie de fusion<a class="headerlink" href="#enthalpie-de-fusion" title="Permalink to this heading">#</a></h2>
+<section id="enthalpie-de-changement-d-etat">
+<h3>Enthalpie de changement d’état<a class="headerlink" href="#enthalpie-de-changement-d-etat" title="Permalink to this heading">#</a></h3>
+<aside class="topic">
 <p class="topic-title">Observations expérimentales</p>
 <p>On considère un 1kg de glace à <span class="math notranslate nohighlight">\(-10 ^{\circ}C\)</span>. On le chauffe par apport constant de chaleur en maintenant la pression du système constante et on mesure l’évolution temporelle de la température. On observe l’évolution ci-après:</p>
 <ul class="simple">
@@ -1132,11 +735,11 @@ v &amp; = x_g (v_g - v_l) + v_l \Longrightarrow x_g = \frac{v - v_l}{v_g - v_l} 
 <li><p>Au moment où la température se stabilise, la glace commence à fondre</p></li>
 <li><p>Quand la température recommence à monter, on a observé que la totalité de la glace s’était liquéfiée.</p></li>
 </ul>
-</div>
-<div class="margin sidebar">
+</aside>
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Cela ne veut pas dire que la température du corps ne peut pas varier <em>en même temps</em> que celui-ci change d’état. Cela signifie simplement que ce n’est PAS une <em>nécessité</em>.</p>
-</div>
+</aside>
 <div class="attention admonition">
 <p class="admonition-title">Interprétation</p>
 <ul class="simple">
@@ -1145,17 +748,17 @@ v &amp; = x_g (v_g - v_l) + v_l \Longrightarrow x_g = \frac{v - v_l}{v_g - v_l} 
 </ul>
 <p><strong>D’une manière générale, quand il se produit un changement d’état du système, l’enthalpie de ce dernier varie (positivement ou négativement).</strong></p>
 </div>
-<div class="margin sidebar">
+<aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>On parle aussi de chaleur latente massique de changement d’état. L’association à un terme de chaleur sera expliqué dans le chapitre sur le premier principe.</p>
-</div>
+</aside>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Enthalpie massique de changement d’état</strong></p>
 <p>On appelle enthalpie massique de changement d’état à la pression P, la variation d’enthalpie <span class="math notranslate nohighlight">\(\Delta h\)</span> du corps pur au cours du changement d’état complet d’un kilogramme du corps pur considéré à la pression donnée.</p>
 <p><strong>Elle correspond à la différence d’enthalpie massique entre la phase finale pure et la phase initiale pure dans les mêmes conditions de pression:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-be1026a9-e0b3-4d9a-ae34-8275cf4fc4dd">
-<span class="eqno">(2)<a class="headerlink" href="#equation-be1026a9-e0b3-4d9a-ae34-8275cf4fc4dd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2981586d-ff93-4f1a-924f-7ca425ac933c">
+<span class="eqno">(2)<a class="headerlink" href="#equation-2981586d-ff93-4f1a-924f-7ca425ac933c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \Delta h_{ph1 \to ph2} (T_{sat}) = h_{ph2}(T_{sat}) - h_{ph1} (T_{sat})
 \end{equation}\]</div>
 </div>
@@ -1165,7 +768,7 @@ v &amp; = x_g (v_g - v_l) + v_l \Longrightarrow x_g = \frac{v - v_l}{v_g - v_l} 
 <p>Il est important de savoir que l’enthalpie de changement d’état dépend de la température. Il existe certaines loi pour certains corps purs sur certaines gammes de températures mais aucune n’est à connaître.</p>
 <p><em>Note : L’enthalpie de changement d’état tend vers 0 quand on se rapproche du point critique.</em></p>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Exemples et ordre de grandeur</p>
 <p>La variation d’enthalpie en cours d’une vaporisation d’1kg de liquide est appelée enthalpie massique de vaporisation. On la note <span class="math notranslate nohighlight">\(\Delta h_{v}\)</span> ou <span class="math notranslate nohighlight">\(l_{v}\)</span>. On pourra nommer chaque enthalpie massique de changement d’état de la même manière. On indice en général les enthalpie de changement d’état de manière claire pour préciser de quel changement d’état il s’agit.</p>
 <p><strong>Ordre de grandeur</strong><br />
@@ -1178,19 +781,19 @@ Pour l’eau à pression atmosphérique (<span class="math notranslate nohighlig
 <p><strong>Intérêt des changements d’état</strong><br />
 On remarque que pour vaporiser du liquide, il faut fournir de l’énergie. Ce principe est utilisé dans des systèmes de climatisation des terrasses. On projette de fines gouttelettes d’eau dans l’air. Ce dernier étant plus sec, les gouttelettes vont se vaporiser mais pour cela elle vont capter l’énergie nécessaire au changement d’état au milieu extérieur. En prélevant ainsi de la chaleur à l’air ambiant, elle refroidissent l’air de la terrasse.</p>
 <p>De manière générale, les grandeurs quantité d’énergie libérée ou prélevée lors d’un changements d’état encouragent à les utiliser dans des machines thermiques.</p>
-</div>
-<div class="sidebar">
+</aside>
+<aside class="sidebar">
 <p class="sidebar-title">Sens du changement d’état</p>
 <p>Il est important de prendre l’enthalpie massique de changement d’état dans le <strong>bon sens</strong> : si c’est une fusion, il faut prendre l’enthalpie massique de fusion et si c’est une solidification, l’enthalpie massique de solidification (<em>même si l’énoncé donne l’enthalpie massique de fusion…)</em>).</p>
-</div>
-<div class="topic">
+</aside>
+<aside class="topic">
 <p class="topic-title">Calcul d’enthalpie</p>
 <p>Pour un changement d’état <strong>partiel ou total</strong> où une masse <span class="math notranslate nohighlight">\(m\)</span> de la phase 1 change d’état à température constante, alors la variation d’enthalpie du système est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c735c1a0-d918-4de4-8d82-ce9c513a24c0">
-<span class="eqno">(3)<a class="headerlink" href="#equation-c735c1a0-d918-4de4-8d82-ce9c513a24c0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-68a1e74f-9da0-4f1f-b3c2-c76afe68b70d">
+<span class="eqno">(3)<a class="headerlink" href="#equation-68a1e74f-9da0-4f1f-b3c2-c76afe68b70d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \Delta H = m \Delta h_{ph1 \to ph2}
 \end{equation}\]</div>
-</div>
+</aside>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Signe des enthalpies de changement d’état</strong></p>
@@ -1199,12 +802,12 @@ On remarque que pour vaporiser du liquide, il faut fournir de l’énergie. Ce p
 &amp;\Delta h_{vap} &gt;0; \Delta h_{fus} &gt;0; \Delta h_{sub} &gt;0;\
 &amp;\Delta h_{liq} &lt;0; \Delta h_{sol} &lt;0; \Delta h_{cond} &lt;0</p>
 </div>
-</div>
-<div class="section" id="diagramme-p-h">
-<h3>Diagramme p-H<a class="headerlink" href="#diagramme-p-h" title="Permalink to this headline">#</a></h3>
-<div class="figure align-center" id="fig-287">
+</section>
+<section id="diagramme-p-h">
+<h3>Diagramme p-H<a class="headerlink" href="#diagramme-p-h" title="Permalink to this heading">#</a></h3>
+<figure class="align-center" id="fig-287">
 <img alt="../_images/thermo_chap_6_diag_ph.png" src="../_images/thermo_chap_6_diag_ph.png" />
-</div>
+</figure>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Diagramme p-H</strong></p>
@@ -1215,19 +818,19 @@ On remarque que pour vaporiser du liquide, il faut fournir de l’énergie. Ce p
 <li><p>Isotherme de la phase gazeuse: En phase gazeuse suffisamment loin de la courbe de rosée, les isothermes sont quasiverticales, ce qui signifie qu’en première approximation, le gaz sui la deuxième loi de Joule.</p></li>
 </ul>
 </div>
-</div>
-</div>
-<div class="section" id="synthese-dans-un-diagramme-p-v-t-en-ligne">
-<h2>Synthèse dans un diagramme (P,V,T) (en ligne)<a class="headerlink" href="#synthese-dans-un-diagramme-p-v-t-en-ligne" title="Permalink to this headline">#</a></h2>
-<div class="topic">
+</section>
+</section>
+<section id="synthese-dans-un-diagramme-p-v-t-en-ligne">
+<h2>Synthèse dans un diagramme (P,V,T) (en ligne)<a class="headerlink" href="#synthese-dans-un-diagramme-p-v-t-en-ligne" title="Permalink to this heading">#</a></h2>
+<aside class="topic">
 <p class="topic-title">Diagramme (P,V,T)</p>
 <p>On donne à titre indictaif la surface des états possibles ainsi que les différentes phases dans un diagramme à 3 dimensions. Sa représentation ou son analyse ne sont pas à connaître.</p>
-<div class="figure align-center" id="fig-288">
+<figure class="align-center" id="fig-288">
 <img alt="../_images/thermo_chap_6_diag_ptv.jpg" src="../_images/thermo_chap_6_diag_ptv.jpg" />
-</div>
-</div>
-</div>
-</div>
+</figure>
+</aside>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1241,7 +844,7 @@ On remarque que pour vaporiser du liquide, il faut fournir de l’énergie. Ce p
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebook"
         },
         predefinedOutput: true
@@ -1249,50 +852,122 @@ On remarque que pour vaporiser du liquide, il faut fournir de l’énergie. Ce p
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="th_u_condenses.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Phases condensées</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="th_u_condenses.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Phases condensées</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="th_d_ex.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="th_d_ex.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">S’entrainer</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differentes-phases-et-transitions">Différentes phases et transitions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phases-definitions">Phases: Définitions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#transitions-de-phases">Transitions de phases</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equilibres-monophases-et-diphases">Equilibres monophasés et diphasés</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fractions-molaires-et-massiques">Fractions molaires et massiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagramme-t-p">Diagramme (T,P)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagramme-de-clapeyron">Diagramme de Clapeyron</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cas-de-l-equilibre-liquide-vapeur-partie-a-savoir-tracer">Cas de l’équilibre liquide-vapeur (partie à savoir tracer)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#theoreme-des-moments">Théorème des moments</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retard-au-changement-d-etat-etat-metastable">Retard au changement d’état: Etat métastable</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enthalpie-de-fusion">Enthalpie de fusion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enthalpie-de-changement-d-etat">Enthalpie de changement d’état</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagramme-p-h">Diagramme p-H</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese-dans-un-diagramme-p-v-t-en-ligne">Synthèse dans un diagramme (P,V,T) (en ligne)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By C. Lacpatia<br/>
-  
-      &copy; Copyright 2021.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By C. Lacpatia
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

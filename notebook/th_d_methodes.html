@@ -1,47 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Méthodes &#8212; Thermodynamique</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>Méthodes &#8212; Thermodynamique</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -51,58 +64,98 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/th_d_methodes';</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/thermodynamique/notebook/th_d_methodes.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Activités" href="th_d_activite.html" />
     <link rel="prev" title="S’entrainer" href="th_d_ex.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Thermodynamique</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="../thermodynamique.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Thermodynamique</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -112,578 +165,253 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="th_description.html">
-   Description d’un système thermodynamique
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_d_contxt.html">
-     Comprendre le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_systeme.html">
-       Système thermodynamique
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_echelle.html">
-       Echelles d’étude
-      </a>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="th_d_variables.html">
-       Variables d’état et variables microscopiques
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-      <label for="toctree-checkbox-3">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_d_equilibre.html">
-         Equilibre thermodynamique
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_d_extensives.html">
-         Variables extensives
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_d_intensives.html">
-         Grandeurs intensives
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="th_usuels.html">
-       Systèmes thermodynamiques usuels
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-      <label for="toctree-checkbox-4">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_u_gaz.html">
-         Etude des gaz
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_u_condenses.html">
-         Phases condensées
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_chgt_etat.html">
-       Equilibres diphasés
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 current active has-children">
-    <a class="reference internal" href="th_d_ex.html">
-     S’entrainer
-    </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul class="current">
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
-       Méthodes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_activite.html">
-       Activités
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_entropie_stat.html">
-       Activités : Approche statistique de l’entropie
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_ex_app.html">
-       Applications
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_td.html">
-       Entrainement
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="th_premier_pcp.html">
-   Premier principe
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_pp_ctxt.html">
-     Comprendre le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_intro.html">
-       Introduction (en ligne)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_enonce.html">
-       Premier principe: Enoncé
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_q.html">
-       Transfert thermique
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_w.html">
-       Travail mécanique
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_pp_ex.html">
-     S’entrainer
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_transfo.html">
-       Activités - Etude de transformations
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_act_meth.html">
-       Activités - Cas du gaz parfait
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_compression.html">
-       Méthodes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_ex_app.html">
-       Exercices d’application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_td.html">
-       Travaux dirigés
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="th_second_pcp.html">
-   Second principe
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_sp_contxt.html">
-     Connaître le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_intro.html">
-       Introduction
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_enonce.html">
-       Enoncé
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_expression.html">
-       Expression des grandeurs
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_interpretation.html">
-       Interprétations
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_sp_ex.html">
-     S’entrainer
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_exemples.html">
-       Exemples d’application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_ex_app.html">
-       Second principe: Exercice d’application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_td.html">
-       Second principe: Travaux dirigés
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="th_machines.html">
-   Machines thermiques
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_machines_contxt.html">
-     Comprendre le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_gene.html">
-       Généralités
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_moteur.html">
-       Moteurs thermiques
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_recepteur.html">
-       Récepteurs
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_machines_ex.html">
-     S’entrainer
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_methodes.html">
-       Méthodes d’études
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_ex_app.html">
-       Exercice d’application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_td.html">
-       Travaux dirigés
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="th_description.html">Description d’un système thermodynamique</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_d_contxt.html">Comprendre le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_d_systeme.html">Système thermodynamique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_echelle.html">Echelles d’étude</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="th_d_variables.html">Variables d’état et variables microscopiques</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="th_d_equilibre.html">Equilibre thermodynamique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="th_d_extensives.html">Variables extensives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="th_d_intensives.html">Grandeurs intensives</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="th_usuels.html">Systèmes thermodynamiques usuels</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="th_u_gaz.html">Etude des gaz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="th_u_condenses.html">Phases condensées</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="th_chgt_etat.html">Equilibres diphasés</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="th_d_ex.html">S’entrainer</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Méthodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_activite.html">Activités</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_entropie_stat.html">Activités : Approche statistique de l’entropie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_ex_app.html">Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_td.html">Entrainement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="th_premier_pcp.html">Premier principe</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_pp_ctxt.html">Comprendre le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_intro.html">Introduction (en ligne)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_enonce.html">Premier principe: Enoncé</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_q.html">Transfert thermique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_w.html">Travail mécanique</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_pp_ex.html">S’entrainer</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_transfo.html">Activités - Etude de transformations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_act_meth.html">Activités - Cas du gaz parfait</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_compression.html">Méthodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_ex_app.html">Exercices d’application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_td.html">Travaux dirigés</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="th_second_pcp.html">Second principe</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_sp_contxt.html">Connaître le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_intro.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_enonce.html">Enoncé</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_expression.html">Expression des grandeurs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_interpretation.html">Interprétations</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_sp_ex.html">S’entrainer</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_exemples.html">Exemples d’application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_ex_app.html">Second principe: Exercice d’application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_td.html">Second principe: Travaux dirigés</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="th_machines.html">Machines thermiques</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_machines_contxt.html">Comprendre le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_gene.html">Généralités</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_moteur.html">Moteurs thermiques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_recepteur.html">Récepteurs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_machines_ex.html">S’entrainer</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_methodes.html">Méthodes d’études</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_ex_app.html">Exercice d’application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_td.html">Travaux dirigés</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/th_d_methodes.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebook/th_d_methodes.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/notebook/th_d_methodes.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download notebook file"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="../_sources/notebook/th_d_methodes.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variables-d-etat">
-   Variables d’état
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Méthodes</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#variables-d-etat">
-   Variables d’état
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Méthodes</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-d-etat">Variables d’état</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="methodes">
-<h1>Méthodes<a class="headerlink" href="#methodes" title="Permalink to this headline">#</a></h1>
-<div class="section" id="variables-d-etat">
-<h2>Variables d’état<a class="headerlink" href="#variables-d-etat" title="Permalink to this headline">#</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="methodes">
+<h1>Méthodes<a class="headerlink" href="#methodes" title="Permalink to this heading">#</a></h1>
+<section id="variables-d-etat">
+<h2>Variables d’état<a class="headerlink" href="#variables-d-etat" title="Permalink to this heading">#</a></h2>
 <div class="attention admonition">
 <p class="admonition-title">Utilisation des grandeurs intensives </p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>On considère un gaz parfait dont l’équation d’état est <span class="math notranslate nohighlight">\(PV = nRT\)</span>. Réexprimer cette équation avec uniquement des grandeurs intensives en introduisant le volume massique et la masse molaire puis en introduisant le volume molaire.</p></li>
 <li><p>On considère maintenant l’équation d’état d’un gaz de Van der Waals donnée comme <span class="math notranslate nohighlight">\((P - \frac{a^2}{V_m^2})(V_m - b) = RT\)</span> où <span class="math notranslate nohighlight">\(V_m\)</span> est le volume molaire. Etablir l’équation de Van der Waals pour un volume V et un nombre de mole n.</p></li>
 </ol>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Correction</p>
 <blockquote>
 <div><p><strong>1. De l’extensif vers l’intensif.</strong></p>
@@ -697,18 +425,18 @@ title="Print to PDF"
 (P - \frac{n^2 a^2}{V})(V - nb) &amp;= nRT
 \end{align*}\]</div>
 </div></blockquote>
-</div>
+</aside>
 <div class="attention admonition">
 <p class="admonition-title">Energie interne </p>
 <p>On considère un gaz non modélisable par le modèle du gaz parfait car les interactions à longue distance entre les particules du gaz ne sont pas négligeable. L’énergie totale se décompose en la partie macroscopique définie comme en mécanique et l’énergie interne. Un modélisation possible dite de Van der Waals consiste à écrire l’énergie interne du gaz à partir de celle du gaz parfait sous la forme <span class="math notranslate nohighlight">\(U = U_{GP} - \frac{n^2 a}{V} + U_0\)</span> où <span class="math notranslate nohighlight">\(U_0\)</span> est l’énergie interne aux conditions <span class="math notranslate nohighlight">\((T_0,V_0)\)</span> et <span class="math notranslate nohighlight">\(U_{GP}\)</span> l’énergie interne d’un gaz s’il suivait le modèle du gaz parfait dans les mêmes conditions.</p>
 <p>Préciser physiquement quel signe attend-on pour a.</p>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Correction</p>
 <blockquote>
 <div><p>Les interactions dans un gaz de Van der Waals sont des interactions entre molécules neutres donc de …  Van der Waals. Elles sont donc attractives. L’énergie potentielle d’interaction doit donc être croissante avec la distance entre particules et l’énergie potentielle d’interaction totale sera donc aussi croissante avec le volume V (qui augmente la distance moyenne entre particules). La différence proposée ici entre les deux modèles est qu’on tient compte des interactions. On attend donc un terme correction croissant avec le volume donc un coefficient a positif.</p>
 </div></blockquote>
-</div>
+</aside>
 <div class="attention admonition">
 <p class="admonition-title">Entropie: Analyse qualitative </p>
 <p>On se propose ici de retrouver la monotonie de l’entropie d’un gaz parfait par un raisonnement qualitatif. On considère n moles d’un gaz parfait. <em>On rappelle que l’entropie est une mesure du désordre.</em></p>
@@ -723,7 +451,7 @@ title="Print to PDF"
 <li><p>Reprendre la question précédente pour les phases solides et liquides d’un corps pur à un couple (P,T) de solidification.</p></li>
 </ul>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Correction</p>
 <blockquote>
 <div><p><strong>Cas d’un gaz parfait</strong><br />
@@ -734,16 +462,16 @@ Si l’on augmente la température, cela signifie qu’on augmente l’énergie 
 Dans une phase gazeuse, les molécules peuvent se mouvoir sur de plus grandes distances avec peu d’interactions avec les autres particules: il naît donc un chaos plus important. L’entropie de la phase gazeuse sera donc plus grand (cela suppose évidemment qu’on compare la même quantité de matière).</p>
 <p>De même l’entropie de la phase liquide, plus désordonnée, sera plus grande que l’entropie de la phase solide.</p>
 </div></blockquote>
-</div>
+</aside>
 <div class="attention admonition">
 <p class="admonition-title">Calculer une pression </p>
 <p>On considère un gaz contenu dans une enceinte fermée sur un côté par un piston de section S et de masse M glissant sans frottement sur les paroi de l’enceinte. De l’autre côté du piston se trouve une atmosphère à pression <span class="math notranslate nohighlight">\(P_0\)</span>.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Déterminer la pression du gaz à l’équilibre en fonction de M,g, S et <span class="math notranslate nohighlight">\(P_0\)</span> suivant que le piston se trouve sur une face latérale ou sur la face supérieure de l’enceinte.</p></li>
 <li><p>Déterminer le volume de l’enceinte à l’équilibre en supposant que la température du gaz est maintenue à <span class="math notranslate nohighlight">\(T_0\)</span> et que le gaz suit le modèle du gaz parfait.</p></li>
 </ol>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Utilisation d’un équilibre mécanique</p>
 <blockquote>
 <div><p>Un équilibre mécanique est traduit par un théorême de la résultante dynamique à l’équilibre sur la paroi mobile - ici le piston. On travaille dans le référentiel de l’enceinte supposée galliléen.</p>
@@ -777,17 +505,17 @@ P &amp;= P_0 + \frac{Mg}{S}
 </ul>
 </div>
 <p><em>Calcul des forces de pression :</em> En thermodynamique, on sera souvent amené à étudier des forces de pressions uniformes sur des surfaces planes. Il n’est pas nécessaire dans ce cas de passer par un calcul intégrale: la force de pression est directement la pression multipliée par la surface (reste à l’orienter correctement).</p>
-</div>
+</aside>
 <div class="attention admonition">
 <p class="admonition-title">Etude d’un gaz </p>
 <p>Considérons une mole d’argon (<span class="math notranslate nohighlight">\(M = 39,9 \rm{g.mol^{-1}}\)</span>) considérée comme un gaz parfait contenu dans un récipient de volume <span class="math notranslate nohighlight">\(V=22.4\rm{L}\)</span> et à une température <span class="math notranslate nohighlight">\(T=273,15\rm{K}\)</span>.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Déterminer la pression du gaz.</p></li>
 <li><p>Déterminer le nombre de particules et la distance moyenne entre deux particules proches.</p></li>
 <li><p>Déterminer l’énergie cinétique moyenne et la vitesse quadratique moyenne des particules.</p></li>
 <li><p>En déduire un estimation du temps entre deux chocs sur une paroi. Commenter le principe de calculer une force “moyenne” pour étudier une force de pression.</p></li>
 <li><p>On définit le <strong>libre parcours moyen</strong> d’une particule comme la distance moyenne que parcourt la particule entre deux chocs. On peut montrer qu’il vaut <span class="math notranslate nohighlight">\(l=\frac{1}{\sqrt{2}n^* \pi d^2}\)</span> où d est le diamètre des particules et <span class="math notranslate nohighlight">\(n^*\)</span> la concentration en particule.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Reexprimer le libre parcours moyen en fonction de la pression, de la température et de d.</p></li>
 <li><p>A température ambiante et pression ambiante, le libre parcours moyen est d’environ 100nm. Représenter qualitativement la trajectoire d’une particule. Commenter.</p></li>
 <li><p>Estimer le diamètre des particules. Commenter.</p></li>
@@ -795,7 +523,7 @@ P &amp;= P_0 + \frac{Mg}{S}
 </li>
 </ol>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Résolution</p>
 <blockquote>
 <div><p><strong>Pression</strong><br />
@@ -818,9 +546,9 @@ De l’équation d’état des gaz parfait, il vient que <span class="math notra
 <p>Il s’agit donc d’une trajectoire erratique, on parlera de chaos moléculaire. On peut par contre remarquer que cette distance est grande devant la taille des atomes.</p>
 <p><span class="math notranslate nohighlight">\(d = \sqrt{\frac{k_B T}{\sqrt{2}\pi P l}} \sim 3 \times 10^{-10} \rm{m}\)</span>. Il s’agit donc à peu près de la taille d’un atome. Elle est légèrement plus grande du fait qu’on tient compte de la portée de l’interaction entre particules.</p>
 </div></blockquote>
-</div>
-</div>
-</div>
+</aside>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -834,7 +562,7 @@ De l’équation d’état des gaz parfait, il vient que <span class="math notra
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebook"
         },
         predefinedOutput: true
@@ -842,50 +570,101 @@ De l’équation d’état des gaz parfait, il vient que <span class="math notra
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="th_d_ex.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">S’entrainer</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="th_d_ex.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">S’entrainer</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="th_d_activite.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="th_d_activite.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Activités</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-d-etat">Variables d’état</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By C. Lacpatia<br/>
-  
-      &copy; Copyright 2021.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By C. Lacpatia
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

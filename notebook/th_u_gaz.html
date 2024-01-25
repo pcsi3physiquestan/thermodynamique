@@ -1,47 +1,60 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Etude des gaz &#8212; Thermodynamique</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    <title>Etude des gaz &#8212; Thermodynamique</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=ac02cc09edc035673794" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=ac02cc09edc035673794"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -51,58 +64,98 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebook/th_u_gaz';</script>
     <link rel="canonical" href="https://pcsi3physiquestan.github.io/thermodynamique/notebook/th_u_gaz.html" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Phases condensées" href="th_u_condenses.html" />
     <link rel="prev" title="Systèmes thermodynamiques usuels" href="th_usuels.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Thermodynamique</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+<a class="navbar-brand logo" href="../thermodynamique.html">
+  
+  
+  
+  
+  
+    <p class="title logo__title">Thermodynamique</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -112,700 +165,270 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="th_description.html">
-   Description d’un système thermodynamique
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active has-children">
-    <a class="reference internal" href="th_d_contxt.html">
-     Comprendre le contexte
-    </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-    <label for="toctree-checkbox-2">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul class="current">
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_systeme.html">
-       Système thermodynamique
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_echelle.html">
-       Echelles d’étude
-      </a>
-     </li>
-     <li class="toctree-l3 has-children">
-      <a class="reference internal" href="th_d_variables.html">
-       Variables d’état et variables microscopiques
-      </a>
-      <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-      <label for="toctree-checkbox-3">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_d_equilibre.html">
-         Equilibre thermodynamique
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_d_extensives.html">
-         Variables extensives
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_d_intensives.html">
-         Grandeurs intensives
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3 current active has-children">
-      <a class="reference internal" href="th_usuels.html">
-       Systèmes thermodynamiques usuels
-      </a>
-      <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-      <label for="toctree-checkbox-4">
-       <i class="fas fa-chevron-down">
-       </i>
-      </label>
-      <ul class="current">
-       <li class="toctree-l4 current active">
-        <a class="current reference internal" href="#">
-         Etude des gaz
-        </a>
-       </li>
-       <li class="toctree-l4">
-        <a class="reference internal" href="th_u_condenses.html">
-         Phases condensées
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_chgt_etat.html">
-       Equilibres diphasés
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_d_ex.html">
-     S’entrainer
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_methodes.html">
-       Méthodes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_activite.html">
-       Activités
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_entropie_stat.html">
-       Activités : Approche statistique de l’entropie
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_ex_app.html">
-       Applications
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_d_td.html">
-       Entrainement
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="th_premier_pcp.html">
-   Premier principe
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_pp_ctxt.html">
-     Comprendre le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-    <label for="toctree-checkbox-7">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_intro.html">
-       Introduction (en ligne)
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_enonce.html">
-       Premier principe: Enoncé
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_q.html">
-       Transfert thermique
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_w.html">
-       Travail mécanique
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_pp_ex.html">
-     S’entrainer
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-    <label for="toctree-checkbox-8">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_transfo.html">
-       Activités - Etude de transformations
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_act_meth.html">
-       Activités - Cas du gaz parfait
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_compression.html">
-       Méthodes
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_ex_app.html">
-       Exercices d’application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_pp_td.html">
-       Travaux dirigés
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="th_second_pcp.html">
-   Second principe
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_sp_contxt.html">
-     Connaître le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-    <label for="toctree-checkbox-10">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_intro.html">
-       Introduction
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_enonce.html">
-       Enoncé
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_expression.html">
-       Expression des grandeurs
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_interpretation.html">
-       Interprétations
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_sp_ex.html">
-     S’entrainer
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-    <label for="toctree-checkbox-11">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_exemples.html">
-       Exemples d’application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_ex_app.html">
-       Second principe: Exercice d’application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_sp_td.html">
-       Second principe: Travaux dirigés
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="th_machines.html">
-   Machines thermiques
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_machines_contxt.html">
-     Comprendre le contexte
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-    <label for="toctree-checkbox-13">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_gene.html">
-       Généralités
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_moteur.html">
-       Moteurs thermiques
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_recepteur.html">
-       Récepteurs
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="th_machines_ex.html">
-     S’entrainer
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-    <label for="toctree-checkbox-14">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_methodes.html">
-       Méthodes d’études
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_ex_app.html">
-       Exercice d’application
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="th_mc_td.html">
-       Travaux dirigés
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="th_description.html">Description d’un système thermodynamique</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="th_d_contxt.html">Comprendre le contexte</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="th_d_systeme.html">Système thermodynamique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_echelle.html">Echelles d’étude</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="th_d_variables.html">Variables d’état et variables microscopiques</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="th_d_equilibre.html">Equilibre thermodynamique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="th_d_extensives.html">Variables extensives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="th_d_intensives.html">Grandeurs intensives</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="th_usuels.html">Systèmes thermodynamiques usuels</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">Etude des gaz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="th_u_condenses.html">Phases condensées</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="th_chgt_etat.html">Equilibres diphasés</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_d_ex.html">S’entrainer</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_d_methodes.html">Méthodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_activite.html">Activités</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_entropie_stat.html">Activités : Approche statistique de l’entropie</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_ex_app.html">Applications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_d_td.html">Entrainement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="th_premier_pcp.html">Premier principe</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_pp_ctxt.html">Comprendre le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_intro.html">Introduction (en ligne)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_enonce.html">Premier principe: Enoncé</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_q.html">Transfert thermique</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_w.html">Travail mécanique</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_pp_ex.html">S’entrainer</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_transfo.html">Activités - Etude de transformations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_act_meth.html">Activités - Cas du gaz parfait</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_compression.html">Méthodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_ex_app.html">Exercices d’application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_pp_td.html">Travaux dirigés</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="th_second_pcp.html">Second principe</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_sp_contxt.html">Connaître le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_intro.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_enonce.html">Enoncé</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_expression.html">Expression des grandeurs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_interpretation.html">Interprétations</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_sp_ex.html">S’entrainer</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_exemples.html">Exemples d’application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_ex_app.html">Second principe: Exercice d’application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_sp_td.html">Second principe: Travaux dirigés</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="th_machines.html">Machines thermiques</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_machines_contxt.html">Comprendre le contexte</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_gene.html">Généralités</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_moteur.html">Moteurs thermiques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_recepteur.html">Récepteurs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="th_machines_ex.html">S’entrainer</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_methodes.html">Méthodes d’études</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_ex_app.html">Exercice d’application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="th_mc_td.html">Travaux dirigés</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/th_u_gaz.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/notebook/th_u_gaz.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
 </div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/notebook/th_u_gaz.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download notebook file"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="../_sources/notebook/th_u_gaz.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#etude-empirique-des-gaz">
-   Etude empirique des gaz
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gaz-parfait">
-     Gaz parfait
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#etude-des-gaz-approche-microscopique">
-   Etude des gaz: Approche microscopique
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#theorie-cinetique-des-gaz">
-     Théorie cinétique des gaz
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modele-du-gaz-parfait-monoatomique">
-     Modèle du gaz parfait monoatomique
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#calcul-de-la-pression-cinetique">
-     Calcul de la pression cinétique
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#equation-d-etat-des-gaz-parfait">
-     Equation d’état des gaz parfait
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#equation-energetique">
-   Equation énergétique
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#energie-interne-des-gaz-parfaits-premiere-loi-de-joule">
-     Energie interne des gaz parfaits: Première loi de Joule
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#enthalpie-des-gaz-parfaits-deuxieme-loi-de-joule">
-     Enthalpie des gaz parfaits: Deuxième loi de Joule
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#relation-de-mayer-et-coefficient-gamma">
-     Relation de Mayer et coefficient gamma
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cas-du-gaz-parfait-monoatomique">
-     Cas du gaz parfait monoatomique
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Etude des gaz</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#etude-empirique-des-gaz">
-   Etude empirique des gaz
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gaz-parfait">
-     Gaz parfait
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#etude-des-gaz-approche-microscopique">
-   Etude des gaz: Approche microscopique
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#theorie-cinetique-des-gaz">
-     Théorie cinétique des gaz
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modele-du-gaz-parfait-monoatomique">
-     Modèle du gaz parfait monoatomique
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#calcul-de-la-pression-cinetique">
-     Calcul de la pression cinétique
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#equation-d-etat-des-gaz-parfait">
-     Equation d’état des gaz parfait
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#equation-energetique">
-   Equation énergétique
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#energie-interne-des-gaz-parfaits-premiere-loi-de-joule">
-     Energie interne des gaz parfaits: Première loi de Joule
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#enthalpie-des-gaz-parfaits-deuxieme-loi-de-joule">
-     Enthalpie des gaz parfaits: Deuxième loi de Joule
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#relation-de-mayer-et-coefficient-gamma">
-     Relation de Mayer et coefficient gamma
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cas-du-gaz-parfait-monoatomique">
-     Cas du gaz parfait monoatomique
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Etude des gaz</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etude-empirique-des-gaz">Etude empirique des gaz</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gaz-parfait">Gaz parfait</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etude-des-gaz-approche-microscopique">Etude des gaz: Approche microscopique</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorie-cinetique-des-gaz">Théorie cinétique des gaz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modele-du-gaz-parfait-monoatomique">Modèle du gaz parfait monoatomique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-de-la-pression-cinetique">Calcul de la pression cinétique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-d-etat-des-gaz-parfait">Equation d’état des gaz parfait</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-energetique">Equation énergétique</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energie-interne-des-gaz-parfaits-premiere-loi-de-joule">Energie interne des gaz parfaits: Première loi de Joule</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enthalpie-des-gaz-parfaits-deuxieme-loi-de-joule">Enthalpie des gaz parfaits: Deuxième loi de Joule</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relation-de-mayer-et-coefficient-gamma">Relation de Mayer et coefficient gamma</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cas-du-gaz-parfait-monoatomique">Cas du gaz parfait monoatomique</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <div class="tex2jax_ignore mathjax_ignore section" id="etude-des-gaz">
-<h1>Etude des gaz<a class="headerlink" href="#etude-des-gaz" title="Permalink to this headline">#</a></h1>
-<div class="section" id="etude-empirique-des-gaz">
-<h2>Etude empirique des gaz<a class="headerlink" href="#etude-empirique-des-gaz" title="Permalink to this headline">#</a></h2>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="etude-des-gaz">
+<h1>Etude des gaz<a class="headerlink" href="#etude-des-gaz" title="Permalink to this heading">#</a></h1>
+<section id="etude-empirique-des-gaz">
+<h2>Etude empirique des gaz<a class="headerlink" href="#etude-empirique-des-gaz" title="Permalink to this heading">#</a></h2>
 <p><em>En général l’étude empirique des gaz se fait par le contrôle de deux paramètres (température et volume par exemple) et par la mesure du troisième. On cherche alors à modéliser la relation (P,V,T) par une équation d’état et à l’interprêter physique (notamment à l’échelle microscopique).</em></p>
-<div class="section" id="gaz-parfait">
-<h3>Gaz parfait<a class="headerlink" href="#gaz-parfait" title="Permalink to this headline">#</a></h3>
-<div class="sidebar">
+<section id="gaz-parfait">
+<h3>Gaz parfait<a class="headerlink" href="#gaz-parfait" title="Permalink to this heading">#</a></h3>
+<aside class="sidebar">
 <p class="sidebar-title">Comportement à basse pression</p>
 <p>Du point de vue macroscopique, un gaz suit cette loi <strong>si sa pression est relativement faible</strong> (cf. expérience de Boyle-Mariotte). Le seuil de pression à partir duquel on peut considérer que le gaz suit le modèle du gaz parfait dépend du gaz et de la précision exigée.</p>
 <p>D’un point de vue microscopique, la nécessité d’une basse pression peut être reliée à la nécessité de négliger les interactions à longue distance.</p>
-</div>
+</aside>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>Approche empirique</strong></p>
@@ -820,7 +443,7 @@ title="Print to PDF"
 <li><p>La pression totale est la somme des pressions partielles de chaque gaz.</p></li>
 </ul>
 </div>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">Interprétation</p>
 <p><strong>Interprétation du covolume</strong></p>
 <blockquote>
@@ -831,27 +454,27 @@ title="Print to PDF"
 <div><p>Le terme <span class="math notranslate nohighlight">\(\frac{n^2 a}{V^2}\)</span> est homogène à une pression (c’est-à-dire une force par unité de volume). Si l’on se place dans le cas relativement courant où le covolume est négligeable devant le volume V, l’équation d’état devient: <span class="math notranslate nohighlight">\(P = \frac{nRT}{V} - \frac{n^2 a}{V^2}\)</span>.</p>
 <p>Autrement dit, pour une température et un volume donné, la pression moléculaire va avoir tendance à diminuer la pression par rapport au modèle du gaz parfait. La pression moléculaire représente en effet les forces d’interaction entre particules, c’est-à-dire les force de Van der Waals (le terme en <span class="math notranslate nohighlight">\(n^2/V^2\)</span> représentent bien la distance moyenne entre particule élevée à la puissance 6). Ces forces sont attractives: elles vont avoir tendance à diminuer la “poussée’’ du gaz sur la paroi (puisque les particules sont attirées ``vers” le gaz).</p>
 </div></blockquote>
-</div>
-<div class="topic">
+</aside>
+<aside class="topic">
 <p class="topic-title">Ecart au gaz parfait. Gaz réel</p>
 <p>Si l’on réalise une mesure du produit PV en faisant varier P,V pour une température donnée, on s’aperçoit qu’il apparaît un écart entre le produit PV et le produit nRT au fur et à mesure que P grandit. Cet écart au modèle du gaz parfait est d’autant plus important qu’on s’approche de la pression de vapeur saturante, c’est-à-dire la pression pour laquelle, pour une température donnée, le gaz se condense et forme un liquide.</p>
 <p>Rappelons nous que le modèle du gaz parfait correspond à des particules dont l’interaction à distance est négligeable. Si l’on augmente la pression, ces interactions deviennent importantes et la réalité s’écarte du modèle. Comme on l’a vu en chimie, les interactions entre molécules ou atomes sont des interactions dites de Van der Waals. On peut se baser sur ces interactions pour trouver une équation d’état.</p>
 <blockquote>
 <div><p><strong>Exemple : Equation d’état de Van der Waals</strong></p>
 <p>Pour décrire le comportement réels des gaz, on dispose notamment d’un modèle: le gaz de Van der Waals. On propose comme équation d’état des gaz:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-abc21577-44f0-442d-95d1-31c3f2a6fa50">
-<span class="eqno">(1)<a class="headerlink" href="#equation-abc21577-44f0-442d-95d1-31c3f2a6fa50" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d3546eab-302f-48a9-8417-8a1b83ea2087">
+<span class="eqno">(1)<a class="headerlink" href="#equation-d3546eab-302f-48a9-8417-8a1b83ea2087" title="Permalink to this equation">#</a></span>\[\begin{equation}
 (P + \frac{n^2 a}{V^2})(V - nb) = nRT
 \end{equation}\]</div>
 </div></blockquote>
 <p>où a et b sont des constantes positives. Les termes correctifs <span class="math notranslate nohighlight">\(\frac{n^2 a}{V^2}\)</span> et nb sont, en général, faibles devant respectivement P et V aux basses pressions. On appelle le terme <span class="math notranslate nohighlight">\(\frac{n^2 a}{V^2}\)</span> <strong>pression moléculaire</strong> et b le <strong>covolume molaire</strong>.</p>
-</div>
-</div>
-</div>
-<div class="section" id="etude-des-gaz-approche-microscopique">
-<h2>Etude des gaz: Approche microscopique<a class="headerlink" href="#etude-des-gaz-approche-microscopique" title="Permalink to this headline">#</a></h2>
-<div class="section" id="theorie-cinetique-des-gaz">
-<h3>Théorie cinétique des gaz<a class="headerlink" href="#theorie-cinetique-des-gaz" title="Permalink to this headline">#</a></h3>
+</aside>
+</section>
+</section>
+<section id="etude-des-gaz-approche-microscopique">
+<h2>Etude des gaz: Approche microscopique<a class="headerlink" href="#etude-des-gaz-approche-microscopique" title="Permalink to this heading">#</a></h2>
+<section id="theorie-cinetique-des-gaz">
+<h3>Théorie cinétique des gaz<a class="headerlink" href="#theorie-cinetique-des-gaz" title="Permalink to this heading">#</a></h3>
 <p><em>Nous allons étudier les gaz par leur comportement à l’échelle microscopique. Cela permettra d’expliquer par des phénomènes microscopiques l’équation d’état des gaz parfait. Pour faire cette étude, nous devons distinguer deux types d’hypothèses: les premières sont générales à la théorie cinétique des gaz et les secondes sont propres à l’étude d’un gaz parfait.</em></p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -861,7 +484,7 @@ title="Print to PDF"
 <li><p>Il y a à l’échelle microscopique un chaos moléculaire c’est-à-dire que les molécules ont un mouvement incessant et désordonné: il est sans cesse modifié par des chocs avec d’autres molécules. Les vitesses et positions sont alors distribuées aléatoirement.</p></li>
 </ul>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Interprétation</p>
 <p>Ces hypothèses ont quelques conséquences sur l’étude des gaz. On rappelle qu’à l’échelle microscopique, on ne peut connaître les caractéristiques de chaque particules mais on peut s’intéresser à la <strong>statistique des différentes grandeurs, notamment des vitesses</strong>.</p>
 <ul class="simple">
@@ -872,10 +495,10 @@ title="Print to PDF"
 <li><p>la statistique des composantes de vitesse est la même quelque soit la direction. Il vient notamment que la moyenne du carré de chaque composante est identique.</p></li>
 <li><p>une conséquence du dernier point est que le carré de la vitesse quadratique moyenne vaut 3 fois la moyenne du carré de chaque composante <span class="math notranslate nohighlight">\(u^2 = 3 \left\langle v_x^2 \right\rangle= 3 \left\langle v_y^2 \right\rangle= 3 \left\langle v_z^2 \right\rangle\)</span></p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="modele-du-gaz-parfait-monoatomique">
-<h3>Modèle du gaz parfait monoatomique<a class="headerlink" href="#modele-du-gaz-parfait-monoatomique" title="Permalink to this headline">#</a></h3>
+</aside>
+</section>
+<section id="modele-du-gaz-parfait-monoatomique">
+<h3>Modèle du gaz parfait monoatomique<a class="headerlink" href="#modele-du-gaz-parfait-monoatomique" title="Permalink to this heading">#</a></h3>
 <p>A l’échelle microscopique, le modèle du gaz parfait monoatomique est décrit par trois hypothèses.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -886,7 +509,7 @@ title="Print to PDF"
 <li><p>Dans le cadre d’un gaz parfait monoatomique, les particules peuvent être assimilées à des <strong>particules ponctuelles</strong>.</p></li>
 </ul>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Remarques sur les hypothèses</p>
 <ul class="simple">
 <li><p>La troisième hypothèse est propre aux gaz parfait monoatomiques. Son implication directe est que l’énergie cinétique microscopique se réduit à l’énergie cinétique de translation. Pour déterminer l’équation d’état du gaz, cette conséquence a peu d’importance mais elle en aura quand il s’agira de déterminer l’énergie interne du gaz. Pour un gaz parfait composé de molécules, l’hypothèse d’une taille négligeable reste importante pour négliger le covolume.</p></li>
@@ -894,10 +517,10 @@ title="Print to PDF"
 <li><p>La première hypothèse est cruciale. On a vu que macroscopiquement, l’existence d’interactions à distances non négligeables impliquaient une déviance du comportement réel du gaz par rapport au modèle du gaz parfait.</p></li>
 <li><p>On peut s’attarder sur l’hypothèse de l’élasticité des chocs. Dans le cas d’un gaz parfait monoatomique, la seule possibilité de transfert d’énergie est de l’énergie cinétique vers l’énergie de l’atome (du gaz ou de la paroi) qui conduit à une excitation de l’atome: les électrons peuvent passer à un niveau d’énergie supérieure. Or cela implique un échange d’énergie de l’ordre de l’électron-volt et donc une énergie cinétique du même ordre au moins. Pour cela, il faudrait une température d’au moins 11000K! Les systèmes étudiées n’atteindrons jamais cette température. L’hypothèse du choc élastique est donc pleinement justifiée.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="calcul-de-la-pression-cinetique">
-<h3>Calcul de la pression cinétique<a class="headerlink" href="#calcul-de-la-pression-cinetique" title="Permalink to this headline">#</a></h3>
+</aside>
+</section>
+<section id="calcul-de-la-pression-cinetique">
+<h3>Calcul de la pression cinétique<a class="headerlink" href="#calcul-de-la-pression-cinetique" title="Permalink to this heading">#</a></h3>
 <p>Ce calcul est à savoir faire par coeur.</p>
 <div class="attention admonition">
 <p class="admonition-title">Exercice</p>
@@ -908,7 +531,7 @@ title="Print to PDF"
 <li><p>chaque particule ne peut se déplacer que suivant une seule des trois directions Ox, Oy, Oz (dans les deux sens).</p></li>
 </ul>
 <p>On peut obtenir l’expression de la pression cinétique sans ces hypothèses mais une telle démonstration n’est plus dans le cadre du programme.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Que vaut la vitesse quadratique?</p></li>
 <li><p>Déduire des hypothèses précédentes le nombre de particules par unité de volume qui possèdent la vitesse <span class="math notranslate nohighlight">\(+v \overrightarrow{e_x}\)</span>.</p></li>
 <li><p>On considère une particule heurtant la paroi entre t et t+dt. Relier la variation <span class="math notranslate nohighlight">\(\overrightarrow{\rm{d} p_1}\)</span>de quantité de mouvement de la particule entre t et t+dt à la force moyenne exercée par la particule sur la paroi entre t et t+dt. En déduire l’expression de la pression cinétique en fonction de <span class="math notranslate nohighlight">\(\overrightarrow{\rm{d} p_1}\)</span>, du nombre <span class="math notranslate nohighlight">\(dN_{choc}\)</span> de particules qui heurtent la paroi dS entre t et t+dt et de la surface dS.</p></li>
@@ -955,9 +578,9 @@ On veut déterminer <span class="math notranslate nohighlight">\(dN_{choc}\)</sp
 Il vient: <span class="math notranslate nohighlight">\(P = \frac{N}{6V} u dt dS \frac{2mu}{dt dS} = \frac{N}{3V} m u^2\)</span></p>
 </div></blockquote>
 </div>
-</div>
-<div class="section" id="equation-d-etat-des-gaz-parfait">
-<h3>Equation d’état des gaz parfait<a class="headerlink" href="#equation-d-etat-des-gaz-parfait" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="equation-d-etat-des-gaz-parfait">
+<h3>Equation d’état des gaz parfait<a class="headerlink" href="#equation-d-etat-des-gaz-parfait" title="Permalink to this heading">#</a></h3>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Pression cinétique</strong></p>
@@ -973,13 +596,13 @@ P = \frac{N}{3V} mu^2
 <p><strong>Equation d’état des gaz parfait.</strong></p>
 <p>L’équation d’état d’un gaz parfait monoatomique est: <span class="math notranslate nohighlight">\(PV = Nk_B T = nRT\)</span>. Elle se démontre à partir de l’expression de la pression cinétique et de la température cinétique.</p>
 </div>
-</div>
-</div>
-<div class="section" id="equation-energetique">
-<h2>Equation énergétique<a class="headerlink" href="#equation-energetique" title="Permalink to this headline">#</a></h2>
-<div class="section" id="energie-interne-des-gaz-parfaits-premiere-loi-de-joule">
-<h3>Energie interne des gaz parfaits: Première loi de Joule<a class="headerlink" href="#energie-interne-des-gaz-parfaits-premiere-loi-de-joule" title="Permalink to this headline">#</a></h3>
-<div class="topic">
+</section>
+</section>
+<section id="equation-energetique">
+<h2>Equation énergétique<a class="headerlink" href="#equation-energetique" title="Permalink to this heading">#</a></h2>
+<section id="energie-interne-des-gaz-parfaits-premiere-loi-de-joule">
+<h3>Energie interne des gaz parfaits: Première loi de Joule<a class="headerlink" href="#energie-interne-des-gaz-parfaits-premiere-loi-de-joule" title="Permalink to this heading">#</a></h3>
+<aside class="topic">
 <p class="topic-title">Rappels</p>
 <ul class="simple">
 <li><p><em>L’énergie interne est une fonction d’état. Elle peut donc se définir comme une fonction de variables d’état indépendantes par exemple U(T,V,n) (en pratique on écrira en physique U(T,V) car on travaille avec des systèmes fermés où n peut être considéré comme un paramètre).</em></p></li>
@@ -991,24 +614,24 @@ La différentielle de l’énergie interne peut alors s’écrire:</p></li>
 dU(T,V) = C_V(T,V) dT + {\left(\frac{\partial U}{\partial V}\right)}(T,V)_T dV
 \]</div>
 <p>On a choisi ici d’exprimer U comme une fonction de T et V. Ce sera souvent le cas dans les premiers temps mais il faut savoir qu’on peut aussi exprimer U comme une fonction de S et V. Les dérivées partielles sont alors différentes (on pourra remarquer qu’il s’agit alors de la température et de la pression).</p>
-</div>
+</aside>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Première loi de Joule</strong></p>
 <p>L’énergie interne d’un gaz parfait <strong>ne dépend que de la température</strong>: <span class="math notranslate nohighlight">\(U(T,V) = U(T)\)</span>. Sa différentielle s’écrit: <span class="math notranslate nohighlight">\(dU = C_V(T) dT\)</span>.</p>
 <p>Dans la majorité des cas étudiés, on peut considérer que la capacité thermique à volume constant ne dépend pas de T sur de grandes gammes de températures, de sorte que la variation d’énergie interne sur une transformation finie s’écrit <span class="math notranslate nohighlight">\(\Delta U = C_V \Delta T\)</span>.</p>
 </div>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">Exemples</p>
 <ul class="simple">
 <li><p>La capacité thermique molaire à volume constant du Néon dans les gammes de températures ambiantes (et jusqu’à plus de 600K) est de l’ordre de <span class="math notranslate nohighlight">\(12.4 J.\rm{mol^{-1}.K^{-1}}\)</span>. Elle est à peu près égale à <span class="math notranslate nohighlight">\(\frac{3}{2}R\)</span>.</p></li>
 <li><p>La capacité thermique molaire à volume constant du dihydrogène dans les gammes de températures ambiantes (et jusqu’à plus de 600K) est de l’ordre de <span class="math notranslate nohighlight">\(20.8 J.\rm{mol^{-1}.K^{-1}}\)</span>. Elle est à peu près égale à <span class="math notranslate nohighlight">\(\frac{5}{2}R\)</span>.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="enthalpie-des-gaz-parfaits-deuxieme-loi-de-joule">
-<h3>Enthalpie des gaz parfaits: Deuxième loi de Joule<a class="headerlink" href="#enthalpie-des-gaz-parfaits-deuxieme-loi-de-joule" title="Permalink to this headline">#</a></h3>
-<div class="topic">
+</aside>
+</section>
+<section id="enthalpie-des-gaz-parfaits-deuxieme-loi-de-joule">
+<h3>Enthalpie des gaz parfaits: Deuxième loi de Joule<a class="headerlink" href="#enthalpie-des-gaz-parfaits-deuxieme-loi-de-joule" title="Permalink to this heading">#</a></h3>
+<aside class="topic">
 <p class="topic-title">Rappels</p>
 <ul class="simple">
 <li><p><em>L’enthalpie est une fonction d’état. Elle peut donc se définir comme une fonction de variables d’état indépendantes par exemple U(T,P,n) (en pratique on écrira en physique H(T,P) car on travaille avec des systèmes fermés où n peut être considéré comme un paramètre).</em></p></li>
@@ -1020,23 +643,23 @@ La différentielle de l’enthalpie peut alors s’écrire:</p></li>
 dH(T,P) = C_P(T,P) dT + {\left(\frac{\partial H}{\partial P}\right)}(T,P)_T dP
 \]</div>
 <p>On a choisi ici d’exprimer H comme une fonction de T et P alors qu’on a exprimé U comme une fonction de T et V. On aurait très bien pu exprimer H comme une fonction de T et V mais comme on le verra par la suite, il est préférable d’exprimer H(T,P) plutôt que H(T,V) à cause de l’utilisation faite de H. De même, il arrive qu’on préfère écrire H(S,P) mais nous nous servirons peu de cette vision de l’enthalpie.</p>
-</div>
-<div class="sidebar">
+</aside>
+<aside class="sidebar">
 <p class="sidebar-title">Exemple</p>
 <ul class="simple">
 <li><p>La capacité thermique molaire à pression constante du Néon dans les gammes de températures ambiantes (et jusqu’à plus de 600K) est de l’ordre de <span class="math notranslate nohighlight">\(20.8 J.\rm{mol^{-1}.K^{-1}}\)</span>. Elle est à peu près égale à <span class="math notranslate nohighlight">\(\frac{5}{2}R\)</span>.</p></li>
 <li><p>La capacité thermique molaire à pression constante du dihydrogène dans les gammes de températures ambiantes (et jusqu’à plus de 600K) est de l’ordre de <span class="math notranslate nohighlight">\(29.0 J.\rm{mol^{-1}.K^{-1}}\)</span>. Elle est à peu près égale à <span class="math notranslate nohighlight">\(\frac{7}{2}R\)</span>.</p></li>
 </ul>
-</div>
+</aside>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Deuxième loi de Joule</strong></p>
 <p>L’enthalpie d’un gaz parfait <strong>ne dépend que de la température</strong>: <span class="math notranslate nohighlight">\(H(T,P) = H(T)\)</span>. Sa différentielle s’écrit: <span class="math notranslate nohighlight">\(dH = C_P(T) dT\)</span>.</p>
 <p>Dans la majorité des cas étudiés, on peut considérer que la capacité thermique à pression constante ne dépend pas de T sur de grandes gammes de températures, de sorte que la variation d’énergie interne sur une transformation finie s’écrit <span class="math notranslate nohighlight">\(\Delta H = C_P \Delta T\)</span>.</p>
 </div>
-</div>
-<div class="section" id="relation-de-mayer-et-coefficient-gamma">
-<h3>Relation de Mayer et coefficient gamma<a class="headerlink" href="#relation-de-mayer-et-coefficient-gamma" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="relation-de-mayer-et-coefficient-gamma">
+<h3>Relation de Mayer et coefficient gamma<a class="headerlink" href="#relation-de-mayer-et-coefficient-gamma" title="Permalink to this heading">#</a></h3>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Relation de Mayer</strong></p>
@@ -1048,10 +671,10 @@ dH(T,P) = C_P(T,P) dT + {\left(\frac{\partial H}{\partial P}\right)}(T,P)_T dP
 <div><p>La première loi de Joule donne l’expression de <span class="math notranslate nohighlight">\(\Delta U = C_V \Delta T\)</span>. La variation d’enthalpie s’écrit donc: <span class="math notranslate nohighlight">\(\Delta H = \Delta (U + PV) = \Delta U + \Delta (nRT) = (C_V + nR) \Delta T\)</span> donc <span class="math notranslate nohighlight">\(C_P = C_V + nR\)</span></p>
 </div></blockquote>
 </div>
-<div class="topic">
+<aside class="topic">
 <p class="topic-title">Interprétation</p>
 <p>On rappelle que la capacité thermique à volume constant donne l’énergie à fournir pour augmenter la température de 1K à volume constant et la capacité thermique à pression constante l’énergie à fournir pour augmenter la température de 1K à pression constante. La relation de Mayer montre que <span class="math notranslate nohighlight">\(C_P &gt; C_V\)</span>: il est donc plus coûteux (en énergie) d’augmenter la température à pression constante que de l’augmenter à volume constante. On pourra en comprendre la raison par la suite.</p>
-</div>
+</aside>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Coefficient gamma.</strong></p>
@@ -1068,9 +691,9 @@ C_V &amp;= \frac{nR}{\gamma-1}\\
 C_p &amp;= \frac{\gamma nR}{\gamma - 1}
 \end{align*}\]</div>
 </div>
-</div>
-<div class="section" id="cas-du-gaz-parfait-monoatomique">
-<h3>Cas du gaz parfait monoatomique<a class="headerlink" href="#cas-du-gaz-parfait-monoatomique" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="cas-du-gaz-parfait-monoatomique">
+<h3>Cas du gaz parfait monoatomique<a class="headerlink" href="#cas-du-gaz-parfait-monoatomique" title="Permalink to this heading">#</a></h3>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Energie interne d’un gaz parfait monoatomique</strong></p>
@@ -1086,9 +709,9 @@ C_p &amp;= \frac{\gamma nR}{\gamma - 1}
 <p>On a vu que cette dernière valait en moyenne <span class="math notranslate nohighlight">\(\overline{E_C}=\frac{3}{2}k_B T\)</span> soit une énergie cinétique totale pour N particule: <span class="math notranslate nohighlight">\(E_C = \frac{3}{2}Nk_B T = \frac{3}{2}n R T\)</span>.</p>
 </div></blockquote>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1102,7 +725,7 @@ C_p &amp;= \frac{\gamma nR}{\gamma - 1}
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./notebook"
         },
         predefinedOutput: true
@@ -1110,50 +733,118 @@ C_p &amp;= \frac{\gamma nR}{\gamma - 1}
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="th_usuels.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Systèmes thermodynamiques usuels</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="th_usuels.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Systèmes thermodynamiques usuels</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="th_u_condenses.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="th_u_condenses.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Phases condensées</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etude-empirique-des-gaz">Etude empirique des gaz</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gaz-parfait">Gaz parfait</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#etude-des-gaz-approche-microscopique">Etude des gaz: Approche microscopique</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#theorie-cinetique-des-gaz">Théorie cinétique des gaz</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modele-du-gaz-parfait-monoatomique">Modèle du gaz parfait monoatomique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-de-la-pression-cinetique">Calcul de la pression cinétique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-d-etat-des-gaz-parfait">Equation d’état des gaz parfait</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-energetique">Equation énergétique</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energie-interne-des-gaz-parfaits-premiere-loi-de-joule">Energie interne des gaz parfaits: Première loi de Joule</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enthalpie-des-gaz-parfaits-deuxieme-loi-de-joule">Enthalpie des gaz parfaits: Deuxième loi de Joule</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relation-de-mayer-et-coefficient-gamma">Relation de Mayer et coefficient gamma</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cas-du-gaz-parfait-monoatomique">Cas du gaz parfait monoatomique</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By C. Lacpatia<br/>
-  
-      &copy; Copyright 2021.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By C. Lacpatia
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2021.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=ac02cc09edc035673794"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=ac02cc09edc035673794"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
