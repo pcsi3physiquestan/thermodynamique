@@ -14,8 +14,8 @@ kernelspec:
   name: python3
 ---
 # Méthodes
-```{figure} ./images/qr_code/qr_thermo_bases_meth.png
-:name: qr_thermo_bases_meth
+```{figure} ./images/qr_code/qr_thermo_methodes.png
+:name: qr_thermo_methodes
 :width: 150px
 :align: right
 :target: th_d_methodes.html
