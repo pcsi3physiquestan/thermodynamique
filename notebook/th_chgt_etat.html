@@ -685,7 +685,7 @@ Aux faibles volumes, on trouve la zone de phase liquide. Aux forts volumes la zo
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Théorème des moments</strong></p>
-<p>Soit, sur un diagramme de Clapeyron, un point B du palier à une température T et les points I et F du même palier placées respectivement sur la courbe d’ébullition et la courbe de rosée. On peut alors écrire: <span class="math notranslate nohighlight">\(x_l BF = x_g BI\)</span> où BF et BI correspondent aux longueurs des deux segments.</p>
+<p>Soit, sur un diagramme de Clapeyron, un point B du palier à une température T et les points I et F du même palier placées respectivement sur la courbe d’ébullition et la courbe de rosée. On peut alors écrire: <span class="math notranslate nohighlight">\(x_l BI = x_g BF\)</span> où BF et BI correspondent aux longueurs des deux segments.</p>
 <figure class="align-center" id="fig-289">
 <img alt="../_images/thermo_chap_6_diag_pv_liqvap.jpg" src="../_images/thermo_chap_6_diag_pv_liqvap.jpg" />
 </figure>
@@ -700,8 +700,8 @@ Aux faibles volumes, on trouve la zone de phase liquide. Aux forts volumes la zo
 <p>On a <span class="math notranslate nohighlight">\(n_T = n_l + n_g \Longrightarrow 1 = x_l + x_g\)</span>. De plus: <span class="math notranslate nohighlight">\(v = x_l v_l + x_g v_g\)</span> par extensivité du volume. Soit:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
-v &amp; = x_l (v_l - v_g) + v_g \Longrightarrow x_l = \frac{v_g - v}{v_g - v_l} = \frac{MB}{EB}\\
-v &amp; = x_g (v_g - v_l) + v_l \Longrightarrow x_g = \frac{v - v_l}{v_g - v_l} = \frac{ME}{EB}
+v &amp; = x_l (v_l - v_g) + v_g \Longrightarrow x_l = \frac{v_g - v}{v_g - v_l} = \frac{BF}{IF}\\
+v &amp; = x_g (v_g - v_l) + v_l \Longrightarrow x_g = \frac{v - v_l}{v_g - v_l} = \frac{BI}{IF}
 \end{align*}\]</div>
 <p>En divisant les deux expressions, on retrouve le théorème des moments.</p>
 </div>
@@ -757,8 +757,8 @@ v &amp; = x_g (v_g - v_l) + v_l \Longrightarrow x_g = \frac{v - v_l}{v_g - v_l} 
 <p><strong>Enthalpie massique de changement d’état</strong></p>
 <p>On appelle enthalpie massique de changement d’état à la pression P, la variation d’enthalpie <span class="math notranslate nohighlight">\(\Delta h\)</span> du corps pur au cours du changement d’état complet d’un kilogramme du corps pur considéré à la pression donnée.</p>
 <p><strong>Elle correspond à la différence d’enthalpie massique entre la phase finale pure et la phase initiale pure dans les mêmes conditions de pression:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-2981586d-ff93-4f1a-924f-7ca425ac933c">
-<span class="eqno">(2)<a class="headerlink" href="#equation-2981586d-ff93-4f1a-924f-7ca425ac933c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e0ed0597-9cc2-4532-a67c-e1f1cdb67c84">
+<span class="eqno">(2)<a class="headerlink" href="#equation-e0ed0597-9cc2-4532-a67c-e1f1cdb67c84" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \Delta h_{ph1 \to ph2} (T_{sat}) = h_{ph2}(T_{sat}) - h_{ph1} (T_{sat})
 \end{equation}\]</div>
 </div>
@@ -789,8 +789,8 @@ On remarque que pour vaporiser du liquide, il faut fournir de l’énergie. Ce p
 <aside class="topic">
 <p class="topic-title">Calcul d’enthalpie</p>
 <p>Pour un changement d’état <strong>partiel ou total</strong> où une masse <span class="math notranslate nohighlight">\(m\)</span> de la phase 1 change d’état à température constante, alors la variation d’enthalpie du système est:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-68a1e74f-9da0-4f1f-b3c2-c76afe68b70d">
-<span class="eqno">(3)<a class="headerlink" href="#equation-68a1e74f-9da0-4f1f-b3c2-c76afe68b70d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1042841f-0865-4e4b-9321-f2115a7585ec">
+<span class="eqno">(3)<a class="headerlink" href="#equation-1042841f-0865-4e4b-9321-f2115a7585ec" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \Delta H = m \Delta h_{ph1 \to ph2}
 \end{equation}\]</div>
 </aside>
